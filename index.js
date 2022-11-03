@@ -8,7 +8,7 @@ const regVars = /{{\s*\w+\s*}}/g
 const regBracesLeft = /{{/
 const regBracesRight = /}}/
 
-const translateTextTo = async (text, lang) => {
+export const translateTextTo = async (text, lang) => {
     try {
         const [translation] = await translateApi.translate(text, lang);
         return translation;

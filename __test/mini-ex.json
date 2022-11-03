@@ -1,0 +1,6 @@
+{
+    "0": "Note: Fallback collection \"{{ title }}\" has no products.",
+    "1": "This shop will be powered by {{ shopify }}",
+    "2": "Page {{ number }}",
+    "3": "{{ product_count }} of {{ count }} product"
+}
