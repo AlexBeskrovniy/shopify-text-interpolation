@@ -60,15 +60,15 @@ const getTranslatedStrWithVars = async (vars, map, text) => {
 
 //Text for Example
 //const text = "Some text here"
-const text = "{{ count }} result found for “{{ terms }}”";
+//const text = "{{ count }} result found for “{{ terms }}”";
 
-const vars = getVars(regVars, text);
+// const vars = getVars(regVars, text);
 
-if (vars) {
-    const varsMap = getMap(vars);
-    const result = await getTranslatedStrWithVars(vars, varsMap, text);
-    console.log(result);
-} else {
-    const result = await translateTextTo(text, 'ru');
-    console.log(result);
-}
+// if (vars) {
+//     const varsMap = getMap(vars);
+//     const result = await getTranslatedStrWithVars(vars, varsMap, text);
+//     console.log(result);
+// } else {
+//     const result = await translateTextTo(text, 'ru');
+//     console.log(result);
+// }
