@@ -8,11 +8,11 @@ const __dirname = path.dirname(__filename);
 
 //const regBefore = /{{\s*([\S]*)\s*}}/gm;
 // const regAfter = /\<tt\>\{([\S]*)\}\<\/tt\>/gm;
-const regVars = /{{\s*\w+\s*}}/g
+const regVars = /{{\s*\w+\s*}}(?!\\|\")/g
 const regBracesLeft = /{{\s+/
 const regBracesRight = /\s+}}/
 
-const examples = JSON.parse(fs.readFileSync(path.join(__dirname, 'mini-ex.json')));
+const examples = JSON.parse(fs.readFileSync(path.join(__dirname, 'examples.json')));
 
 
 const getVars = (reg, str) => str.match(reg);
@@ -44,10 +44,10 @@ const addVarsToTranslation = (map, str) => {
 
 const getTranslatedStrWithVars = async (vars, map, text) => {
     const indexedString = indexVars(vars, text);
-    console.log(indexedString);
+    //console.log(indexedString);
     try {
         const translatedString = await translateTextTo(indexedString, 'ru');
-        console.log(translatedString);
+        //console.log(translatedString);
         const newStr = addVarsToTranslation(map, translatedString);
 
         return newStr;
@@ -57,11 +57,15 @@ const getTranslatedStrWithVars = async (vars, map, text) => {
 }
 
 const translateObj = async (obj) => {
+    console.log(obj);
     await Promise.all(Object.entries(obj).map(async ([key, val]) => {
-        const vars = getVars(regVars, val)
-        const varsMap = getMap(vars);
-        const translate = await getTranslatedStrWithVars(vars, varsMap, val);
-        obj[key] = translate;
+        const vars = getVars(regVars, val);
+        if (vars) {
+            const varsMap = getMap(vars);
+            const translate = await getTranslatedStrWithVars(vars, varsMap, val);
+            obj[key] = translate;
+        }
+        return;
     }));
     console.log(obj);
 }
