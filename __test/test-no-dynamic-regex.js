@@ -115,6 +115,26 @@ const updateLocalesKeys = (keyMap, locale, source) => {
     return newObject;
 }
 
+const translateUpdatedKeys = async (keyMap, updatedObj) => {
+    const translateBySteps = async (steps, obj) => {
+        const step = steps.shift();
+        if (typeof obj[step] === 'string') {
+            obj[step] = await translateStr(obj[step]);
+            return;
+        }
+        if (typeof obj[step] === 'object') {
+            await translateBySteps(steps, obj[step]);
+        }
+    }
+
+    await Promise.all(Object.keys(keyMap).map(async (key) => {
+        const steps = key.split('.');
+        await translateBySteps(steps, updatedObj);
+    }));
+
+    return updatedObj;
+}
+
 const source = JSON.parse(fs.readFileSync(path.join(__dirname, 'en.json')));
 const locale = JSON.parse(fs.readFileSync(path.join(__dirname, 'ru.json')));
 
@@ -142,11 +162,7 @@ if (keysArrUpdated.length === keysArrSource.length) {
     console.log('False --- ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
 }
 
+const translatedLocaleObject = await translateUpdatedKeys(diff, updatedLocaleObject);
 
-const translatedObj = await translateObj(diff, updatedLocaleObject)
 
-
-fs.writeFileSync(path.join(__dirname, 'updated-ru.json'), JSON.stringify(translatedObj, null, '\t'));
-
-translateObj(examples);
-//console.log($.html());
+fs.writeFileSync(path.join(__dirname, 'updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
