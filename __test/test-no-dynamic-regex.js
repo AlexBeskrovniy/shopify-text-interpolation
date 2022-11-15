@@ -15,26 +15,26 @@ const examples = JSON.parse(fs.readFileSync(path.join(__dirname, 'examples.json'
 // /{{\s*([\w]*)\s*}}(?!\\|\")/gm
 //const str = "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>";
 
-const translateObj = async (obj) => {
-    // console.log(obj);
-    await Promise.all(Object.entries(obj).map(async ([key, val]) => {
-        const interpolatedStr = val.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
-            return `<tt traslate-key="${p}">${p}</tt>`;
-        });
+// const translateObj = async (obj) => {
+//     // console.log(obj);
+//     await Promise.all(Object.entries(obj).map(async ([key, val]) => {
+//         const interpolatedStr = val.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
+//             return `<tt traslate-key="${p}">${p}</tt>`;
+//         });
         
-        const [translation] = await translateApi.translate(interpolatedStr, 'ru');
-        const $ = cheerio.load(translation, {
-            decodeEntities: true
-        }, false);
+//         const [translation] = await translateApi.translate(interpolatedStr, 'ru');
+//         const $ = cheerio.load(translation, {
+//             decodeEntities: true
+//         }, false);
         
-        $('tt').each((_, item) => {
-            $(item).replaceWith(`{{ ${$(item).attr('traslate-key')} }}`)
-        })
+//         $('tt').each((_, item) => {
+//             $(item).replaceWith(`{{ ${$(item).attr('traslate-key')} }}`)
+//         })
 
-        obj[key] = $.html();
-    }));
-    console.log(obj);
-}
+//         obj[key] = $.html();
+//     }));
+//     console.log(obj);
+// }
 
 const translateStr = async (str) => {
     const interpolatedStr = str.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
