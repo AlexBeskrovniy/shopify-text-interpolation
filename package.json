@@ -2,11 +2,11 @@
   "name": "shopify-text-interpolation",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "jest unit-test/interpolate.test.js",
+    "testik": "jest unit-test/interpolate.test.js",
+    "start": "node not_test/test-no-dynamic-regex.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,8 @@
     "@google-cloud/translate": "^7.0.3",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
   }
 }

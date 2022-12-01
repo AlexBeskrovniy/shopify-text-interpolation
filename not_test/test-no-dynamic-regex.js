@@ -10,37 +10,11 @@ const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const examples = JSON.parse(fs.readFileSync(path.join(__dirname, 'examples.json')));
-
-// /{{\s*([\w]*)\s*}}(?!\\|\")/gm
-//const str = "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>";
-
-// const translateObj = async (obj) => {
-//     // console.log(obj);
-//     await Promise.all(Object.entries(obj).map(async ([key, val]) => {
-//         const interpolatedStr = val.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
-//             return `<tt traslate-key="${p}">${p}</tt>`;
-//         });
-        
-//         const [translation] = await translateApi.translate(interpolatedStr, 'ru');
-//         const $ = cheerio.load(translation, {
-//             decodeEntities: true
-//         }, false);
-        
-//         $('tt').each((_, item) => {
-//             $(item).replaceWith(`{{ ${$(item).attr('traslate-key')} }}`)
-//         })
-
-//         obj[key] = $.html();
-//     }));
-//     console.log(obj);
-// }
-
 const translateStr = async (str) => {
-    const interpolatedStr = str.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
-        return `<tt traslate-key="${p}">${p}</tt>`;
-    });
-    
+    // const interpolatedStr = str.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
+    //     return `<tt traslate-key="${p}">${p}</tt>`;
+    // });
+    const interpolatedStr = interpolate(str)
     const [translation] = await translateApi.translate(interpolatedStr, 'ru');
     const $ = cheerio.load(translation, {
         decodeEntities: true
@@ -51,6 +25,12 @@ const translateStr = async (str) => {
     })
 
     return $.html();
+}
+
+export const interpolate = (str) => {
+    return str.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
+       return `<tt traslate-key="${p}">${p}</tt>`;
+    });
 }
 
 const parseKeys = (obj, arr=[]) => {
@@ -107,6 +87,8 @@ const update = (steps, locale, tmpl) => {
 }
 
 const updateLocalesKeys = (keyMap, locale, source) => {
+    console.log('i am not');
+    return
     const newObject = JSON.parse(JSON.stringify(source));
     Object.keys(keyMap).map(key => {
         const steps = key.split('.');
@@ -134,35 +116,36 @@ const translateUpdatedKeys = async (keyMap, updatedObj) => {
 
     return updatedObj;
 }
+const start = async () => {
+    const source = JSON.parse(fs.readFileSync(path.join(__dirname, 'en.json')));
+    const locale = JSON.parse(fs.readFileSync(path.join(__dirname, 'ru.json')));
 
-const source = JSON.parse(fs.readFileSync(path.join(__dirname, 'en.json')));
-const locale = JSON.parse(fs.readFileSync(path.join(__dirname, 'ru.json')));
+    const map = withMap(source);
 
-const map = withMap(source);
+    const updatedLocaleObject = updateLocalesKeys(map, locale, source);
 
-const updatedLocaleObject = updateLocalesKeys(map, locale, source);
+    const keysArrLocale = parseKeys(locale);
+    const keysArrSource = parseKeys(source);
+    const keysArrUpdated = parseKeys(updatedLocaleObject);            
 
-const keysArrLocale = parseKeys(locale);
-const keysArrSource = parseKeys(source);
-const keysArrUpdated = parseKeys(updatedLocaleObject);            
+    const diff = compareKeys(withMap(source), withMap(locale));
+    console.log(diff);
+    if (keysArrLocale.length === keysArrSource.length) {
+        console.log('Success +++ ', keysArrLocale.length, 'from', keysArrSource.length);
+    } else {
+        console.log('False --- ', keysArrLocale.length, 'from', keysArrSource.length);
+    }
 
-const diff = compareKeys(withMap(source), withMap(locale));
-console.log(diff);
-if (keysArrLocale.length === keysArrSource.length) {
-    console.log('Success +++ ', keysArrLocale.length, 'from', keysArrSource.length);
-} else {
-    console.log('False --- ', keysArrLocale.length, 'from', keysArrSource.length);
+    const checkDiff = compareKeys(withMap(source), withMap(updatedLocaleObject));
+
+    if (keysArrUpdated.length === keysArrSource.length) {
+        console.log('Success +++ ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
+    } else {
+        console.log('False --- ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
+    }
+
+    const translatedLocaleObject = await translateUpdatedKeys(diff, updatedLocaleObject);
+
+
+    fs.writeFileSync(path.join(__dirname, 'updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
 }
-
-const checkDiff = compareKeys(withMap(source), withMap(updatedLocaleObject));
-
-if (keysArrUpdated.length === keysArrSource.length) {
-    console.log('Success +++ ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
-} else {
-    console.log('False --- ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
-}
-
-const translatedLocaleObject = await translateUpdatedKeys(diff, updatedLocaleObject);
-
-
-fs.writeFileSync(path.join(__dirname, 'updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));

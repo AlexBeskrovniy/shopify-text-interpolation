@@ -12,7 +12,7 @@
         "fallback": "You have no recently viewed items."
       },
       "password_page": {
-        "login_form_heading": "Enter store using password:",
+        "login_form_heading": "Enter store using password or login:",
         "login_password_button": "Enter using password",
         "login_form_password_label": "Password",
         "login_form_password_placeholder": "Your password",
