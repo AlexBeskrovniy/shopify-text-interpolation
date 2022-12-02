@@ -1,74 +1,143 @@
-import 'dotenv/config';
-import { v2 } from '@google-cloud/translate';
-const { Translate } = v2;
+const fs = require('fs');
+const path = require('path');
+const {Translate} = require('@google-cloud/translate').v2;
+const cheerio = require('cheerio');
+
+const { interpolate } = require('./helpers.js')
 
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-const regVars = /{{\s*\w+\s*}}/g
-const regBracesLeft = /{{/
-const regBracesRight = /}}/
 
-export const translateTextTo = async (text, lang) => {
-    try {
-        const [translation] = await translateApi.translate(text, lang);
-        return translation;
-    } catch (err) {
-        console.log(err);
-    }
+
+const translateStr = async (str) => {
+    const interpolatedStr = interpolate(str);
+    // console.log(interpolatedStr);
+    return
+    const [translation] = await translateApi.translate(interpolatedStr, 'ru');
+    const $ = cheerio.load(translation, {
+        decodeEntities: true
+    }, false);
+    
+    $('tt').each((_, item) => {
+        $(item).replaceWith(`{{ ${$(item).attr('traslate-key')} }}`)
+    })
+    return $.html();
 }
 
-const getVars = (reg, str) => str.match(reg);
-
-const getMap = (arr) => {
-	const map = {};
-	arr.map((key, index) => {
-  	map[index] = key;
-  });
-  return map;
-}
-
-const indexVars = (vars, str) => {
-	const map = getMap(vars);
-  Object.entries(map).map(([key, val]) => {
-  	str = str.replace(regBracesLeft, `<span id="${key}">`);
-    str = str.replace(regBracesRight, '</span>');
-  });
-  return str;
-}
-
-const addVarsToTranslation = (map, str) => {
-	Object.entries(map).map(([key, val]) => {
-        const reg = new RegExp("<span id=\""+key+"\"[\\p{L}\\p{P}\\p{S}\\p{Z}]+>", 'u')
-        str = str.replace(reg, val);
+const parseKeys = (obj, arr=[]) => {
+    Object.keys(obj).map((key) => {
+        const value = obj[key];
+        if (typeof value === 'object') {
+            arr.push(key);
+            parseKeys(value, arr);
+        }
+        if (typeof value === 'string') {
+            arr.push(key);
+        }
     });
-    return str;
+    return arr;
 }
 
-const getTranslatedStrWithVars = async (vars, map, text) => {
-    const indexedString = indexVars(vars, text);
-    console.log(indexedString);
-    try {
-        const translatedString = await translateTextTo(indexedString, 'ru');
-        console.log(translatedString);
-        const newStr = addVarsToTranslation(map, translatedString);
+const composeMap = (data, mapPath = '', map) => {
+    if(typeof data === 'string') {
+      map[mapPath] = data;
+    return;
+  }
+  Object.entries(data).map(([k, v]) => {
+        composeMap(v, mapPath ? (mapPath + '.' + k) : k, map);
+  })
+  }
+ 
+const withMap = (data) => {
+    const map = {};
+    composeMap(data, '', map);
+    return map;
+}
 
-        return newStr;
-    } catch(err) {
-        console.error(err);
+const compareKeys = (source, locale) => {
+    const diff = {};
+    Object.entries(source).map(([key, val]) => {
+        if (!Object.keys(locale).includes(key)) {
+            diff[key] = val;
+        }
+    }); 
+    return diff;
+}
+
+const update = (steps, locale, tmpl) => {
+    const step = steps.shift();
+
+    if(tmpl[step] && typeof tmpl[step] === 'string' && typeof locale[step] === 'string') {
+        tmpl[step] = locale[step];
+        return;
+    }
+
+    if (typeof tmpl[step] === 'object' && typeof locale[step] === 'object') {
+        update(steps, locale[step], tmpl[step]);
     }
 }
 
-//Text for Example
-//const text = "Some text here"
-//const text = "{{ count }} result found for “{{ terms }}”";
+const updateLocalesKeys = (keyMap, locale, source) => {
+    const newObject = JSON.parse(JSON.stringify(source));
+    Object.keys(keyMap).map(key => {
+        const steps = key.split('.');
+        update(steps, locale, newObject);
+    });
+    return newObject;
+}
 
-// const vars = getVars(regVars, text);
+const translateUpdatedKeys = async (keyMap, updatedObj) => {
+    const translateBySteps = async (steps, obj) => {
+        const step = steps.shift();
+        if (typeof obj[step] === 'string') {
+            obj[step] = await translateStr(obj[step]);
+            return;
+        }
+        if (typeof obj[step] === 'object') {
+            await translateBySteps(steps, obj[step]);
+        }
+    }
 
-// if (vars) {
-//     const varsMap = getMap(vars);
-//     const result = await getTranslatedStrWithVars(vars, varsMap, text);
-//     console.log(result);
-// } else {
-//     const result = await translateTextTo(text, 'ru');
-//     console.log(result);
-// }
+    await Promise.all(Object.keys(keyMap).map(async (key) => {
+        const steps = key.split('.');
+        await translateBySteps(steps, updatedObj);
+    }));
+
+    return updatedObj;
+}
+
+const start = async () => {
+    const source = JSON.parse(fs.readFileSync(path.join(__dirname, './templates/in/en.json')));
+    const locale = JSON.parse(fs.readFileSync(path.join(__dirname, './templates/in/ru.json')));
+
+    const map = withMap(source);
+
+    const updatedLocaleObject = updateLocalesKeys(map, locale, source);
+
+    const keysArrLocale = parseKeys(locale);
+    const keysArrSource = parseKeys(source);
+    const keysArrUpdated = parseKeys(updatedLocaleObject);            
+
+    const diff = compareKeys(withMap(source), withMap(locale));
+    console.log(diff);
+    if (keysArrLocale.length === keysArrSource.length) {
+        console.log('Success +++ ', keysArrLocale.length, 'from', keysArrSource.length);
+    } else {
+        console.log('False --- ', keysArrLocale.length, 'from', keysArrSource.length);
+    }
+
+    const checkDiff = compareKeys(withMap(source), withMap(updatedLocaleObject));
+
+    if (keysArrUpdated.length === keysArrSource.length) {
+        console.log('Success +++ ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
+    } else {
+        console.log('False --- ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
+    }
+
+    const translatedLocaleObject = await translateUpdatedKeys(diff, updatedLocaleObject);
+
+
+    fs.writeFileSync(path.join(__dirname, './templates/out/updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
+}
+
+start()

@@ -1,16 +1,7 @@
 {
 	"general": {
-		"editor": {
-			"default_heading": "В этом разделе сейчас нет контента.",
-			"default_text": "Это сообщение будет отображаться только в редакторе тем.",
-			"browsing_history_message": "Примечание. Недавно просмотренных товаров пока нет. Этот раздел будет скрыт для покупателей, пока они не просмотрят какие-либо товары.",
-			"quick_view_message": "Примечание. Этот шаблон предназначен только для настройки быстрого просмотра. Не используйте его как отдельный шаблон продукта.",
-			"empty_collection_message": "Примечание. Эта коллекция пуста.",
-			"empty_fallback_collection_message": "Примечание. В резервной коллекции \"{{ title }}\" нет продуктов."
-		},
-		"browsing_history": {
-			"fallback": "У Вас нет недавно просмотренных пунктов."
-		},
+		"editor": {},
+		"browsing_history": {},
 		"password_page": {
 			"login_form_heading": "Вход в магазин с помощью пароля:",
 			"login_password_button": "Войти с помощью пароля",
@@ -25,7 +16,6 @@
 			"alt_text": {
 				"share_on_facebook": "Поделиться в Facebook",
 				"share_on_twitter": "Опубликовать в Твиттере",
-				"share_by_email": "Поделиться по электронной почте",
 				"share_on_pinterest": "Сохранить в Pinterest"
 			},
 			"links": {
@@ -45,9 +35,7 @@
 			"label": "Разбивка на страницы",
 			"page": "Страница {{ number }}",
 			"next": "Следующая страница",
-			"previous": "Предыдущая страница",
-			"next_short": "Следующий",
-			"previous_short": "Предыдущий"
+			"previous": "Предыдущая страница"
 		},
 		"search": {
 			"search": "Поиск",
@@ -55,15 +43,9 @@
 		},
 		"cart": {
 			"view": "Просмотреть корзину ({{ count }})",
-			"open": "Открыть корзину",
-			"qty_max_note": "Все доступные товары в корзине",
 			"item_added": "Товар добавлен в корзину.",
-			"recommendations": {
-				"heading": "Вам также может понравиться"
-			},
-			"notification": {
-				"msg_title": "Добавлено в корзину"
-			}
+			"recommendations": {},
+			"notification": {}
 		},
 		"share": {
 			"close": "Свернуть функцию \"Поделиться\"",
@@ -72,8 +54,7 @@
 			"success_message": "Ссылка скопирована в буфер обмена.",
 			"facebook": "Делиться",
 			"twitter": "Твитнуть",
-			"pinterest": "Штырь",
-			"email": "Эл. почта"
+			"pinterest": "Штырь"
 		},
 		"slider": {
 			"of": "из",
@@ -133,7 +114,6 @@
 		"product": {
 			"add_to_cart": "Добавить в корзину",
 			"description": "Описание",
-			"description_read_mode": "Читать далее",
 			"on_sale": "Распродажа",
 			"saved_amount": "{{ value }} выключено",
 			"product_variants": "Варианты товара",
@@ -201,8 +181,7 @@
 				"regular_price": "Обычная цена",
 				"sale_price": "Цена со скидкой",
 				"unit_price": "Цена за единицу",
-				"save_price": "Вы сэкономили",
-				"free_price": "Свободно"
+				"save_price": "Вы сэкономили"
 			},
 			"popup": {
 				"no_page": "Пожалуйста, укажите страницу"
@@ -248,12 +227,7 @@
 			"to": "Для",
 			"clear_filter": "Удалить фильтр"
 		},
-		"product_options": {
-			"view_all_options": "Просмотреть все варианты в виде списка",
-			"only_in_stock": "Показать только товары в наличии",
-			"sku": "Артикул",
-			"availability": "Доступность"
-		}
+		"product_options": {}
 	},
 	"templates": {
 		"404": {
@@ -264,7 +238,6 @@
 			"no_results": "По запросу «{{ terms }}» ничего не найдено. Проверьте правописание или выберите другие слова либо фразу.",
 			"no_results_title": "По запросу \"{{terms }}\" ничего не найдено",
 			"no_results_subtitle": "Проверьте правописание или попробуйте другие ключевые слова",
-			"no_results_recommend": "Вас могут заинтересовать следующие товары",
 			"page": "Страница",
 			"products": "Товары",
 			"results_with_count": {
@@ -312,8 +285,7 @@
 			"checkout": "Оформить заказ",
 			"empty": {
 				"heading": "Ваша корзина пуста",
-				"subheading": "Похоже, вы еще ничего не добавили в корзину",
-				"continue_shopping": "Продолжить покупки"
+				"subheading": "Похоже, вы еще ничего не добавили в корзину"
 			},
 			"cart_error": "Не удалось обновить корзину. Повторите попытку.",
 			"cart_quantity_error_html": "Максимально допустимое количество единиц этого товара в корзине: {{ quantity }}.",
@@ -352,8 +324,7 @@
 		"collection_template": {
 			"empty": "Продукты не найдены",
 			"title": "Коллекция",
-			"use_fewer_filters_html": "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">удалите фильтры</a>",
-			"use_fewer_filters": "Используйте меньше фильтров"
+			"use_fewer_filters_html": "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">удалите фильтры</a>"
 		},
 		"video": {
 			"load_video": "Загрузить видео: {{ description }}"
@@ -411,9 +382,7 @@
 			"cancel": "Отменить",
 			"edit": "Редактировать",
 			"delete": "Удалить",
-			"delete_address": "Удалить адрес",
-			"delete_confirm": "Удалить этот адрес?",
-			"delete_confirm_warning": "Это действие нельзя отменить."
+			"delete_confirm": "Удалить этот адрес?"
 		},
 		"log_in": "Войти",
 		"log_out": "Выйти",
