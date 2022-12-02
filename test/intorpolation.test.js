@@ -1,12 +1,12 @@
-const { interpolate } = require('../helpers.js')
+const { interpolate, deinterpolate } = require('../helpers.js')
 // NOTE: ??? "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>"
 // NOTE: bug "\"{{ number }}\""
 
 const cases = [
-    // [
-    //     "Note: Fallback collection \"{{ title }}\" has no products.",
-    //     `Note: Fallback collection <tt traslate-key="title">title</tt> has no products.`        
-    // ],
+    [
+        "Note: Fallback collection \"{{ title }}\" has no products.",
+        `Note: Fallback collection <tt traslate-key="title">title</tt> has no products.`        
+    ],
     [
         "This shop will be powered by {{ shopify }}",
         `This shop will be powered by <tt traslate-key="shopify">shopify</tt>`        
@@ -37,8 +37,14 @@ const cases = [
     ]
 ]
 
-test('', () => {
+test('String interpolation', () => {
     cases.forEach((strCase) => {
         expect(interpolate(strCase[0])).toBe(strCase[1])
+    })
+})
+
+test('String deinterpolation', () => {
+    cases.forEach((strCase) => {
+        expect(deinterpolate(strCase[1])).toBe(strCase[0])
     })
 })

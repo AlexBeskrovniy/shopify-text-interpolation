@@ -1,23 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 const {Translate} = require('@google-cloud/translate').v2;
-const cheerio = require('cheerio');
 
-const { interpolate } = require('./helpers.js')
+const { interpolate, deinterpolate } = require('./helpers.js')
 
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
 const translateStr = async (str) => {
     const interpolatedStr = interpolate(str);
     const [translation] = await translateApi.translate(interpolatedStr, 'ru');
-    const $ = cheerio.load(translation, {
-        decodeEntities: true
-    }, false);
-    
-    $('tt').each((_, item) => {
-        $(item).replaceWith(`{{ ${$(item).attr('traslate-key')} }}`)
-    })
-    return $.html();
+    return deinterpolate(translation)
 }
 
 const parseKeys = (obj, arr=[]) => {
@@ -133,6 +125,7 @@ const start = async () => {
     const translatedLocaleObject = await translateUpdatedKeys(diff, updatedLocaleObject);
 
 
+    fs.unlinkSync(path.join(__dirname, './templates/out/updated-ru.json'));
     fs.writeFileSync(path.join(__dirname, './templates/out/updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
 }
 
