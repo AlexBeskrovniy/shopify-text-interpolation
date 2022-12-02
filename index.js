@@ -7,12 +7,8 @@ const { interpolate } = require('./helpers.js')
 
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-
-
 const translateStr = async (str) => {
     const interpolatedStr = interpolate(str);
-    // console.log(interpolatedStr);
-    return
     const [translation] = await translateApi.translate(interpolatedStr, 'ru');
     const $ = cheerio.load(translation, {
         decodeEntities: true
