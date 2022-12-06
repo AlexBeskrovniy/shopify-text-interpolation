@@ -1,7 +1,9 @@
 const cheerio = require('cheerio');
 
+
+//Backup regexp (?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")   (?<!\=\"){{\s*([\w]*)\s*}}
 const interpolate = (str) => { //NOTE: has bug
-    return str.replace(/(?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")/gm, (m, p) => {
+    return str.replace(/(?<!\=\"){{\s*([\w]*)\s*}}/gm, (m, p) => {
         return `<tt traslate-key="${p}">${p}</tt>`;
     });
 }
