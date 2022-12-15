@@ -13,16 +13,16 @@ const {
 
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-const mergeObjectsValues = (keys, source, target) => {
+const mergeObjectsValues = (keys, source, acc) => {
     const step = keys.shift();
 
-    if(target[step] && typeof target[step] === 'string' && typeof source[step] === 'string') {
-        target[step] = source[step];
+    if(acc[step] && typeof acc[step] === 'string' && typeof source[step] === 'string') {
+        acc[step] = source[step];
         return;
     }
 
-    if (typeof target[step] === 'object' && typeof source[step] === 'object') {
-        mergeObjectsValues(keys, source[step], target[step]);
+    if (typeof acc[step] === 'object' && typeof source[step] === 'object') {
+        mergeObjectsValues(keys, source[step], acc[step]);
     }
 }
 
