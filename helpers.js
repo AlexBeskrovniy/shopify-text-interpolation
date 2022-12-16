@@ -10,6 +10,9 @@ const interpolate = (str) => { //NOTE: has bug
 }
 
 const deinterpolate = (str) => {
+    if (typeof str !== 'string') {
+        throw `Deinterpolate must get string. Got ${typeof str} instead`
+    }
     const $ = cheerio.load(str, {
         decodeEntities: true
     }, false);
