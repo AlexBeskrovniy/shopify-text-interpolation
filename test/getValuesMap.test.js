@@ -1,10 +1,10 @@
-const { getObjKeysArray } = require('../helpers.js');
+const { getValuesMap } = require('../helpers.js');
 
 const cases = [
     {   
         caseName: 'Empty object ?',
         inValue: {},
-        outValue: []
+        outValue: {}
     },
     {   
         caseName: 'Simple object',
@@ -16,7 +16,14 @@ const cases = [
             "false": 'boolean',
             "string": 'stringKey'
         },
-        outValue: ['stringName','number','5','true','false','string']
+        outValue: {
+            "stringName": 'string',
+            "number": '5',
+            "5": 'number',
+            "true": 'boolean',
+            "false": 'boolean',
+            "string": 'stringKey'
+        }
     },
     {   
         caseName: 'Nested object',
@@ -35,12 +42,20 @@ const cases = [
             "very_long_key_value_test": 'Long key value',
             "false": 'false'
         },
-        outValue: ['first','one','two','seccond','seccondOne','one','two','seccondTwo','very_long_key_value_test','false']
+        outValue: {
+            "first.one": "1",
+            "first.two": "2",
+            "seccond.seccondOne.one": "211",
+            "seccond.seccondOne.two": "212",
+            "seccond.seccondTwo": "22",
+            "very_long_key_value_test": "Long key value",
+            "false": "false"
+          }
     }
 ]
 
 cases.forEach(({ caseName, inValue, outValue }) => {
     test(caseName, () => {
-        expect(getObjKeysArray(inValue)).toStrictEqual(outValue)
+        expect(getValuesMap(inValue)).toStrictEqual(outValue)
     })
 })

@@ -24,7 +24,7 @@ const deinterpolate = (str) => {
     return $.html();
 }
 
-const getObjKeysArray = (obj, acc=[]) => {
+const getObjKeysArray = (obj, acc=[]) => { //NOTE: add recursion exit
     Object.keys(obj).map((key) => {
         const value = obj[key];
         if (typeof value === 'object') {
