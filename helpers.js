@@ -38,7 +38,7 @@ const getObjKeysArray = (obj, acc=[]) => { //NOTE: add recursion exit
     return acc;
 }
 
-const parseJSONFile = (localePath) => {
+const parseJSONFile = (localePath) => { // NOTE: what if empty or doesn't exist?
     return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
 }
 
@@ -53,10 +53,10 @@ const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
     return mapAcc
 }
 
-const compareObjectsByKeys = (source, target) => {
-    return Object.entries(source).reduce((acc, [key, val]) => {
-        if (!Object.keys(target).includes(key)) {
-            acc[key] = val;
+const compareObjectsByKeys = (sourceMap, targetMap) => { //NOTE: compareObjectsByKeys -> compareObjectMaps ?
+    return Object.entries(sourceMap).reduce((acc, [keyMap, val]) => {
+        if (!Object.keys(targetMap).includes(keyMap)) {
+            acc[keyMap] = val;
         }
         return acc;
     }, {})
