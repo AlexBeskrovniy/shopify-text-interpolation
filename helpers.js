@@ -1,5 +1,6 @@
 const cheerio = require('cheerio');
-
+const fs = require('fs');
+const path = require('path');
 
 //Backup regexp (?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")   (?<!\=\"){{\s*([\w]*)\s*}}
 const interpolate = (str) => { //NOTE: has bug
@@ -20,7 +21,49 @@ const deinterpolate = (str) => {
     return $.html();
 }
 
+const getObjKeysArray = (obj, acc=[]) => {
+    Object.keys(obj).map((key) => {
+        const value = obj[key];
+        if (typeof value === 'object') {
+            acc.push(key);
+            getObjKeysArray(value, acc);
+        }
+        if (typeof value === 'string') {
+            acc.push(key);
+        }
+    });
+    return acc;
+}
+
+const parseJSONFile = (localePath) => {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
+}
+
+const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
+    if(typeof obj === 'string') {
+        mapAcc[mapPath] = obj;
+        return mapAcc;
+    }
+    Object.entries(obj).map(([key, value]) => {
+        getValuesMap(value, mapPath ? (mapPath + '.' + key) : key, mapAcc);
+    })
+    return mapAcc
+}
+
+const compareObjectsByKeys = (source, target) => {
+    return Object.entries(source).reduce((acc, [key, val]) => {
+        if (!Object.keys(target).includes(key)) {
+            acc[key] = val;
+        }
+        return acc;
+    }, {})
+}
+
 module.exports = { 
     interpolate,
-    deinterpolate
+    deinterpolate,
+    getObjKeysArray,
+    parseJSONFile,
+    getValuesMap,
+    compareObjectsByKeys
 }

@@ -2,76 +2,37 @@ const fs = require('fs');
 const path = require('path');
 const {Translate} = require('@google-cloud/translate').v2;
 
-const { interpolate, deinterpolate } = require('./helpers.js')
+const { 
+    interpolate, 
+    deinterpolate, 
+    getObjKeysArray,
+    parseJSONFile,
+    getValuesMap,
+    compareObjectsByKeys 
+} = require('./helpers.js')
 
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-const translateStr = async (str) => {
-    const interpolatedStr = interpolate(str);
-    const [translation] = await translateApi.translate(interpolatedStr, 'ru');
-    return deinterpolate(translation)
-}
+const mergeObjectsValues = (keys, source, acc) => {
+    const step = keys.shift();
 
-const parseKeys = (obj, arr=[]) => {
-    Object.keys(obj).map((key) => {
-        const value = obj[key];
-        if (typeof value === 'object') {
-            arr.push(key);
-            parseKeys(value, arr);
-        }
-        if (typeof value === 'string') {
-            arr.push(key);
-        }
-    });
-    return arr;
-}
-
-const composeMap = (data, mapPath = '', map) => {
-    if(typeof data === 'string') {
-      map[mapPath] = data;
-    return;
-  }
-  Object.entries(data).map(([k, v]) => {
-        composeMap(v, mapPath ? (mapPath + '.' + k) : k, map);
-  })
-  }
- 
-const withMap = (data) => {
-    const map = {};
-    composeMap(data, '', map);
-    return map;
-}
-
-const compareKeys = (source, locale) => {
-    const diff = {};
-    Object.entries(source).map(([key, val]) => {
-        if (!Object.keys(locale).includes(key)) {
-            diff[key] = val;
-        }
-    }); 
-    return diff;
-}
-
-const update = (steps, locale, tmpl) => {
-    const step = steps.shift();
-
-    if(tmpl[step] && typeof tmpl[step] === 'string' && typeof locale[step] === 'string') {
-        tmpl[step] = locale[step];
+    if(acc[step] && typeof acc[step] === 'string' && typeof source[step] === 'string') {
+        acc[step] = source[step];
         return;
     }
 
-    if (typeof tmpl[step] === 'object' && typeof locale[step] === 'object') {
-        update(steps, locale[step], tmpl[step]);
+    if (typeof acc[step] === 'object' && typeof source[step] === 'object') {
+        mergeObjectsValues(keys, source[step], acc[step]);
     }
 }
 
-const updateLocalesKeys = (keyMap, locale, source) => {
-    const newObject = JSON.parse(JSON.stringify(source));
+const mergeLocalesKeys = (keyMap, locale, source) => {
+    const sourceCopy = JSON.parse(JSON.stringify(source));
     Object.keys(keyMap).map(key => {
-        const steps = key.split('.');
-        update(steps, locale, newObject);
+        const keysArr = key.split('.');
+        mergeObjectsValues(keysArr, locale, sourceCopy);
     });
-    return newObject;
+    return sourceCopy;
 }
 
 const translateUpdatedKeys = async (keyMap, updatedObj) => {
@@ -94,35 +55,42 @@ const translateUpdatedKeys = async (keyMap, updatedObj) => {
     return updatedObj;
 }
 
+const translateStr = async (str) => {
+    const interpolatedStr = interpolate(str);
+    const [translation] = await translateApi.translate(interpolatedStr, 'ru');
+    return deinterpolate(translation)
+}
+
 const start = async () => {
-    const source = JSON.parse(fs.readFileSync(path.join(__dirname, './templates/in/en.json')));
-    const locale = JSON.parse(fs.readFileSync(path.join(__dirname, './templates/in/ru.json')));
+    const source = parseJSONFile('./templates/in/en.json');
+    const locale = parseJSONFile('./templates/in/ru.json');
 
-    const map = withMap(source);
+    const valuesMap = getValuesMap(source);
 
-    const updatedLocaleObject = updateLocalesKeys(map, locale, source);
+    const updatedLocaleObject = mergeLocalesKeys(valuesMap, locale, source);
 
-    const keysArrLocale = parseKeys(locale);
-    const keysArrSource = parseKeys(source);
-    const keysArrUpdated = parseKeys(updatedLocaleObject);            
+    // const keysArrLocale = getObjKeysArray(locale);
+    // const keysArrSource = getObjKeysArray(source);
+    // const keysArrUpdated = getObjKeysArray(updatedLocaleObject);            
 
-    const diff = compareKeys(withMap(source), withMap(locale));
-    console.log(diff);
-    if (keysArrLocale.length === keysArrSource.length) {
-        console.log('Success +++ ', keysArrLocale.length, 'from', keysArrSource.length);
-    } else {
-        console.log('False --- ', keysArrLocale.length, 'from', keysArrSource.length);
-    }
+    const entriesDiffs = compareObjectsByKeys(getValuesMap(source), getValuesMap(locale));
+    // console.log(entriesDiffs);
 
-    const checkDiff = compareKeys(withMap(source), withMap(updatedLocaleObject));
+    // if (keysArrLocale.length === keysArrSource.length) {
+    //     console.log('Success +++ ', keysArrLocale.length, 'from', keysArrSource.length);
+    // } else {
+    //     console.log('False --- ', keysArrLocale.length, 'from', keysArrSource.length);
+    // }
 
-    if (keysArrUpdated.length === keysArrSource.length) {
-        console.log('Success +++ ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
-    } else {
-        console.log('False --- ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
-    }
+    // const checkDiff = compareObjectsByKeys(getValuesMap(source), getValuesMap(updatedLocaleObject));
 
-    const translatedLocaleObject = await translateUpdatedKeys(diff, updatedLocaleObject);
+    // if (keysArrUpdated.length === keysArrSource.length) {
+    //     console.log('Success +++ ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
+    // } else {
+    //     console.log('False --- ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);
+    // }
+
+    const translatedLocaleObject = await translateUpdatedKeys(entriesDiffs, updatedLocaleObject);
 
 
     fs.unlinkSync(path.join(__dirname, './templates/out/updated-ru.json'));
