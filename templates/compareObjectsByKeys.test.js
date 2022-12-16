@@ -3,7 +3,6 @@ const { compareObjectsByKeys } = require('../helpers.js');
 const simpleObjectMap = {
     "stringName": 'string',
     "number": '5',
-    "5": 'number',
     "true": 'boolean',
     "false": 'boolean',
     "string": 'stringKey'

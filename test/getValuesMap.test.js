@@ -11,7 +11,6 @@ const cases = [
         inValue: {
             "stringName": 'string',
             "number": '5',
-            "5": 'number',
             "true": 'boolean',
             "false": 'boolean',
             "string": 'stringKey'
@@ -19,7 +18,6 @@ const cases = [
         outValue: {
             "stringName": 'string',
             "number": '5',
-            "5": 'number',
             "true": 'boolean',
             "false": 'boolean',
             "string": 'stringKey'

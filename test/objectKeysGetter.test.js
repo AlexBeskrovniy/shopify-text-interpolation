@@ -11,12 +11,11 @@ const cases = [
         inValue: {
             "stringName": 'string',
             "number": '5',
-            "5": 'number',
             "true": 'boolean',
             "false": 'boolean',
             "string": 'stringKey'
         },
-        outValue: ['stringName','number','5','true','false','string']
+        outValue: ['stringName','number','true','false','string']
     },
     {   
         caseName: 'Nested object',
