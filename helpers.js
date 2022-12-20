@@ -2,8 +2,7 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-//Backup regexp (?<!\=\\|\"){{\s*([\w]*)\s*}}(?!\\|\")   (?<!\=\"){{\s*([\w]*)\s*}}
-const interpolate = (str) => { //NOTE: has bug
+const interpolate = (str) => {
     return str.replace(/(?<!\=\"){{\s*([\w]*)\s*}}/gm, (m, p) => {
         return `<tt traslate-key="${p}">${p}</tt>`;
     });
@@ -24,23 +23,17 @@ const deinterpolate = (str) => {
     return $.html();
 }
 
-const getObjKeysArray = (obj, acc=[]) => { //NOTE: add recursion exit
+const getObjKeysArray = (obj, acc=[]) => {
     Object.keys(obj).map((key) => {
-        const value = obj[key];
-        if (typeof value === 'object') {
-            acc.push(key);
-            getObjKeysArray(value, acc);
-        }
-        if (typeof value === 'string') {
-            acc.push(key);
+    	acc.push(key);
+        if (typeof obj[key] === 'string') {
+            return;
+        } else if (typeof obj[key] === 'object') {
+            getObjKeysArray(obj[key], acc);
         }
     });
     return acc;
-}
-
-const parseJSONFile = (localePath) => { // NOTE: what if empty or doesn't exist?
-    return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
-}
+};
 
 const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
     if(typeof obj === 'string') {
@@ -53,7 +46,7 @@ const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
     return mapAcc
 }
 
-const compareObjectsByKeys = (sourceMap, targetMap) => { //NOTE: compareObjectsByKeys -> compareObjectMaps ?
+const compareObjectsMaps = (sourceMap, targetMap) => {
     return Object.entries(sourceMap).reduce((acc, [keyMap, val]) => {
         if (!Object.keys(targetMap).includes(keyMap)) {
             acc[keyMap] = val;
@@ -62,11 +55,17 @@ const compareObjectsByKeys = (sourceMap, targetMap) => { //NOTE: compareObjectsB
     }, {})
 }
 
+//For test environment only
+const parseJSONFile = (localePath) => { // NOTE: what if empty or doesn't exist?
+    return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
+}
+//For test environment only
+
 module.exports = { 
     interpolate,
     deinterpolate,
     getObjKeysArray,
     parseJSONFile,
     getValuesMap,
-    compareObjectsByKeys
+    compareObjectsMaps
 }

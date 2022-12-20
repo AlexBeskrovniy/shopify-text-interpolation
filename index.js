@@ -8,30 +8,30 @@ const {
     getObjKeysArray,
     parseJSONFile,
     getValuesMap,
-    compareObjectsByKeys 
+    compareObjectsMaps 
 } = require('./helpers.js')
 
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-const mergeObjectsValues = (keys, source, acc) => {
-    const step = keys.shift();
+const mergeObjectsValues = (keyMap, locale, source) => {
+	const mergeBySteps = (steps, locale, acc) => {
+      const step = steps.shift();
 
-    if(acc[step] && typeof acc[step] === 'string' && typeof source[step] === 'string') {
-        acc[step] = source[step];
+      if(!locale[step]) {
         return;
-    }
-
-    if (typeof acc[step] === 'object' && typeof source[step] === 'object') {
-        mergeObjectsValues(keys, source[step], acc[step]);
-    }
-}
-
-const mergeLocalesKeys = (keyMap, locale, source) => {
+      } else if(typeof acc[step] === 'string' && typeof locale[step] === 'string') {
+          acc[step] = locale[step];
+      } else if (typeof acc[step] === 'object' && typeof locale[step] === 'object') {
+          mergeBySteps(steps, locale[step], acc[step]);
+      }
+  };
+  
     const sourceCopy = JSON.parse(JSON.stringify(source));
     Object.keys(keyMap).map(key => {
-        const keysArr = key.split('.');
-        mergeObjectsValues(keysArr, locale, sourceCopy);
+        const steps = key.split('.');
+        mergeBySteps(steps, locale, sourceCopy);
     });
+    
     return sourceCopy;
 }
 
@@ -66,14 +66,14 @@ const start = async () => {
     const locale = parseJSONFile('./templates/in/ru.json');
 
     const valuesMap = getValuesMap(source);
-
-    const updatedLocaleObject = mergeLocalesKeys(valuesMap, locale, source);
+    console.log(valuesMap);
+    const updatedLocaleObject = mergeObjectsValues(valuesMap, locale, source);
 
     // const keysArrLocale = getObjKeysArray(locale);
     // const keysArrSource = getObjKeysArray(source);
     // const keysArrUpdated = getObjKeysArray(updatedLocaleObject);            
 
-    const entriesDiffs = compareObjectsByKeys(getValuesMap(source), getValuesMap(locale));
+    const entriesDiffs = compareObjectsMaps(getValuesMap(source), getValuesMap(locale));
     // console.log(entriesDiffs);
 
     // if (keysArrLocale.length === keysArrSource.length) {
@@ -82,7 +82,7 @@ const start = async () => {
     //     console.log('False --- ', keysArrLocale.length, 'from', keysArrSource.length);
     // }
 
-    // const checkDiff = compareObjectsByKeys(getValuesMap(source), getValuesMap(updatedLocaleObject));
+    // const checkDiff = compareObjectsMaps(getValuesMap(source), getValuesMap(updatedLocaleObject));
 
     // if (keysArrUpdated.length === keysArrSource.length) {
     //     console.log('Success +++ ', keysArrUpdated.length, 'from', keysArrSource.length, checkDiff);

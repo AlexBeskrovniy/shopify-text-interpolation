@@ -73,7 +73,7 @@
 			"facebook": "Делиться",
 			"twitter": "Твитнуть",
 			"pinterest": "Штырь",
-			"email": "Эл. почта"
+			"email": "Электронная почта"
 		},
 		"slider": {
 			"of": "из",
@@ -133,7 +133,7 @@
 		"product": {
 			"add_to_cart": "Добавить в корзину",
 			"description": "Описание",
-			"description_read_mode": "Читать далее",
+			"description_read_mode": "Прочитайте больше",
 			"on_sale": "Распродажа",
 			"saved_amount": "{{ value }} выключено",
 			"product_variants": "Варианты товара",
@@ -202,7 +202,7 @@
 				"sale_price": "Цена со скидкой",
 				"unit_price": "Цена за единицу",
 				"save_price": "Вы сэкономили",
-				"free_price": "Свободно"
+				"free_price": "Бесплатно"
 			},
 			"popup": {
 				"no_page": "Пожалуйста, укажите страницу"

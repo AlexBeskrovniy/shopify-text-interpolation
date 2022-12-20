@@ -1,6 +1,4 @@
 const { interpolate, deinterpolate } = require('../helpers.js')
-// NOTE: ??? "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>"
-// NOTE: bug "\"{{ number }}\""
 
 const cases = [
     [
