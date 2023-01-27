@@ -116,4 +116,5 @@ module.exports = {
     getObjKeysArray,
     deinterpolate,
     interpolate,
+    translateStr
 }
