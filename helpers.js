@@ -4,11 +4,23 @@ const path = require('path');
 const {Translate} = require('@google-cloud/translate').v2;
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
+const exeptionWords = [
+    ["Twitter", "\"{{ Twitter }}\""],
+    ["Facebook", "\"{{ Facebook }}\""],
+    ["Pinterest", "\"{{ Pinterest }}\""],
+    ["Instagram", "\"{{ Instagram }}\""],
+    ["Tumblr", "\"{{ Tumblr }}\""],
+    ["Snapchat", "\"{{ Snapchat }}\""],
+    ["YouTube", "\"{{ YouTube }}\""],
+    ["Vimeo", "\"{{ Vimeo }}\""],
+    ["TikTok", "\"{{ TikTok }}\""]
+]
 
+let i = 0;
 const readAndParseJSON = (localePath) => { // NOTE: what if empty or doesn't exist?
     return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
 }
-
+let interpolatedExeptions = [];
 
 const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
     if(typeof obj === 'string') {
@@ -53,9 +65,11 @@ const compareObjectsMaps = (sourceMap, targetMap) => {
 
 const translateByMap = async (valuesMap, obj) => {
     await Promise.all(Object.keys(valuesMap).map(async (key) => {
+        //timeout
         const steps = key.split('.');
         await translateBySteps(steps, obj);
     }));
+    console.log('requests count', i);
     return obj;
 }
 const translateBySteps = async (steps, obj) => {
@@ -68,12 +82,30 @@ const translateBySteps = async (steps, obj) => {
         await translateBySteps(steps, obj[step]);
     }
 }
-const translateStr = async (str, lang) => {
+const translateStr = async (str, lang = 'ru') => {
     const interpolatedStr = interpolate(str);
+    //timeout
     const [translation] = await translateApi.translate(interpolatedStr, lang);
-    return deinterpolate(translation)
+    // return deinterpolate(translation)
+    // i++;
+    let deinterpolatedStr = deinterpolate(translation)
+    exeptionWords.map(exeptionWord => {
+        if (deinterpolatedStr.includes(exeptionWord[1])) {
+            deinterpolatedStr = deinterpolatedStr.replace(exeptionWord[1], exeptionWord[0])
+        }
+    })
+    return deinterpolatedStr;
+    // return deinterpolate(interpolatedStr)
 }
 const interpolate = (str) => {
+    exeptionWords.map(exWord => {
+        if (str.includes(exWord[0])) {
+            console.log('before', str);
+            console.log('replace for', exWord[1]);
+            str = str.replace(exWord[0], exWord[1]);
+            console.log('after', str);
+        }
+    })
     return str.replace(/(?<!\=\"){{\s*([\w]*)\s*}}/gm, (_, p) => {
         return `<tt traslate-key="${p}">${p}</tt>`;
     });

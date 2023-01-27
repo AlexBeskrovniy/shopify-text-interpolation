@@ -1,0 +1,22 @@
+{
+	"social": {
+		"alt_text": {
+			"share_on_facebook": "Поделиться на Facebook",
+			"share_on_twitter": "Твит в Twitter",
+			"share_by_email": "Поделиться по электронной почте",
+			"share_on_pinterest": "Пин на Pinterest",
+			"share_on_vimeo": "Пин на Vimeo"
+		},
+		"links": {
+			"twitter": "Twitter",
+			"facebook": "Facebook",
+			"pinterest": "Pinterest",
+			"instagram": "Instagram",
+			"tumblr": "Tumblr",
+			"snapchat": "Snapchat",
+			"youtube": "YouTube",
+			"vimeo": "Vimeo",
+			"tiktok": "TikTok"
+		}
+	}
+}
