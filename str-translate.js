@@ -3,29 +3,18 @@ const cheerio = require('cheerio');
 const {Translate} = require('@google-cloud/translate').v2;
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-const { translateStr } = require('./helpers.js');
+const { translateStr, interpolateExeptions, deinterpolateExeptions } = require('./helpers.js')
+const { exeptionsArr } = require('./exeptions.js');
 
-const exeptions = ["Twitter", "Facebook", "Pinterest", "Instagram"];
-
-const ignoreExeptions = async (str) => {
-    const match = exeptions.find(el => str.includes(el))
-    const interpolated = str.replace(match, `<span no-translate="${match}">${match}</span>`);
+const ignoreExeptions = async (str, exeptions) => {
+    const interpolated = interpolateExeptions(str, exeptions);
     const translation = await translateStr(interpolated, 'ru');
-    // const [translation] = await translateApi.translate(interpolated, 'ru');
-
-    const $ = cheerio.load(translation, {
-        decodeEntities: true
-    }, false);
-    
-    $('[no-translate]').each((_, item) => {
-        $(item).replaceWith($(item).attr('no-translate'));
-    })
-
-    console.log($.html());
-    return $.html();
+    console.log(deinterpolateExeptions(translation));
+    return deinterpolateExeptions(translation);
 }
 
-ignoreExeptions("Tweet on Twitter");
+ignoreExeptions("Tweet on Twitter", exeptionsArr);
+// console.log(deinterpolateExeptions("Tweet on <span no-translate=\"Twitter\">Twitter</span>"));
 
 // const translateStr = async (strArr) => {
 //     const langs = ['ru'];
@@ -61,6 +50,5 @@ ignoreExeptions("Tweet on Twitter");
 // }
 
 module.exports = {
-    exeptions,
     ignoreExeptions
 }

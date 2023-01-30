@@ -93,6 +93,22 @@ const deinterpolate = (str) => {
     return $.html();
 }
 
+const interpolateExeptions = (str, exeptions) => {
+    const match = exeptions.find(el => str.includes(el));
+    return str.replace(match, `<span no-translate="${match}">${match}</span>`);
+}
+
+const deinterpolateExeptions = (str) => {
+    const $ = cheerio.load(str, {
+        decodeEntities: true
+    }, false);
+    
+    $('[no-translate]').each((_, item) => {
+        $(item).replaceWith($(item).attr('no-translate'));
+    })
+
+    return $.html();
+}
 
 const getObjKeysArray = (obj, acc=[]) => {
     Object.keys(obj).map((key) => {
@@ -116,5 +132,7 @@ module.exports = {
     getObjKeysArray,
     deinterpolate,
     interpolate,
+    interpolateExeptions,
+    deinterpolateExeptions,
     translateStr
 }

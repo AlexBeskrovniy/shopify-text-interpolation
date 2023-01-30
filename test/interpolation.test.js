@@ -1,4 +1,5 @@
-const { interpolate, deinterpolate } = require('../helpers.js')
+const { interpolate, deinterpolate, interpolateExeptions, deinterpolateExeptions } = require('../helpers.js')
+const { exeptionsArr } = require('../exeptions.js');
 
 const cases = [
     [
@@ -39,6 +40,70 @@ const cases = [
     ]
 ]
 
+const casesForExeptions = [
+    [
+        "Twitter",
+        "<span no-translate=\"Twitter\">Twitter<\/span>"
+    ],
+    [
+        "Facebook",
+        "<span no-translate=\"Facebook\">Facebook<\/span>"
+    ],
+    [
+        "Pinterest",
+        "<span no-translate=\"Pinterest\">Pinterest<\/span>"
+    ],
+    [
+        "Instagram",
+        "<span no-translate=\"Instagram\">Instagram<\/span>"
+    ],
+    [
+        "Tumblr",
+        "<span no-translate=\"Tumblr\">Tumblr<\/span>"
+    ],
+    [
+        "Snapchat",
+        "<span no-translate=\"Snapchat\">Snapchat<\/span>"
+    ],
+    [
+        "YouTube",
+        "<span no-translate=\"YouTube\">YouTube<\/span>"
+    ],
+    [
+        "Vimeo",
+        "<span no-translate=\"Vimeo\">Vimeo<\/span>"
+    ],
+    [
+        "TikTok",
+        "<span no-translate=\"TikTok\">TikTok<\/span>"
+    ],
+    [
+        "Share on Facebook",
+        "Share on <span no-translate=\"Facebook\">Facebook<\/span>"
+    ],
+    [
+        "Tweet on Twitter",
+        "Tweet on <span no-translate=\"Twitter\">Twitter<\/span>"
+    ],
+    [
+        "Pin on Pinterest",
+        "Pin on <span no-translate=\"Pinterest\">Pinterest<\/span>"
+    ],
+    [
+        "Share by e-mail",
+        "Share by e-mail"
+    ],
+    [
+        "Share on Facebo",
+        "Share on Facebo"
+    ],
+    [
+        "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>"
+    ]
+
+]
+
 test('String interpolation', () => {
     cases.forEach((strCase) => {
         expect(interpolate(strCase[0])).toBe(strCase[1])
@@ -48,5 +113,17 @@ test('String interpolation', () => {
 test('String deinterpolation', () => {
     cases.forEach((strCase) => {
         expect(deinterpolate(strCase[1])).toBe(strCase[0])
+    })
+})
+
+test('Exeptions interpolation', () => {
+    casesForExeptions.forEach((strCase) => {
+        expect(interpolateExeptions(strCase[0], exeptionsArr)).toBe(strCase[1])
+    })
+})
+
+test('Exeptions deinterpolation', () => {
+    casesForExeptions.forEach((strCase) => {
+        expect(deinterpolateExeptions(strCase[1])).toBe(strCase[0])
     })
 })
