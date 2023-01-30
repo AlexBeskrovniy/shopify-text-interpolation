@@ -51,27 +51,30 @@ const compareObjectsMaps = (sourceMap, targetMap) => {
 }
 
 
-const translateByMap = async (valuesMap, obj) => {
+const translateByMap = async (valuesMap, obj, lang, exeptions) => {
     await Promise.all(Object.keys(valuesMap).map(async (key) => {
         const steps = key.split('.');
-        await translateBySteps(steps, obj);
+        await translateBySteps(steps, obj, lang, exeptions);
     }));
     return obj;
 }
-const translateBySteps = async (steps, obj) => {
+const translateBySteps = async (steps, obj, lang, exeptions) => {
     const step = steps.shift();
     if (typeof obj[step] === 'string') {
-        obj[step] = await translateStr(obj[step]);
+        const translatable = new Promise((res) => {
+            setTimeout(() => res(translateStr(obj[step], lang, exeptions)), 200)
+        })
+        obj[step] = await translatable;
         return;
     }
     if (typeof obj[step] === 'object') {
-        await translateBySteps(steps, obj[step]);
+        await translateBySteps(steps, obj[step], lang, exeptions);
     }
 }
-const translateStr = async (str, lang) => {
-    const interpolatedStr = interpolate(str);
+const translateStr = async (str, lang, exeptions) => {
+    const interpolatedStr = interpolateExeptions(interpolate(str), exeptions);
     const [translation] = await translateApi.translate(interpolatedStr, lang);
-    return deinterpolate(translation)
+    return deinterpolateExeptions(deinterpolate(translation));
 }
 const interpolate = (str) => {
     return str.replace(/(?<!\=\"){{\s*([\w]*)\s*}}/gm, (_, p) => {

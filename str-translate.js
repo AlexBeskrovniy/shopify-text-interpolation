@@ -13,41 +13,8 @@ const ignoreExeptions = async (str, exeptions) => {
     return deinterpolateExeptions(translation);
 }
 
-ignoreExeptions("Tweet on Twitter", exeptionsArr);
-// console.log(deinterpolateExeptions("Tweet on <span no-translate=\"Twitter\">Twitter</span>"));
-
-// const translateStr = async (strArr) => {
-//     const langs = ['ru'];
-//     const arr = [];
-//     await Promise.all(langs.map(lang => strArr.map(async str => {
-//         const [translation] = await translateApi.translate(str, lang);
-//         // arr.push(`${lang} - ${str} - ${translation}`);
-//         console.log(`${lang} - ${str} - ${translation}`);
-//     })));
-    
-//     arr.map(p => {
-//         console.log(p)
-//     });
-// }
-
-// translateStr([
-    // "Twitter",
-	// "Facebook",
-	// "Pinterest",
-	// "Instagram",
-	// "Tumblr",
-	// "Snapchat",
-	// "YouTube",
-	// "Vimeo",
-	// "TikTok",
-    // "Share on Facebook",
-//     "Tweet on <span translate='no'>Twitter</span>"
-// ]);
-
-// const test_test = {
-//     case: "Tweet on Twitter",
-//     expect: "Твитнуть в Twitter"
-// }
+// ignoreExeptions("The highest price is 100", exeptionsArr);
+const res = translateStr("The highest price is 100", 'ru', exeptionsArr);
 
 module.exports = {
     ignoreExeptions
