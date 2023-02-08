@@ -22,8 +22,9 @@ const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
 }
 
 
-const mergeObjectsValues = (keyMap, locale, source) => {  
+const optimizeSource = (keyMap, locale, source, exeptionsMap) => {  
     return Object.keys(keyMap).reduce((acc, keyPath) => {
+        if (exeptionsMap[keyPath]) return acc;
         const steps = keyPath.split('.');
         return mergeBySteps(steps, locale, acc);
     }, JSON.parse(JSON.stringify(source)))
@@ -41,7 +42,7 @@ const mergeBySteps = (steps, locale, acc) => {
 }
 
 
-const compareObjectsMaps = (sourceMap, targetMap) => {
+const getNewKeysByMap = (sourceMap, targetMap) => {
     return Object.entries(sourceMap).reduce((acc, [keyMap, val]) => {
         if (!Object.keys(targetMap).includes(keyMap)) {
             acc[keyMap] = val;
@@ -129,8 +130,8 @@ const getObjKeysArray = (obj, acc=[]) => {
 module.exports = {
     readAndParseJSON,
     getValuesMap,
-    mergeObjectsValues,
-    compareObjectsMaps,
+    optimizeSource,
+    getNewKeysByMap,
     translateByMap,
     getObjKeysArray,
     deinterpolate,

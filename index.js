@@ -64,17 +64,17 @@ const translateAllLocales = async () => {
 }
 translateAllLocales();
 
-// const start = async () => {
-//     const source = readAndParseJSON('./templates/in/en.json');
-//     const locale = readAndParseJSON('./templates/in/ru.json');
-//     const valuesMap = getValuesMap(source);
-//     const optimizedSourceLocale = mergeObjectsValues(valuesMap, locale, source);
-//     const diffValuesMap = compareObjectsMaps(getValuesMap(source), getValuesMap(locale));
-//     const translatedLocaleObject = await translateByMap(diffValuesMap, optimizedSourceLocale);
-//     // fs.unlinkSync(path.join(__dirname, './templates/out/updated-ru.json'));
-//     fs.writeFileSync(path.join(__dirname, './templates/out/updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
-// }
-// start();
+const start = async () => {
+    const source = readAndParseJSON('./templates/in/en.json');
+    const locale = readAndParseJSON('./templates/in/ru.json');
+    const valuesMap = getValuesMap(source);
+    const optimizedSourceLocale = mergeObjectsValues(valuesMap, locale, source);
+    const diffValuesMap = compareObjectsMaps(getValuesMap(source), getValuesMap(locale));
+    const translatedLocaleObject = await translateByMap(diffValuesMap, optimizedSourceLocale);
+    // fs.unlinkSync(path.join(__dirname, './templates/out/updated-ru.json'));
+    fs.writeFileSync(path.join(__dirname, './templates/out/updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
+}
+start();
 
 
 // const { getObjKeysArray } = require('./helpers.js')
