@@ -126,6 +126,13 @@ const getObjKeysArray = (obj, acc=[]) => {
     return acc;
 }
 
+const getChangedValuesByMap = (newMap, oldMap) => {
+    return Object.entries(newMap).reduce((acc, [keyMap, changedValue]) => {
+        if (oldMap[keyMap] && oldMap[keyMap] !== changedValue)
+        acc[keyMap] = changedValue
+        return acc
+    }, {})
+} 
 
 module.exports = {
     readAndParseJSON,
@@ -138,5 +145,6 @@ module.exports = {
     interpolate,
     interpolateExeptions,
     deinterpolateExeptions,
-    translateStr
+    translateStr,
+    getChangedValuesByMap
 }
