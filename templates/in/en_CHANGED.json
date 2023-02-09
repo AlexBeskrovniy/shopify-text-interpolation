@@ -1,0 +1,20 @@
+{
+    "general": {
+      "date_types": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds" 
+      },
+      "editor": {
+        "default_heading": "There is no content",
+        "default_text": "Will only be shown",
+        "browsing_history_message": "Note: This section",
+        "quick_view_message": "Note: Do not use it as stand alone product template.",
+        "quick_view_message_2": "Note: product template."
+      },
+      "browsing_history": {
+        "fallback": "You have no recently viewed items." 
+      }
+    }
+}
