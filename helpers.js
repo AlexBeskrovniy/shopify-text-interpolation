@@ -4,7 +4,7 @@ const path = require('path');
 const {Translate} = require('@google-cloud/translate').v2;
 const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 
-
+let translated = 0;
 const readAndParseJSON = (localePath) => { // NOTE: what if empty or doesn't exist?
     return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
 }
@@ -57,6 +57,7 @@ const translateByMap = async (valuesMap, obj, lang, exeptions) => {
         const steps = key.split('.');
         await translateBySteps(steps, obj, lang, exeptions);
     }));
+    console.log('translated:', translated);
     return obj;
 }
 const translateBySteps = async (steps, obj, lang, exeptions) => {
@@ -74,8 +75,10 @@ const translateBySteps = async (steps, obj, lang, exeptions) => {
 }
 const translateStr = async (str, lang, exeptions) => {
     const interpolatedStr = interpolateExeptions(interpolate(str), exeptions);
+    translated++;
     const [translation] = await translateApi.translate(interpolatedStr, lang);
     return deinterpolateExeptions(deinterpolate(translation));
+    // return deinterpolateExeptions(deinterpolate(interpolatedStr)); // NOTE: for tests
 }
 const interpolate = (str) => {
     return str.replace(/(?<!\=\"){{\s*([\w]*)\s*}}/gm, (_, p) => {
