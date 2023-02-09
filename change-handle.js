@@ -46,10 +46,15 @@ const diffsOnEn = Object.assign(newKeysMap, newValuesMap);
 
 const translateLocale = (localeName) => {
     const locale = readAndParseJSON(`./templates/locales/${localeName}`);
-    targetLang = localeName.split('.')[0];
+    const localeMap = getValuesMap(locale);
+    
+    const diffsOnLocale = getNewKeysByMap(newMap, localeMap);
+    const toTranslateMap = {...diffsOnLocale, ...diffsOnEn}; //NOTE: diffsOnLocale is extra
+    
     const optimizedNewSource = optimizeSource(oldMap, locale, newSource, diffsOnEn);
-    const diffValuesMap = getNewKeysByMap(newMap, getValuesMap(locale));
-    const translatedLocaleObject = await translateByMap({...diffValuesMap, ...diffsOnEn}, optimizedNewSource, 'ru', exeptionsArr);
+    targetLang = localeName.split('.')[0];
+
+    const translatedLocaleObject = await translateByMap(toTranslateMap, optimizedNewSource, targetLang, exeptionsArr);
     fs.unlinkSync(path.join(__dirname, './templates/out/updated-ru.json'));
     fs.writeFileSync(path.join(__dirname, './templates/out/updated-ru.json'), JSON.stringify(translatedLocaleObject, null, '\t'));
 }
