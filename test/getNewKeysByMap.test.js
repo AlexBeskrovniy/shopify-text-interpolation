@@ -1,4 +1,4 @@
-const { compareObjectsMaps } = require('../helpers.js');
+const { getNewKeysByMap } = require('../helpers.js');
 
 const cases = [
     {   
@@ -108,6 +108,6 @@ const cases = [
 
 cases.forEach(({ caseName, inValue, outValue }) => {
     test(caseName, () => {
-        expect(compareObjectsMaps(inValue[0], inValue[1])).toStrictEqual(outValue)
+        expect(getNewKeysByMap(inValue[0], inValue[1])).toStrictEqual(outValue)
     })
 })
