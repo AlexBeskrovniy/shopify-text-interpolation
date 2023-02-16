@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config index.js",
-    "handle": "node -r dotenv/config change-handle.js",
+    "changes-test": "node -r dotenv/config change-handle-testing.js",
     "test": "jest ./test/"
   },
   "keywords": [],

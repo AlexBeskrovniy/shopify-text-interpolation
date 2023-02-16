@@ -7,12 +7,10 @@ const { shopify } = require('./shopify.js');
 const { exeptionsArr } = require('./exeptions.js');
 
 const {
-    readAndParseJSON,
     getValuesMap,
     optimizeSource,
-    compareObjectsMaps,
+    getNewKeysByMap,
     translateByMap,
-    translateStr
 } = require('./helpers.js')
 
 const translateAllLocales = async () => {
@@ -29,7 +27,7 @@ const translateAllLocales = async () => {
         const fileName = targetAsset.key.split('/')[1];
         
         const optimizedSourceLocale = optimizeSource(valuesMap, locale, source);
-        const diffValuesMap = compareObjectsMaps(getValuesMap(source), getValuesMap(locale));
+        const diffValuesMap = getNewKeysByMap(getValuesMap(source), getValuesMap(locale));
         const translatedLocaleObject = await translateByMap(diffValuesMap, optimizedSourceLocale, lang, exeptionsArr);
         fs.writeFileSync(path.join(__dirname, `./templates/out/${fileName}`), JSON.stringify(translatedLocaleObject, null, '\t'));
         console.log(`Done ${lang}`);
