@@ -1,0 +1,22 @@
+{
+	"general": {
+		"date_types": {
+			"days": "Giorni",
+			"hours": "Ore",
+			"minutes": "Minuti",
+			"seconds": "Secondi",
+			"facebook": "Facebook"
+		},
+		"editor": {
+			"default_heading": "Al momento non è presente alcun contenuto in questa sezione.",
+			"default_text": "Questo messaggio verrà visualizzato solo nell'editor del tema.",
+			"browsing_history_message": "Nota: questa sezione",
+			"quick_view_message": "Nota: non utilizzarlo come modello di prodotto autonomo.",
+			"quick_view_message_2": "Nota: modello di prodotto.",
+			"empty_fallback_collection_message": "Nota: la raccolta di fallback \"{{ title }}\" non ha prodotti."
+		},
+		"browsing_history": {
+			"fallback": "Non risultano prodotti visti di recente."
+		}
+	}
+}
