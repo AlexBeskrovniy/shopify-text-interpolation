@@ -10,12 +10,12 @@ const { Locale } = require('./models/locale.js');
 const app = express();
 app.use(express.json());
 
-const data = JSON.stringify(JSON.parse(fs.readFileSync(path.join(__dirname, 'ru.json'))));
+// const data = JSON.stringify(JSON.parse(fs.readFileSync(path.join(__dirname, 'ru.json'))));
 
-const body = {
-    lang: 'ru',
-    doc: data
-}
+// const body = {
+//     lang: 'ru',
+//     doc: data
+// }
 
 // app.get('/', async (req, res) => {
 //     try {
