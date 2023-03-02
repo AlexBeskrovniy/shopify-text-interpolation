@@ -1,47 +1,55 @@
 const fs = require('fs');
 const path = require('path');
 
-const { exeptionsArr } = require('./exeptions.js');
-
 const {
     readAndParseJSON,
     getValuesMap,
-    optimizeSource,
     getNewKeysByMap,
-    translateByMap,
     getChangedValuesByMap
 } = require('./helpers.js')
+const { updateLocale } = require('./helpers.js')
 
+//TEMP: use env
+// const localesPath = './templates/locales/'; 
+// const outPath = './templates/out/'; 
+const localesPath = './test/TestTemplates/locales/'; 
+const outPath = './test/TestTemplates/out/'; 
+const oldSourcePath = './test/TestTemplates/in/en.json';
+const newSourcePath = './test/TestTemplates/in/en_CHANGED.json';
 
-const oldSource  = readAndParseJSON('./templates/in/en.json');
-const newSource = readAndParseJSON('./templates/in/en_CHANGED.json');
+const getSourceState = () => {
+    const oldSource = readAndParseJSON(oldSourcePath);
+    const newSource = readAndParseJSON(newSourcePath);
 
-const oldMap = getValuesMap(oldSource);
-const newMap = getValuesMap(newSource);
-
-const newValuesMap = getChangedValuesByMap(newMap, oldMap);
-const newKeysMap = getNewKeysByMap(oldMap, newMap);
-
-const diffsOnEn = Object.assign(newKeysMap, newValuesMap);  
-
-const translateLocale = async (localeName) => {
-    const locale = readAndParseJSON(`./templates/locales/${localeName}`);
-    const localeMap = getValuesMap(locale);
+    const oldSourceMap = getValuesMap(oldSource);
+    const newSourceMap = getValuesMap(newSource);
     
-    const diffsOnLocale = getNewKeysByMap(newMap, localeMap);
-    const toTranslateMap = {...diffsOnLocale, ...diffsOnEn};
-    console.log(toTranslateMap);
-    const optimizedNewSource = optimizeSource(oldMap, locale, newSource, diffsOnEn);
-    targetLang = localeName.split('.')[0];
-
-    const translatedLocaleObject = await translateByMap(toTranslateMap, optimizedNewSource, targetLang, exeptionsArr);
-    // fs.unlinkSync(path.join(__dirname, `./templates/out/${localeName}`));
-    fs.writeFileSync(path.join(__dirname, `./templates/out/${localeName}`), JSON.stringify(translatedLocaleObject, null, '\t'));
+    const changedValues = getChangedValuesByMap(newSourceMap, oldSourceMap);
+    const newKeysMap = getNewKeysByMap(oldSourceMap, newSourceMap);
+    const diffsOnSources = Object.assign(newKeysMap, changedValues);
+    
+    return { newSource, oldSourceMap, newSourceMap, diffsOnSources };
 }
 
-const translateLocalesFiles = () => {
-    fs.readdirSync('./templates/locales/')
-        .filter(name => !name.includes('default'))
-        .forEach(translateLocale);
+
+const getLocaleJSON = (name) => readAndParseJSON(`${localesPath}${name}`);
+const getLocaleNames = () => fs.readdirSync(localesPath).filter(name => !name.includes('default'));
+const getLocaleLang = (name) => name.split('.')[0];
+
+const rewriteLocaleFiles = (updatedLocales) => {
+    updatedLocales.map(({ localeName, updatedLocaleObject }) => {
+        const outFilePath = path.join(__dirname, `${outPath}${localeName}`);
+        fs.existsSync(outFilePath) && fs.unlinkSync(outFilePath);
+        fs.writeFileSync(outFilePath), JSON.stringify(updatedLocaleObject, null, '\t');
+    })
 }
-translateLocalesFiles()
+
+const translateLocalesFiles = async () => {
+    const localeNames = getLocaleNames()
+    const updatedLocales = await Promise.all(localeNames.map(async (name) => {
+        return await updateLocale(getLocaleJSON(name), getLocaleLang(name), getSourceState())
+    }))
+    rewriteLocaleFiles(updatedLocales);
+}
+
+translateLocalesFiles();
