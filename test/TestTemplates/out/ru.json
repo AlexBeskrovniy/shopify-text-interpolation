@@ -1,0 +1,22 @@
+{
+	"general": {
+		"date_types": {
+			"days": "Дни",
+			"hours": "Часы",
+			"minutes": "Минуты",
+			"seconds": "Секунды",
+			"facebook": "Откройте мой Facebook"
+		},
+		"editor": {
+			"default_heading": "В этом разделе сейчас нет контента.",
+			"default_text": "Это сообщение будет отображаться только в редакторе темы.",
+			"browsing_history_message": "Примечание: этот раздел",
+			"quick_view_message": "Примечание. Не используйте его как отдельный шаблон продукта.",
+			"quick_view_message_2": "Примечание: шаблон продукта.",
+			"empty_fallback_collection_message": "Примечание. В резервной коллекции \"{{ title }}\" нет продуктов."
+		},
+		"browsing_history": {
+			"fallback": "У Вас нет недавно просмотренных пунктов."
+		}
+	}
+}

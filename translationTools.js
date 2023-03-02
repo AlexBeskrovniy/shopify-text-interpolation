@@ -1,5 +1,4 @@
 const {
-    readAndParseJSON,
     getValuesMap,
     optimizeSource,
     getNewKeysByMap,
@@ -7,7 +6,7 @@ const {
 } = require('./helpers.js')
 const { exeptionsArr } = require('./exeptions.js');
 
-const updateLocale = async (locale, targetLang, sourceState) => {
+const updateLocale = async (localeName, locale, targetLang, sourceState) => {
     const { newSource, oldSourceMap, newSourceMap, diffsOnSources } = sourceState;
     const localeMap = getValuesMap(locale);
     const diffsOnLocale = getNewKeysByMap(newSourceMap, localeMap);

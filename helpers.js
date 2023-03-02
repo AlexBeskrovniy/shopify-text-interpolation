@@ -1,3 +1,4 @@
+require('dotenv').config()
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
@@ -133,7 +134,20 @@ const getChangedValuesByMap = (newMap, oldMap) => {
         acc[keyMap] = changedValue
         return acc
     }, {})
-} 
+}
+
+const getLocaleJSON = (name) => readAndParseJSON(`${process.env.LOCALES_PATH}${name}`);
+const getLocaleNames = () => fs.readdirSync(process.env.LOCALES_PATH).filter(name => !name.includes('default'));
+const getLocaleLang = (name) => name.split('.')[0];
+
+const rewriteLocaleFiles = (updatedLocales) => {
+    updatedLocales.map(({ localeName, updatedLocaleObject }) => {
+        const outFilePath = path.join(__dirname, `${process.env.OUT_PATH}${localeName}`);
+        console.log('outFilePath', outFilePath);
+        fs.existsSync(outFilePath) && fs.unlinkSync(outFilePath);
+        fs.writeFileSync(outFilePath, JSON.stringify(updatedLocaleObject, null, '\t'));
+    })
+}
 
 module.exports = {
     readAndParseJSON,
@@ -147,5 +161,9 @@ module.exports = {
     interpolateExeptions,
     deinterpolateExeptions,
     translateStr,
-    getChangedValuesByMap
+    getChangedValuesByMap,
+    getLocaleJSON,
+    getLocaleNames,
+    getLocaleLang,
+    rewriteLocaleFiles
 }
