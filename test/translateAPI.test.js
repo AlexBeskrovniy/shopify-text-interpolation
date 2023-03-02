@@ -24,12 +24,8 @@ const translatedINTRPLStrings = [
 ]
 
 
-
 test('Translate-INTRPL-strings', () => {
     INTRPLStrings.map((strCase, i) => {
-        // return translateStr(strCase, 'ru', exeptionsArr).then( data => {
-        //     expect(data).toBe(translatedINTRPLStrings[i])
-        // } )
         translateStr(strCase, 'ru', exeptionsArr).then(data => expect(data).toBe(translatedINTRPLStrings[i]))
     })
 })
