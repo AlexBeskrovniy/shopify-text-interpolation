@@ -33,4 +33,4 @@ const translateAllLocales = async () => {
         console.log(`Done ${lang}`);
     });
 }
-// translateAllLocales();
+translateAllLocales();

@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node -r dotenv/config index.js",
     "changes-test": "node -r dotenv/config change-handle-testing.js",
-    "save": "node save-locales.js",
-    "test": "jest ./test/"
+    "test": "jest ./test/",
+    "sync-locales": "node -r dotenv/config localesSync.js"
   },
   "keywords": [],
   "author": "",

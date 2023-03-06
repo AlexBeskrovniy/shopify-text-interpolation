@@ -27,8 +27,6 @@ const getAllLocales = async () => {
             return acc;
         }, {});
 
-        dbDisconnect();
-
         return localesObjects;
     } catch(err) {
         console.error(err)

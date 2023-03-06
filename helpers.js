@@ -1,3 +1,4 @@
+require('dotenv').config()
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
@@ -7,7 +8,7 @@ const translateApi = new Translate({key: process.env.GOOGLE_API_KEY });
 const readAndParseJSON = (localePath) => { // NOTE: what if empty or doesn't exist?
     return JSON.parse(fs.readFileSync(path.join(__dirname, localePath)))
 }
-
+let counter = {};
 
 const getValuesMap = (obj, mapPath = '', mapAcc = {}) => {
     if(typeof obj === 'string') {
@@ -56,6 +57,7 @@ const translateByMap = async (valuesMap, obj, lang, exeptions) => {
         const steps = key.split('.');
         await translateBySteps(steps, obj, lang, exeptions);
     }));
+    console.log(lang, counter.lang);
     return obj;
 }
 const translateBySteps = async (steps, obj, lang, exeptions) => {
@@ -73,7 +75,8 @@ const translateBySteps = async (steps, obj, lang, exeptions) => {
 }
 const translateStr = async (str, lang, exeptions) => {
     const interpolatedStr = interpolateExeptions(interpolate(str), exeptions);
-
+    counter.lang = counter.lang ? counter.lang + 1 : 1;
+    console.log();
     const [translation] = await translateApi.translate(interpolatedStr, lang);
     return deinterpolateExeptions(deinterpolate(translation));
     // return deinterpolateExeptions(deinterpolate(interpolatedStr)); // NOTE: for tests
@@ -133,7 +136,18 @@ const getChangedValuesByMap = (newMap, oldMap) => {
         acc[keyMap] = changedValue
         return acc
     }, {})
-} 
+}
+
+const getLocaleJSON = (name) => readAndParseJSON(`${process.env.LOCALES_PATH}${name}`);
+const getLocaleFileNames = () => fs.readdirSync(process.env.LOCALES_PATH).filter(name => !name.includes('default'));
+const getLocaleLang = (name) => name.split('.')[0];
+
+const writeOutFile = ({ fileName, updatedLocaleObject }) => {
+    const outFilePath = path.join(__dirname, `${process.env.OUT_PATH}${fileName}`);
+    fs.existsSync(outFilePath) && fs.unlinkSync(outFilePath);
+    fs.writeFileSync(outFilePath, JSON.stringify(updatedLocaleObject, null, '\t'));
+    
+}
 
 module.exports = {
     readAndParseJSON,
@@ -147,5 +161,9 @@ module.exports = {
     interpolateExeptions,
     deinterpolateExeptions,
     translateStr,
-    getChangedValuesByMap
+    getChangedValuesByMap,
+    getLocaleJSON,
+    getLocaleFileNames,
+    getLocaleLang,
+    writeOutFile
 }
