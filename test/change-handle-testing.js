@@ -1,17 +1,14 @@
-// const fs = require('fs');
-// const path = require('path');
-
 const {
     readAndParseJSON,
     getValuesMap,
     getNewKeysByMap,
     getChangedValuesByMap,
     getLocaleJSON,
-    getLocaleNames,
+    getLocaleFileNames,
     getLocaleLang,
     rewriteLocaleFiles
-} = require('./helpers.js')
-const { updateLocale } = require('./translationTools.js')
+} = require('../helpers.js')
+const { updateLocale } = require('../translationTools.js')
 
 //TEMP: use env
 const oldSourcePath = './test/TestTemplates/in/en.json';
@@ -33,7 +30,7 @@ const getSourceState = () => {
 
 
 const translateLocalesFiles = async () => {
-    const localeNames = getLocaleNames()
+    const localeNames = getLocaleFileNames()
     const updatedLocales = await Promise.all(localeNames.map(async (name) => {
         return await updateLocale(name, getLocaleJSON(name), getLocaleLang(name), getSourceState())
     }))

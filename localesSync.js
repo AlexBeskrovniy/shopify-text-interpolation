@@ -1,7 +1,5 @@
-// const fs = require('fs');
-// const path = require('path');
-const { Locale } = require('./db/models/locale.js');
-const { dbDisconnect } = require('./db/connect.js');
+const { Locale } = require('.APIs/db/models/locale.js');
+const { dbDisconnect } = require('.APIs/db/connect.js');
 
 const {
     readAndParseJSON,
@@ -12,7 +10,7 @@ const {
 } = require('./helpers.js')
 const { updateLocale } = require('./translationTools.js');
 const { getAllLocales } = require('./db/methods.js');
-const { shopify } = require('./shopify.js');
+const { shopify } = require('./APIs/shopify.js');
 
 
 const getSourceState = (oldSource, newSource) => {
@@ -32,14 +30,6 @@ const getLocalesData = (locales) => {
             acc.oldSource = locale;
             return acc
         };
-        // if (lang === 'ru') {
-        //     acc.locales.push({
-        //         fileName: `${lang}.json`,
-        //         locale: locale,
-        //         lang: lang
-        //     })
-            
-        // }
         acc.locales.push({
             fileName: `${lang}.json`,
             locale: locale,

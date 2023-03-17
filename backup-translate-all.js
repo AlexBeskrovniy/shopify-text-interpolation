@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { shopify } = require('./shopify.js');
+const { shopify } = require('./APIs/shopify.js');
 
 const { exeptionsArr } = require('./exeptions.js');
 
@@ -34,3 +34,5 @@ const translateAllLocales = async () => {
     });
 }
 translateAllLocales();
+
+//need refactoring and testing
