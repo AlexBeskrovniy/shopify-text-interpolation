@@ -139,6 +139,11 @@
 		"blog_title": "Příklad názvu blogu"
 	},
 	"products": {
+		"total_price": "Celková cena:",
+		"select": "Vybrat",
+		"selected": "Vybraný",
+		"currently_viewing": "Aktuálně zobrazeno",
+		"add_count_items_to_cart_html": "Přidejte <span data-i18n-amount=\"\">{{ amount }}</span> položek do košíku",
 		"product": {
 			"add_to_cart": "Přidat do košíku",
 			"express_add_to_cart": "Přidat",

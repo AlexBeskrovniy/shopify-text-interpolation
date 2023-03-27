@@ -139,6 +139,11 @@
 		"blog_title": "Przykładowy tytuł bloga"
 	},
 	"products": {
+		"total_price": "Cena całkowita:",
+		"select": "Wybierać",
+		"selected": "Wybrany",
+		"currently_viewing": "Aktualnie oglądam",
+		"add_count_items_to_cart_html": "Dodaj <span data-i18n-amount=\"\">{{ amount }}</span> przedmiotów do koszyka",
 		"product": {
 			"add_to_cart": "Dodaj do koszyka",
 			"express_add_to_cart": "Dodać",

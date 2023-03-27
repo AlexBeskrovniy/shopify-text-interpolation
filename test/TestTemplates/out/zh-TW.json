@@ -139,6 +139,11 @@
 		"blog_title": "示例博客標題"
 	},
 	"products": {
+		"total_price": "總價：",
+		"select": "選擇",
+		"selected": "已選",
+		"currently_viewing": "當前正在查看",
+		"add_count_items_to_cart_html": "將<span data-i18n-amount=\"\">{{ amount }}</span>項目添加到購物車",
 		"product": {
 			"add_to_cart": "添加到購物車",
 			"express_add_to_cart": "添加",

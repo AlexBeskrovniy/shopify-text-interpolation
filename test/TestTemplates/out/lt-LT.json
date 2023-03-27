@@ -139,6 +139,11 @@
 		"blog_title": "Tinklaraščio pavadinimo pavyzdys"
 	},
 	"products": {
+		"total_price": "Bendra kaina:",
+		"select": "Pasirinkite",
+		"selected": "Pasirinkta",
+		"currently_viewing": "Šiuo metu žiūrima",
+		"add_count_items_to_cart_html": "Pridėkite prekių <span data-i18n-amount=\"\">{{ amount }}</span> į krepšelį",
 		"product": {
 			"add_to_cart": "Į krepšelį",
 			"express_add_to_cart": "Papildyti",

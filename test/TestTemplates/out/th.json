@@ -139,6 +139,11 @@
 		"blog_title": "ตัวอย่างชื่อบล็อก"
 	},
 	"products": {
+		"total_price": "ราคารวม:",
+		"select": "เลือก",
+		"selected": "เลือกแล้ว",
+		"currently_viewing": "กำลังดูอยู่",
+		"add_count_items_to_cart_html": "เพิ่ม <span data-i18n-amount=\"\">{{ amount }}</span> รายการในรถเข็น",
 		"product": {
 			"add_to_cart": "หยิบใส่ตะกร้า",
 			"express_add_to_cart": "เพิ่ม",

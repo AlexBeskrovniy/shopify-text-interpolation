@@ -139,6 +139,11 @@
 		"blog_title": "Primer naslova bloga"
 	},
 	"products": {
+		"total_price": "Skupna cena:",
+		"select": "Izberite",
+		"selected": "Izbrano",
+		"currently_viewing": "Trenutno gledam",
+		"add_count_items_to_cart_html": "Dodajte <span data-i18n-amount=\"\">{{ amount }}</span> artiklov v košarico",
 		"product": {
 			"add_to_cart": "Dodaj v voziček",
 			"express_add_to_cart": "Dodaj",

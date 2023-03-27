@@ -139,6 +139,11 @@
 		"blog_title": "Primjer naslova bloga"
 	},
 	"products": {
+		"total_price": "Ukupna cijena:",
+		"select": "Izaberi",
+		"selected": "Odabran",
+		"currently_viewing": "Trenutno gledam",
+		"add_count_items_to_cart_html": "Dodajte <span data-i18n-amount=\"\">{{ amount }}</span> artikala u košaricu",
 		"product": {
 			"add_to_cart": "Dodaj u košaricu",
 			"express_add_to_cart": "Dodati",

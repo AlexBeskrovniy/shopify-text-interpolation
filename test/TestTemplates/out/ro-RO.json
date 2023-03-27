@@ -139,6 +139,11 @@
 		"blog_title": "Exemplu de titlu de blog"
 	},
 	"products": {
+		"total_price": "Pretul total:",
+		"select": "Selectați",
+		"selected": "Selectat",
+		"currently_viewing": "Vizualizare în prezent",
+		"add_count_items_to_cart_html": "Adăugați <span data-i18n-amount=\"\">{{ amount }}</span> de articole în coș",
 		"product": {
 			"add_to_cart": "Adaugă in coş",
 			"express_add_to_cart": "Adăuga",

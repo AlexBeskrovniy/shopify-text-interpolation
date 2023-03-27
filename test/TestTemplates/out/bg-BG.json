@@ -139,6 +139,11 @@
 		"blog_title": "Примерно заглавие на блог"
 	},
 	"products": {
+		"total_price": "Обща цена:",
+		"select": "Изберете",
+		"selected": "Избрано",
+		"currently_viewing": "В момента гледам",
+		"add_count_items_to_cart_html": "Добавяне на <span data-i18n-amount=\"\">{{ amount }}</span> артикули в количката",
 		"product": {
 			"add_to_cart": "Добави в кошницата",
 			"express_add_to_cart": "Добавете",
