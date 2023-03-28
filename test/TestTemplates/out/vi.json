@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "của",
-			"next_slide": "Trượt sang phải",
-			"previous_slide": "Trượt sang trái"
-		}
+			"next_slide": "Đi đến slide tiếp theo",
+			"previous_slide": "Chuyển đến trang trình bày trước"
+		},
+		"breadcrumbs": "điều hướng đường dẫn"
 	},
 	"newsletter": {
 		"label": "E-mail",
@@ -139,6 +140,11 @@
 		"blog_title": "Tiêu đề blog ví dụ"
 	},
 	"products": {
+		"total_price": "Tổng giá:",
+		"select": "Lựa chọn",
+		"selected": "Đã chọn",
+		"currently_viewing": "đang xem",
+		"add_count_items_to_cart_html": "Thêm <span data-i18n-amount=\"\">{{ amount }}</span> mặt hàng vào giỏ hàng",
 		"product": {
 			"add_to_cart": "Thêm vào giỏ hàng",
 			"express_add_to_cart": "Thêm vào",

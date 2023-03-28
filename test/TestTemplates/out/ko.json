@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "의",
-			"next_slide": "오른쪽으로 슬라이드",
-			"previous_slide": "왼쪽으로 슬라이드"
-		}
+			"next_slide": "다음 슬라이드로 이동",
+			"previous_slide": "이전 슬라이드로 이동"
+		},
+		"breadcrumbs": "이동 경로 탐색"
 	},
 	"newsletter": {
 		"label": "이메일",
@@ -139,6 +140,11 @@
 		"blog_title": "블로그 제목 예"
 	},
 	"products": {
+		"total_price": "총 가격:",
+		"select": "선택하다",
+		"selected": "선택된",
+		"currently_viewing": "현재 보고 있는",
+		"add_count_items_to_cart_html": "장바구니에 <span data-i18n-amount=\"\">{{ amount }}</span> 항목 추가",
 		"product": {
 			"add_to_cart": "장바구니에 담기",
 			"express_add_to_cart": "추가하다",

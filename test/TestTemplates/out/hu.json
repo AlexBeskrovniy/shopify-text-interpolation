@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "nak,-nek",
-			"next_slide": "Csúsztassa jobbra",
-			"previous_slide": "Csúsztassa balra"
-		}
+			"next_slide": "Ugrás a következő diára",
+			"previous_slide": "Ugrás az előző diára"
+		},
+		"breadcrumbs": "kenyérmorzsa navigáció"
 	},
 	"newsletter": {
 		"label": "Email",
@@ -139,6 +140,11 @@
 		"blog_title": "Példa a blog címére"
 	},
 	"products": {
+		"total_price": "Teljes ár:",
+		"select": "Válassza ki",
+		"selected": "Kiválasztott",
+		"currently_viewing": "Jelenleg megtekintés alatt",
+		"add_count_items_to_cart_html": "Tedd a kosárba <span data-i18n-amount=\"\">{{ amount }}</span>",
 		"product": {
 			"add_to_cart": "Kosárba",
 			"express_add_to_cart": "Hozzáadás",

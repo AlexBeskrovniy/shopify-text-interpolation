@@ -1,6 +1,8 @@
-const { Locale } = require('.APIs/db/models/locale.js');
-const { dbDisconnect } = require('.APIs/db/connect.js');
-
+const { Locale } = require('./APIs/db/models/locale.js');
+const { dbDisconnect } = require('./APIs/db/connect.js');
+const { updateLocale } = require('./translationTools.js');
+const { getAllLocales } = require('./APIs/db/methods.js');
+const { shopify } = require('./APIs/shopify.js');
 const {
     readAndParseJSON,
     getValuesMap,
@@ -8,9 +10,6 @@ const {
     getChangedValuesByMap,
     writeOutFile
 } = require('./helpers.js')
-const { updateLocale } = require('./translationTools.js');
-const { getAllLocales } = require('./db/methods.js');
-const { shopify } = require('./APIs/shopify.js');
 
 
 const getSourceState = (oldSource, newSource) => {
@@ -60,8 +59,8 @@ const translateLocales = async () => {
     }));
     writeOutFile({fileName: 'en.json', updatedLocaleObject: newSource});
     updatedLocales.map(writeOutFile);
-    // await Promise.all(updatedLocales.map(updateLocaleDB));
-    // await updateLocaleDB({fileName: 'en.json'});
+    await Promise.all(updatedLocales.map(updateLocaleDB));
+    await updateLocaleDB({fileName: 'en.json'});
     dbDisconnect();
 }
 

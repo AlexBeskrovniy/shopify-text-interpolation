@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "dari",
-			"next_slide": "Geser ke kanan",
-			"previous_slide": "Geser ke kiri"
-		}
+			"next_slide": "Ke slide berikutnya",
+			"previous_slide": "Ke slide sebelumnya"
+		},
+		"breadcrumbs": "navigasi remah roti"
 	},
 	"newsletter": {
 		"label": "Surel",
@@ -139,6 +140,11 @@
 		"blog_title": "Contoh judul blog"
 	},
 	"products": {
+		"total_price": "Total harga:",
+		"select": "Pilih",
+		"selected": "Terpilih",
+		"currently_viewing": "Sedang melihat",
+		"add_count_items_to_cart_html": "Tambahkan <span data-i18n-amount=\"\">{{ amount }}</span> item ke troli",
 		"product": {
 			"add_to_cart": "Masukkan ke keranjang",
 			"express_add_to_cart": "Menambahkan",

@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "de",
-			"next_slide": "Deslizar a la derecha",
-			"previous_slide": "Deslizar hacia la izquierda"
-		}
+			"next_slide": "Ir a la siguiente diapositiva",
+			"previous_slide": "Ir a la diapositiva anterior"
+		},
+		"breadcrumbs": "navegación de migas de pan"
 	},
 	"newsletter": {
 		"label": "Correo electrónico",
@@ -139,6 +140,11 @@
 		"blog_title": "Ejemplo de título de blog"
 	},
 	"products": {
+		"total_price": "Precio total:",
+		"select": "Seleccionar",
+		"selected": "Seleccionado",
+		"currently_viewing": "Viendo actualmente",
+		"add_count_items_to_cart_html": "Agregar <span data-i18n-amount=\"\">{{ amount }}</span> de artículos al carrito",
 		"product": {
 			"add_to_cart": "Añadir a la cesta",
 			"express_add_to_cart": "Agregar",

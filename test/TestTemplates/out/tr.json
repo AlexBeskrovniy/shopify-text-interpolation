@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "ile ilgili",
-			"next_slide": "Sağa kaydır",
-			"previous_slide": "Sola kaydır"
-		}
+			"next_slide": "Sonraki slayta git",
+			"previous_slide": "Önceki slayda git"
+		},
+		"breadcrumbs": "ekmek kırıntısı navigasyonu"
 	},
 	"newsletter": {
 		"label": "E-posta",
@@ -139,6 +140,11 @@
 		"blog_title": "Örnek blog başlığı"
 	},
 	"products": {
+		"total_price": "Toplam fiyat:",
+		"select": "Seçme",
+		"selected": "Seçildi",
+		"currently_viewing": "Şu anda görüntüleniyor",
+		"add_count_items_to_cart_html": "Sepete <span data-i18n-amount=\"\">{{ amount }}</span> ürün ekle",
 		"product": {
 			"add_to_cart": "Sepete ekle",
 			"express_add_to_cart": "Eklemek",

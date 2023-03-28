@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "av",
-			"next_slide": "Skyv til høyre",
-			"previous_slide": "Skyv til venstre"
-		}
+			"next_slide": "Gå til neste lysbilde",
+			"previous_slide": "Gå til forrige lysbilde"
+		},
+		"breadcrumbs": "navigering med brødsmuler"
 	},
 	"newsletter": {
 		"label": "E-post",
@@ -139,6 +140,11 @@
 		"blog_title": "Eksempel på bloggtittel"
 	},
 	"products": {
+		"total_price": "Totalpris:",
+		"select": "Plukke ut",
+		"selected": "Valgt",
+		"currently_viewing": "Viser for øyeblikket",
+		"add_count_items_to_cart_html": "Legg <span data-i18n-amount=\"\">{{ amount }}</span> varer i handlekurven",
 		"product": {
 			"add_to_cart": "Legg i handlekurv",
 			"express_add_to_cart": "Legge til",

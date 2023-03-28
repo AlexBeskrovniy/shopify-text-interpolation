@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "di",
-			"next_slide": "Scorri verso destra",
-			"previous_slide": "Scorri verso sinistra"
-		}
+			"next_slide": "Vai alla diapositiva successiva",
+			"previous_slide": "Vai alla diapositiva precedente"
+		},
+		"breadcrumbs": "navigazione breadcrumb"
 	},
 	"newsletter": {
 		"label": "E-mail",
@@ -139,6 +140,11 @@
 		"blog_title": "Esempio di titolo del blog"
 	},
 	"products": {
+		"total_price": "Prezzo totale:",
+		"select": "Selezionare",
+		"selected": "Selezionato",
+		"currently_viewing": "Attualmente in visione",
+		"add_count_items_to_cart_html": "Aggiungi <span data-i18n-amount=\"\">{{ amount }}</span> di articoli al carrello",
 		"product": {
 			"add_to_cart": "Aggiungi al carrello",
 			"express_add_to_cart": "Aggiungere",

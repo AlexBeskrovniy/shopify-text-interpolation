@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "af",
-			"next_slide": "Skub til højre",
-			"previous_slide": "Skub til venstre"
-		}
+			"next_slide": "Gå til næste dias",
+			"previous_slide": "Gå til forrige dias"
+		},
+		"breadcrumbs": "brødkrumme navigation"
 	},
 	"newsletter": {
 		"label": "E-mail",
@@ -139,6 +140,11 @@
 		"blog_title": "Eksempel på blogtitel"
 	},
 	"products": {
+		"total_price": "Total pris:",
+		"select": "Vælg",
+		"selected": "Valgte",
+		"currently_viewing": "Ser i øjeblikket",
+		"add_count_items_to_cart_html": "Læg <span data-i18n-amount=\"\">{{ amount }}</span> varer til indkøbskurven",
 		"product": {
 			"add_to_cart": "Tilføj til kurv",
 			"express_add_to_cart": "Tilføje",

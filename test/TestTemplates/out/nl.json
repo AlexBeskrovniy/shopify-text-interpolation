@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "van",
-			"next_slide": "Schuif naar rechts",
-			"previous_slide": "Schuif naar links"
-		}
+			"next_slide": "Ga naar de volgende dia",
+			"previous_slide": "Ga naar de vorige dia"
+		},
+		"breadcrumbs": "broodkruimel navigatie"
 	},
 	"newsletter": {
 		"label": "E-mail",
@@ -139,6 +140,11 @@
 		"blog_title": "Voorbeeld blogtitel"
 	},
 	"products": {
+		"total_price": "Totale prijs:",
+		"select": "Selecteer",
+		"selected": "Geselecteerd",
+		"currently_viewing": "Momenteel aan het bekijken",
+		"add_count_items_to_cart_html": "<span data-i18n-amount=\"\">{{ amount }}</span> items toevoegen aan winkelwagen",
 		"product": {
 			"add_to_cart": "Voeg toe aan winkelkar",
 			"express_add_to_cart": "Toevoegen",
