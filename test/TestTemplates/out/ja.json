@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "の",
-			"next_slide": "右にスライド",
-			"previous_slide": "左にスライド"
-		}
+			"next_slide": "次のスライドに移動",
+			"previous_slide": "前のスライドに移動"
+		},
+		"breadcrumbs": "ブレッドクラム ナビゲーション"
 	},
 	"newsletter": {
 		"label": "Eメール",

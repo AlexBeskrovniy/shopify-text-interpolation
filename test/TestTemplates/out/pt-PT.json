@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "de",
-			"next_slide": "Deslize para a direita",
-			"previous_slide": "Deslize para a esquerda"
-		}
+			"next_slide": "Ir para o próximo slide",
+			"previous_slide": "Ir para o slide anterior"
+		},
+		"breadcrumbs": "navegação em breadcrumb"
 	},
 	"newsletter": {
 		"label": "O email",

@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "de",
-			"next_slide": "Glisați spre dreapta",
-			"previous_slide": "Glisați spre stânga"
-		}
+			"next_slide": "Accesați diapozitivul următor",
+			"previous_slide": "Accesați diapozitivul anterior"
+		},
+		"breadcrumbs": "navigare prin breadcrumb"
 	},
 	"newsletter": {
 		"label": "E-mail",

@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "ของ",
-			"next_slide": "เลื่อนไปทางขวา",
-			"previous_slide": "เลื่อนไปทางซ้าย"
-		}
+			"next_slide": "ไปที่สไลด์ถัดไป",
+			"previous_slide": "ไปที่สไลด์ก่อนหน้า"
+		},
+		"breadcrumbs": "การนำทางเบรดครัมบ์"
 	},
 	"newsletter": {
 		"label": "อีเมล",

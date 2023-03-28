@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "di",
-			"next_slide": "Scorri verso destra",
-			"previous_slide": "Scorri verso sinistra"
-		}
+			"next_slide": "Vai alla diapositiva successiva",
+			"previous_slide": "Vai alla diapositiva precedente"
+		},
+		"breadcrumbs": "navigazione breadcrumb"
 	},
 	"newsletter": {
 		"label": "E-mail",

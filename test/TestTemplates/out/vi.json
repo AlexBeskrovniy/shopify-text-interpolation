@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "của",
-			"next_slide": "Trượt sang phải",
-			"previous_slide": "Trượt sang trái"
-		}
+			"next_slide": "Đi đến slide tiếp theo",
+			"previous_slide": "Chuyển đến trang trình bày trước"
+		},
+		"breadcrumbs": "điều hướng đường dẫn"
 	},
 	"newsletter": {
 		"label": "E-mail",

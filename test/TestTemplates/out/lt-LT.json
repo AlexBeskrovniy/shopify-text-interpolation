@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "apie",
-			"next_slide": "Slyskite į dešinę",
-			"previous_slide": "Slyskite į kairę"
-		}
+			"next_slide": "Eiti į kitą skaidrę",
+			"previous_slide": "Eiti į ankstesnę skaidrę"
+		},
+		"breadcrumbs": "naršymas"
 	},
 	"newsletter": {
 		"label": "El. paštas",

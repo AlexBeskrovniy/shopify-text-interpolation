@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "/",
-			"next_slide": "Liu'uta oikealle",
-			"previous_slide": "Liu'uta vasemmalle"
-		}
+			"next_slide": "Siirry seuraavaan diaan",
+			"previous_slide": "Siirry edelliseen diaan"
+		},
+		"breadcrumbs": "navigointipolku"
 	},
 	"newsletter": {
 		"label": "Sähköposti",

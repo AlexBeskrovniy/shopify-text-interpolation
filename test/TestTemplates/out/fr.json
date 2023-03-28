@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "de",
-			"next_slide": "Faites glisser vers la droite",
-			"previous_slide": "Faites glisser vers la gauche"
-		}
+			"next_slide": "Aller à la diapositive suivante",
+			"previous_slide": "Aller à la diapositive précédente"
+		},
+		"breadcrumbs": "fil d'Ariane"
 	},
 	"newsletter": {
 		"label": "E-mail",

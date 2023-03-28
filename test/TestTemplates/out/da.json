@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "af",
-			"next_slide": "Skub til højre",
-			"previous_slide": "Skub til venstre"
-		}
+			"next_slide": "Gå til næste dias",
+			"previous_slide": "Gå til forrige dias"
+		},
+		"breadcrumbs": "brødkrumme navigation"
 	},
 	"newsletter": {
 		"label": "E-mail",

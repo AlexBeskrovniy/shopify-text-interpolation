@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "de",
-			"next_slide": "Deslizar a la derecha",
-			"previous_slide": "Deslizar hacia la izquierda"
-		}
+			"next_slide": "Ir a la siguiente diapositiva",
+			"previous_slide": "Ir a la diapositiva anterior"
+		},
+		"breadcrumbs": "navegación de migas de pan"
 	},
 	"newsletter": {
 		"label": "Correo electrónico",

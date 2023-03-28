@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "av",
-			"next_slide": "Skjut åt höger",
-			"previous_slide": "Skjut åt vänster"
-		}
+			"next_slide": "Gå till nästa bild",
+			"previous_slide": "Gå till föregående bild"
+		},
+		"breadcrumbs": "navigering med brödsmulor"
 	},
 	"newsletter": {
 		"label": "E-post",

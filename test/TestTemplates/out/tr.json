@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "ile ilgili",
-			"next_slide": "Sağa kaydır",
-			"previous_slide": "Sola kaydır"
-		}
+			"next_slide": "Sonraki slayta git",
+			"previous_slide": "Önceki slayda git"
+		},
+		"breadcrumbs": "ekmek kırıntısı navigasyonu"
 	},
 	"newsletter": {
 		"label": "E-posta",

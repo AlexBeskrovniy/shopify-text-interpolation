@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "nak,-nek",
-			"next_slide": "Csúsztassa jobbra",
-			"previous_slide": "Csúsztassa balra"
-		}
+			"next_slide": "Ugrás a következő diára",
+			"previous_slide": "Ugrás az előző diára"
+		},
+		"breadcrumbs": "kenyérmorzsa navigáció"
 	},
 	"newsletter": {
 		"label": "Email",

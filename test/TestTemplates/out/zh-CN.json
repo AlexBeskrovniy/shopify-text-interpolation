@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "的",
-			"next_slide": "向右滑动",
-			"previous_slide": "向左滑动"
-		}
+			"next_slide": "转到下一张幻灯片",
+			"previous_slide": "转到上一张幻灯片"
+		},
+		"breadcrumbs": "面包屑导航"
 	},
 	"newsletter": {
 		"label": "电子邮件",

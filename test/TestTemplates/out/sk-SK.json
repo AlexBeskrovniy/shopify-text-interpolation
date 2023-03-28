@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "z",
-			"next_slide": "Posuňte doprava",
-			"previous_slide": "Posuňte doľava"
-		}
+			"next_slide": "Prejsť na ďalšiu snímku",
+			"previous_slide": "Prejsť na predchádzajúcu snímku"
+		},
+		"breadcrumbs": "navigácia v strúhanke"
 	},
 	"newsletter": {
 		"label": "Email",

@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "od",
-			"next_slide": "Povucite desno",
-			"previous_slide": "Povucite lijevo"
-		}
+			"next_slide": "Idi na sljedeći slajd",
+			"previous_slide": "Idi na prethodni slajd"
+		},
+		"breadcrumbs": "navigacija putem putanje"
 	},
 	"newsletter": {
 		"label": "E-mail",

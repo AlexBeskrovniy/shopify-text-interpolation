@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "av",
-			"next_slide": "Skyv til høyre",
-			"previous_slide": "Skyv til venstre"
-		}
+			"next_slide": "Gå til neste lysbilde",
+			"previous_slide": "Gå til forrige lysbilde"
+		},
+		"breadcrumbs": "navigering med brødsmuler"
 	},
 	"newsletter": {
 		"label": "E-post",

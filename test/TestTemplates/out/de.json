@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "von",
-			"next_slide": "Nach rechts schieben",
-			"previous_slide": "Nach links schieben"
-		}
+			"next_slide": "Gehen Sie zur nächsten Folie",
+			"previous_slide": "Gehen Sie zur vorherigen Folie"
+		},
+		"breadcrumbs": "Breadcrumb-Navigation"
 	},
 	"newsletter": {
 		"label": "Email",

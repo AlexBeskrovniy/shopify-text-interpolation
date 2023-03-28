@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "z",
-			"next_slide": "Przesuń w prawo",
-			"previous_slide": "Przesuń w lewo"
-		}
+			"next_slide": "Przejdź do następnego slajdu",
+			"previous_slide": "Przejdź do poprzedniego slajdu"
+		},
+		"breadcrumbs": "okruszkowa nawigacja"
 	},
 	"newsletter": {
 		"label": "E-mail",

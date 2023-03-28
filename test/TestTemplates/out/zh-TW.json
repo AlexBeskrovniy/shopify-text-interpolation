@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "的",
-			"next_slide": "向右滑動",
-			"previous_slide": "向左滑動"
-		}
+			"next_slide": "轉到下一張幻燈片",
+			"previous_slide": "轉到上一張幻燈片"
+		},
+		"breadcrumbs": "麵包屑導航"
 	},
 	"newsletter": {
 		"label": "電子郵件",

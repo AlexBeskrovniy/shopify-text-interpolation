@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "van",
-			"next_slide": "Schuif naar rechts",
-			"previous_slide": "Schuif naar links"
-		}
+			"next_slide": "Ga naar de volgende dia",
+			"previous_slide": "Ga naar de vorige dia"
+		},
+		"breadcrumbs": "broodkruimel navigatie"
 	},
 	"newsletter": {
 		"label": "E-mail",

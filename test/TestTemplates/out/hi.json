@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "का",
-			"next_slide": "दाईं ओर स्लाइड करें",
-			"previous_slide": "बाईं ओर स्लाइड करें"
-		}
+			"next_slide": "अगली स्लाइड पर जाएं",
+			"previous_slide": "पिछली स्लाइड पर जाएं"
+		},
+		"breadcrumbs": "ब्रेडक्रंब नेविगेशन"
 	},
 	"newsletter": {
 		"label": "ईमेल",

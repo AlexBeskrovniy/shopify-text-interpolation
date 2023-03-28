@@ -86,9 +86,10 @@
 		},
 		"slider": {
 			"of": "dari",
-			"next_slide": "Geser ke kanan",
-			"previous_slide": "Geser ke kiri"
-		}
+			"next_slide": "Ke slide berikutnya",
+			"previous_slide": "Ke slide sebelumnya"
+		},
+		"breadcrumbs": "navigasi remah roti"
 	},
 	"newsletter": {
 		"label": "Surel",
