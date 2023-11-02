@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Pokaż szczegóły",
+			"announcement": "Ogłoszenie",
+			"cart": "Wózek",
+			"search": "Szukaj",
+			"home": "Dom"
+		},
 		"date_types": {
 			"days": "Dni",
 			"hours": "godziny",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Udostępnij na Facebook",
-				"share_on_twitter": "Tweetuj na Twitter",
+				"share_on_twitter": "Opublikuj na X",
 				"share_by_email": "Udostępnij mailem",
 				"share_on_pinterest": "Przypnij na Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Następna strona",
 			"previous": "Poprzednia strona",
 			"next_short": "Następny",
-			"previous_short": "Poprzedni"
+			"previous_short": "Poprzedni",
+			"view_more": "Zobacz więcej"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Pokaż wszystko",
+				"show_less": "Pokaż mniej"
+			},
 			"search": "Szukaj",
 			"search_placeholder": "Wpisz aby wyszukać...",
-			"info": "Użyj paska wyszukiwania, aby znaleźć produkty"
+			"info": "Użyj paska wyszukiwania, aby znaleźć produkty",
+			"predictive_search": {
+				"suggestions": "Propozycje",
+				"collections": "Kolekcje",
+				"products": "Produkty",
+				"posts": "Posty na blogu",
+				"pages": "Strony"
+			}
 		},
 		"cart": {
 			"view": "Zobacz mój koszyk ({{ count }})",
 			"open": "Otwórz koszyk",
 			"qty_max_note": "Wszystkie dostępne pozycje w koszyku",
+			"qty_max_note_short": "Wszystkie pozycje w koszyku",
 			"item_added": "Pozycja dodana do Twojego koszyka",
 			"recommendations": {
 				"heading": "Może ci się spodobać również"
 			},
 			"notification": {
 				"title": "Dodano do koszyka",
-				"go_to_cart": "Idź do wózka"
+				"go_to_cart": "Idź do wózka",
+				"error": "Coś poszło nie tak. Proszę spróbuj później"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Połączyć",
 			"success_message": "Link skopiowany do schowka",
 			"facebook": "Udział",
-			"twitter": "Ćwierkać",
+			"twitter": "Post",
 			"pinterest": "Szpilka",
 			"email": "E-mail"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Wybrany",
 		"currently_viewing": "Aktualnie oglądam",
 		"add_count_items_to_cart_html": "Dodaj <span data-i18n-amount=\"\">{{ amount }}</span> przedmiotów do koszyka",
+		"wishlist": {
+			"button_add": "Dodaj do listy życzeń",
+			"button_remove": "Usuń z listy życzeń",
+			"empty_note": {
+				"heading": "Twoja lista życzeń jest pusta",
+				"subheading": "Odkryj więcej i wybierz kilka pozycji"
+			}
+		},
 		"product": {
 			"add_to_cart": "Dodaj do koszyka",
 			"express_add_to_cart": "Dodać",
 			"description": "Opis",
-			"description_read_mode": "Czytaj więcej",
+			"description_read_more": "Czytaj więcej",
+			"description_read_less": "Mniej czytać",
 			"on_sale": "Sprzedaż",
 			"saved_amount": "{{ value }} wyłączona",
 			"product_variants": "Warianty produktu",
 			"back_to_product": "Powrót do produktu",
-			"quick_view": "Szybki podgląd",
+			"quick_view": "Szybkie zakupy",
+			"more_details": "Więcej szczegółów produktu",
+			"more_options": "Więcej możliwości",
 			"show_options": "Pokaż opcje",
 			"express_show_options": "Opcje",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Obraz {{ index }} jest teraz dostępny w widoku galerii",
 				"open_media": "Otwórz media {{ index }} w trybie modalnym",
 				"play_model": "Zagraj w przeglądarkę 3D",
-				"play_video": "Odtwórz wideo"
+				"play_video": "Odtwórz wideo",
+				"expanded_view_label": "Kliknij, aby otworzyć widok rozszerzony"
 			},
 			"quantity": {
 				"label": "Ilość",
@@ -241,7 +274,8 @@
 			"label": "Galeria mediów"
 		},
 		"facets": {
-			"apply": "Zastosować",
+			"apply": "Zastosuj filtry",
+			"filtered": "Filtrowane według:",
 			"clear": "Jasne",
 			"clear_all": "Wyczyść wszystko",
 			"from": "Od",
@@ -268,7 +302,7 @@
 			"clear_filter": "Czysty filtr"
 		},
 		"product_options": {
-			"view_all_options": "Wyświetl wszystkie opcje jako listę",
+			"view_all_options": "Porównaj opcje produktów",
 			"only_in_stock": "Pokaż tylko produkty w magazynie",
 			"in_stock_only": "Tylko w magazynie",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} element",
 				"other": "{{ count }} elementy"
-			}
+			},
+			"store": "Sklep",
+			"search": "Szukaj",
+			"language": "Język",
+			"country": "Kraj",
+			"account": "Konto",
+			"my_account": "Moje konto",
+			"login": "Zaloguj sie",
+			"wishlist": "Lista życzeń",
+			"my": "Mój"
 		},
 		"cart": {
 			"title": "Twój wózek",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Z wliczonym podatkiem. <a href=\"{{ link }}\">Wysyłka</a> obliczona przy kasie.",
 			"taxes_and_shipping_at_checkout": "Podatki i wysyłka obliczane przy kasie",
 			"free_shipping_aligible": "Otrzymujesz DARMOWĄ wysyłkę!",
-			"free_shipping_shortage": "Uzyskaj bezpłatną wysyłkę z {{ amount }} więcej",
+			"free_shipping_shortage_html": "Uzyskaj bezpłatną wysyłkę przy większej <span data-i18n-amount=\"\">{{ amount }}</span>",
 			"headings": {
 				"product": "Produkt",
 				"price": "Cena £",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Zaloguj się</a> , aby dokonać płatności szybciej."
 			}
 		},
+		"compare_products": {
+			"this_item": "Ten przedmiot",
+			"price": "Cena",
+			"brand": "Marka",
+			"rating": "Ocena",
+			"availability": "Dostępność"
+		},
 		"footer": {
-			"payment": "Metody Płatności"
+			"payment": "Metody Płatności",
+			"back_to_top": "Powrót do góry"
 		},
 		"featured_blog": {
 			"view_all": "Pokaż wszystkie",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Pokaż wszystkie",
 			"title": "Kolekcje"
+		},
+		"child_collections": {
+			"shop_all": "Kupuj wszystko"
 		},
 		"collection_template": {
 			"empty_collection_message": "Ta kolekcja nie zawiera produktów",
@@ -519,6 +573,13 @@
 			"expired": "Wygasły",
 			"copy_code_success": "Kod skopiowany pomyślnie",
 			"print_gift_card": "Wydrukować"
+		},
+		"recipient_form": {
+			"checkbox_label": "Chcę to wysłać jako prezent",
+			"email_label": "Email odbiorcy",
+			"name_label": "Nazwa odbiorcy (opcjonalnie)",
+			"message_label": "Wiadomość (opcjonalnie)",
+			"max_chars_warn": "*{{ chars }} maks. liczba znaków"
 		}
 	}
 }

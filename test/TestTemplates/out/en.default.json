@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "View details",
+			"announcement": "Announcement",
+			"cart": "Cart",
+			"search": "Search",
+			"home": "Home"
+		},
 		"date_types": {
 			"days": "Days",
 			"hours": "Hours",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Share on Facebook",
-				"share_on_twitter": "Tweet on Twitter",
+				"share_on_twitter": "Post on X",
 				"share_by_email": "Share by e-mail",
 				"share_on_pinterest": "Pin on Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Next page",
 			"previous": "Previous page",
 			"next_short": "Next",
-			"previous_short": "Previous"
+			"previous_short": "Previous",
+			"view_more": "View more"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Show all",
+				"show_less": "Show less"
+			},
 			"search": "Search",
 			"search_placeholder": "Type to search...",
-			"info": "Use the search bar to find products"
+			"info": "Use the search bar to find products",
+			"predictive_search": {
+				"suggestions": "Suggestions",
+				"collections": "Collections",
+				"products": "Products",
+				"posts": "Blog Posts",
+				"pages": "Pages"
+			}
 		},
 		"cart": {
 			"view": "View my cart ({{ count }})",
 			"open": "Open cart",
 			"qty_max_note": "All available items in the cart",
+			"qty_max_note_short": "All items in the cart",
 			"item_added": "Item added to your cart",
 			"recommendations": {
 				"heading": "You might also like"
 			},
 			"notification": {
 				"title": "Added to cart",
-				"go_to_cart": "Go to Cart"
+				"go_to_cart": "Go to Cart",
+				"error": "Something went wrong. Please, try later"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Link",
 			"success_message": "Link copied to clipboard",
 			"facebook": "Share",
-			"twitter": "Tweet",
+			"twitter": "Post",
 			"pinterest": "Pin",
 			"email": "E-mail"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Selected",
 		"currently_viewing": "Currently viewing",
 		"add_count_items_to_cart_html": "Add <span data-i18n-amount>{{ amount }}</span> items to cart",
+		"wishlist": {
+			"button_add": "Add to Wishlist",
+			"button_remove": "Remove from Wishlist",
+			"empty_note": {
+				"heading": "Your wishlist is empty",
+				"subheading": "Explore more and shortlist some items"
+			}
+		},
 		"product": {
 			"add_to_cart": "Add to cart",
 			"express_add_to_cart": "Add",
 			"description": "Description",
-			"description_read_mode": "Read more",
+			"description_read_more": "Read more",
+			"description_read_less": "Read less",
 			"on_sale": "Sale",
 			"saved_amount": "{{ value }} off",
 			"product_variants": "Product variants",
 			"back_to_product": "Back to product",
-			"quick_view": "Quick View",
+			"quick_view": "Quick shop",
+			"more_details": "More product details",
+			"more_options": "More options",
 			"show_options": "Show options",
 			"express_show_options": "Options",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Image {{ index }} is now available in gallery view",
 				"open_media": "Open media {{ index }} in modal",
 				"play_model": "Play 3D Viewer",
-				"play_video": "Play video"
+				"play_video": "Play video",
+				"expanded_view_label": "Click to open expanded view"
 			},
 			"quantity": {
 				"label": "Quantity",
@@ -241,7 +274,8 @@
 			"label": "Media gallery"
 		},
 		"facets": {
-			"apply": "Apply",
+			"apply": "Apply filters",
+			"filtered": "Filtered by:",
 			"clear": "Clear",
 			"clear_all": "Clear all",
 			"from": "From",
@@ -268,7 +302,7 @@
 			"clear_filter": "Clear filter"
 		},
 		"product_options": {
-			"view_all_options": "View all options as a list",
+			"view_all_options": "Compare product options",
 			"only_in_stock": "Show only products in stock",
 			"in_stock_only": "In stock only",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} item",
 				"other": "{{ count }} items"
-			}
+			},
+			"store": "Store",
+			"search": "Search",
+			"language": "Language",
+			"country": "Country",
+			"account": "Account",
+			"my_account": "My account",
+			"login": "Login",
+			"wishlist": "Wishlist",
+			"my": "My"
 		},
 		"cart": {
 			"title": "Your cart",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
 			"taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
 			"free_shipping_aligible": "You are getting FREE shipping!",
-			"free_shipping_shortage": "Get free shipping with {{ amount }} more",
+			"free_shipping_shortage_html": "Get free shipping with <span data-i18n-amount>{{ amount }}</span> more",
 			"headings": {
 				"product": "Product",
 				"price": "Price",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
 			}
 		},
+		"compare_products": {
+			"this_item": "This item",
+			"price": "Price",
+			"brand": "Brand",
+			"rating": "Rating",
+			"availability": "Availability"
+		},
 		"footer": {
-			"payment": "Payment methods"
+			"payment": "Payment methods",
+			"back_to_top": "Back to top"
 		},
 		"featured_blog": {
 			"view_all": "View all",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "View all",
 			"title": "Collections"
+		},
+		"child_collections": {
+			"shop_all": "Shop all"
 		},
 		"collection_template": {
 			"empty_collection_message": "This collection has no products",
@@ -519,6 +573,13 @@
 			"expired": "Expired",
 			"copy_code_success": "Code copied successfully",
 			"print_gift_card": "Print"
+		},
+		"recipient_form": {
+			"checkbox_label": "I want to send this as a gift",
+			"email_label": "Recipient email",
+			"name_label": "Recipient name (optional)",
+			"message_label": "Message (optional)",
+			"max_chars_warn": "*{{ chars }} characters max"
 		}
 	}
 }

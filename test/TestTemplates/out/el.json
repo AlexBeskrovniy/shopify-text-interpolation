@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Δείτε λεπτομέρειες",
+			"announcement": "Ανακοίνωση",
+			"cart": "Καροτσάκι",
+			"search": "Αναζήτηση",
+			"home": "Σπίτι"
+		},
 		"date_types": {
 			"days": "Ημέρες",
 			"hours": "Ωρες",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Μοιραστείτε το στο Facebook",
-				"share_on_twitter": "Tweet στο Twitter",
+				"share_on_twitter": "Δημοσίευση στο Χ",
 				"share_by_email": "Κοινή χρήση μέσω e-mail",
 				"share_on_pinterest": "Καρφιτσώστε στο Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Επόμενη σελίδα",
 			"previous": "Προηγούμενη σελίδα",
 			"next_short": "Επόμενο",
-			"previous_short": "Προηγούμενος"
+			"previous_short": "Προηγούμενος",
+			"view_more": "Δείτε περισσότερα"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Προβολή όλων",
+				"show_less": "Δείξε λιγότερο"
+			},
 			"search": "Αναζήτηση",
 			"search_placeholder": "Πληκτρολογήστε για αναζήτηση...",
-			"info": "Χρησιμοποιήστε τη γραμμή αναζήτησης για να βρείτε προϊόντα"
+			"info": "Χρησιμοποιήστε τη γραμμή αναζήτησης για να βρείτε προϊόντα",
+			"predictive_search": {
+				"suggestions": "Προτάσεις",
+				"collections": "Συλλογές",
+				"products": "Προϊόντα",
+				"posts": "Αναρτήσεις ιστολογίου",
+				"pages": "Σελίδες"
+			}
 		},
 		"cart": {
 			"view": "Προβολή του καλαθιού μου ({{ count }})",
 			"open": "Ανοιχτό καλάθι",
 			"qty_max_note": "Όλα τα διαθέσιμα είδη στο καλάθι",
+			"qty_max_note_short": "Όλα τα είδη στο καλάθι",
 			"item_added": "Στοιχείο προστέθηκε στο καλάθι σας",
 			"recommendations": {
 				"heading": "Μπορεί επίσης να σας αρέσει"
 			},
 			"notification": {
 				"title": "Προστέθηκε στο καλάθι",
-				"go_to_cart": "Μεταβείτε στο Καλάθι"
+				"go_to_cart": "Μεταβείτε στο Καλάθι",
+				"error": "Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε αργότερα"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Σύνδεσμος",
 			"success_message": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο",
 			"facebook": "Μερίδιο",
-			"twitter": "Τιτίβισμα",
+			"twitter": "Θέση",
 			"pinterest": "Καρφίτσα",
 			"email": "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Επιλεγμένο",
 		"currently_viewing": "Προβολή αυτήν τη στιγμή",
 		"add_count_items_to_cart_html": "Προσθέστε στοιχεία <span data-i18n-amount=\"\">{{ amount }}</span> στο καλάθι",
+		"wishlist": {
+			"button_add": "Πρόσθεσε στην λίστα επιθυμιών",
+			"button_remove": "Κατάργηση από τη λίστα επιθυμιών",
+			"empty_note": {
+				"heading": "Η Λίστα Επιθυμών σας είναι άδεια",
+				"subheading": "Εξερευνήστε περισσότερα και επιλέξτε ορισμένα στοιχεία"
+			}
+		},
 		"product": {
 			"add_to_cart": "Προσθήκη στο καλάθι",
 			"express_add_to_cart": "Προσθήκη",
 			"description": "Περιγραφή",
-			"description_read_mode": "Διαβάστε περισσότερα",
+			"description_read_more": "Διαβάστε περισσότερα",
+			"description_read_less": "Διαβάστε λιγότερο",
 			"on_sale": "Πώληση",
 			"saved_amount": "{{ value }} απενεργοποιημένη",
 			"product_variants": "Παραλλαγές προϊόντων",
 			"back_to_product": "Επιστροφή στο προϊόν",
-			"quick_view": "Γρήγορη ματιά",
+			"quick_view": "Γρήγορο κατάστημα",
+			"more_details": "Περισσότερες λεπτομέρειες προϊόντος",
+			"more_options": "Περισσότερες επιλογές",
 			"show_options": "Εμφάνιση επιλογών",
 			"express_show_options": "Επιλογές",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Η εικόνα {{ index }} είναι πλέον διαθέσιμη σε προβολή συλλογής",
 				"open_media": "Ανοίξτε το {{ index }} πολυμέσων σε modal",
 				"play_model": "Παίξτε το πρόγραμμα προβολής 3D",
-				"play_video": "Παίξε το βίντεο"
+				"play_video": "Παίξε το βίντεο",
+				"expanded_view_label": "Κάντε κλικ για να ανοίξετε την αναπτυγμένη προβολή"
 			},
 			"quantity": {
 				"label": "Ποσότητα",
@@ -241,7 +274,8 @@
 			"label": "Γκαλερί πολυμέσων"
 		},
 		"facets": {
-			"apply": "Ισχύουν",
+			"apply": "Εφαρμόστε φίλτρα",
+			"filtered": "Φιλτράρισμα κατά:",
 			"clear": "Σαφή",
 			"clear_all": "Τα καθαρίζω όλα",
 			"from": "Από",
@@ -268,7 +302,7 @@
 			"clear_filter": "Καθαρίστε το φίλτρο"
 		},
 		"product_options": {
-			"view_all_options": "Προβολή όλων των επιλογών ως λίστα",
+			"view_all_options": "Συγκρίνετε επιλογές προϊόντων",
 			"only_in_stock": "Εμφάνιση μόνο προϊόντων σε απόθεμα",
 			"in_stock_only": "Μόνο σε απόθεμα",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} στοιχείο",
 				"other": "{{ count }} στοιχεία"
-			}
+			},
+			"store": "Κατάστημα",
+			"search": "Αναζήτηση",
+			"language": "Γλώσσα",
+			"country": "Χώρα",
+			"account": "λογαριασμός",
+			"my_account": "Ο λογαριασμός μου",
+			"login": "Σύνδεση",
+			"wishlist": "Λίστα επιθυμιών",
+			"my": "Μου"
 		},
 		"cart": {
 			"title": "Το καλάθι σας",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Συμπεριλαμβανομένου του φόρου. <a href=\"{{ link }}\">Η αποστολή</a> υπολογίζεται στο ταμείο.",
 			"taxes_and_shipping_at_checkout": "Οι φόροι και τα έξοδα αποστολής υπολογίζονται στο ταμείο",
 			"free_shipping_aligible": "Λαμβάνετε ΔΩΡΕΑΝ αποστολή!",
-			"free_shipping_shortage": "Λάβετε δωρεάν αποστολή με επιπλέον {{ amount }}",
+			"free_shipping_shortage_html": "Αποκτήστε δωρεάν αποστολή με επιπλέον <span data-i18n-amount=\"\">{{ amount }}</span>",
 			"headings": {
 				"product": "Προϊόν",
 				"price": "Τιμή",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Συνδεθείτε για</a> να κάνετε check out πιο γρήγορα."
 			}
 		},
+		"compare_products": {
+			"this_item": "Αυτό το αντικείμενο",
+			"price": "Τιμή",
+			"brand": "Μάρκα",
+			"rating": "Εκτίμηση",
+			"availability": "Διαθεσιμότητα"
+		},
 		"footer": {
-			"payment": "Μέθοδοι πληρωμής"
+			"payment": "Μέθοδοι πληρωμής",
+			"back_to_top": "Επιστροφή στην κορυφή"
 		},
 		"featured_blog": {
 			"view_all": "Προβολή όλων",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Προβολή όλων",
 			"title": "Συλλογές"
+		},
+		"child_collections": {
+			"shop_all": "Αγοράστε όλα"
 		},
 		"collection_template": {
 			"empty_collection_message": "Αυτή η συλλογή δεν έχει προϊόντα",
@@ -519,6 +573,13 @@
 			"expired": "έχει λήξει",
 			"copy_code_success": "Ο κωδικός αντιγράφηκε με επιτυχία",
 			"print_gift_card": "Τυπώνω"
+		},
+		"recipient_form": {
+			"checkbox_label": "Θέλω να το στείλω ως δώρο",
+			"email_label": "Email παραλήπτη",
+			"name_label": "Όνομα παραλήπτη (προαιρετικό)",
+			"message_label": "Μήνυμα (προαιρετικό)",
+			"max_chars_warn": "*{{ chars }} μέγ"
 		}
 	}
 }

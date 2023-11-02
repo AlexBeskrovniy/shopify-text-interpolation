@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "विवरण देखें",
+			"announcement": "घोषणा",
+			"cart": "कार्ट",
+			"search": "खोज",
+			"home": "घर"
+		},
 		"date_types": {
 			"days": "दिन",
 			"hours": "घंटे",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Facebook पर शेयर करें",
-				"share_on_twitter": "Twitter पर ट्वीट करें",
+				"share_on_twitter": "एक्स पर पोस्ट करें",
 				"share_by_email": "ईमेल द्वारा साझा करें",
 				"share_on_pinterest": "Pinterest पर पिन करें"
 			},
@@ -54,24 +61,38 @@
 			"next": "अगला पृष्ठ",
 			"previous": "पिछला पृष्ठ",
 			"next_short": "अगला",
-			"previous_short": "पहले का"
+			"previous_short": "पहले का",
+			"view_more": "और देखें"
 		},
 		"search": {
+			"filters": {
+				"show_all": "सब दिखाएं",
+				"show_less": "कम दिखाएं"
+			},
 			"search": "खोज",
 			"search_placeholder": "खोजने के लिए लिखें...",
-			"info": "उत्पादों को खोजने के लिए खोज बार का उपयोग करें"
+			"info": "उत्पादों को खोजने के लिए खोज बार का उपयोग करें",
+			"predictive_search": {
+				"suggestions": "सुझाव",
+				"collections": "संग्रह",
+				"products": "उत्पादों",
+				"posts": "वेबदैनिकी डाक",
+				"pages": "पृष्ठों"
+			}
 		},
 		"cart": {
 			"view": "मेरा कार्ट देखें ({{ count }})",
 			"open": "खुली गाड़ी",
 			"qty_max_note": "कार्ट में सभी उपलब्ध आइटम",
+			"qty_max_note_short": "कार्ट में सभी आइटम",
 			"item_added": "आइटम को आपके कार्ट में शामिल किया गया",
 			"recommendations": {
 				"heading": "शायद तुम्हे यह भी अच्छा लगे"
 			},
 			"notification": {
 				"title": "कार्ट में जोड़ा गया",
-				"go_to_cart": "गाड़ी पर जाना"
+				"go_to_cart": "गाड़ी पर जाना",
+				"error": "कुछ गलत हो गया। बाद में कोशिश करें"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "संपर्क",
 			"success_message": "लिंक को क्लिपबोर्ड पर कॉपी किया गया",
 			"facebook": "साझा करना",
-			"twitter": "कलरव",
+			"twitter": "डाक",
 			"pinterest": "नत्थी करना",
 			"email": "ईमेल"
 		},
@@ -145,16 +166,27 @@
 		"selected": "गिने चुने",
 		"currently_viewing": "वर्तमान में देख रहे हैं",
 		"add_count_items_to_cart_html": "कार्ट में <span data-i18n-amount=\"\">{{ amount }}</span> आइटम जोड़ें",
+		"wishlist": {
+			"button_add": "इच्छा सूची में जोड़ें",
+			"button_remove": "इच्छा सूची से हटाएँ",
+			"empty_note": {
+				"heading": "अपकि इच्छा सूची खाली है",
+				"subheading": "अधिक अन्वेषण करें और कुछ वस्तुओं को संक्षिप्त करें"
+			}
+		},
 		"product": {
 			"add_to_cart": "कार्ट में जोड़ें",
 			"express_add_to_cart": "जोड़ें",
 			"description": "विवरण",
-			"description_read_mode": "अधिक पढ़ें",
+			"description_read_more": "और पढ़ें",
+			"description_read_less": "कम पढ़ें",
 			"on_sale": "बिक्री",
 			"saved_amount": "{{ value }} बंद",
 			"product_variants": "उत्पाद प्रकार",
 			"back_to_product": "उत्पाद पर वापस",
-			"quick_view": "त्वरित देखें",
+			"quick_view": "त्वरित दुकान",
+			"more_details": "अधिक उत्पाद विवरण",
+			"more_options": "अधिक विकल्प",
 			"show_options": "विकल्प दिखाएं",
 			"express_show_options": "विकल्प",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "इमेज {{ index }} अब गैलरी व्यू में उपलब्ध है",
 				"open_media": "मोडल में मीडिया {{ index }} खोलें",
 				"play_model": "3D व्यूअर चलाएं",
-				"play_video": "वीडियो चलाएं"
+				"play_video": "वीडियो चलाएं",
+				"expanded_view_label": "विस्तारित दृश्य खोलने के लिए क्लिक करें"
 			},
 			"quantity": {
 				"label": "मात्रा",
@@ -241,7 +274,8 @@
 			"label": "मीडिया गैलरी"
 		},
 		"facets": {
-			"apply": "आवेदन करना",
+			"apply": "फ़िल्टर लागू करें",
+			"filtered": "इसके द्वारा फ़िल्टर किया गया:",
 			"clear": "साफ़",
 			"clear_all": "सभी साफ करें",
 			"from": "से",
@@ -268,7 +302,7 @@
 			"clear_filter": "स्पष्ट निस्यंदक"
 		},
 		"product_options": {
-			"view_all_options": "सूची के रूप में सभी विकल्प देखें",
+			"view_all_options": "उत्पाद विकल्पों की तुलना करें",
 			"only_in_stock": "स्टॉक में केवल उत्पाद दिखाएं",
 			"in_stock_only": "केवल स्टॉक में",
 			"sku": "एसकेयू",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} आइटम",
 				"other": "आइटम {{ count }}"
-			}
+			},
+			"store": "इकट्ठा करना",
+			"search": "खोज",
+			"language": "भाषा",
+			"country": "देश",
+			"account": "खाता",
+			"my_account": "मेरा खाता",
+			"login": "लॉग इन करें",
+			"wishlist": "इच्छा-सूची",
+			"my": "मेरा"
 		},
 		"cart": {
 			"title": "आपकी गाड़ी",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "कर सहित। <a href=\"{{ link }}\">शिपिंग</a> की गणना चेकआउट पर की जाती है।",
 			"taxes_and_shipping_at_checkout": "चेकआउट पर कर और शिपिंग की गणना",
 			"free_shipping_aligible": "आपको मुफ़्त शिपिंग मिल रही है!",
-			"free_shipping_shortage": "अधिक {{ amount }} के साथ निःशुल्क शिपिंग प्राप्त करें",
+			"free_shipping_shortage_html": "अधिक <span data-i18n-amount=\"\">{{ amount }}</span> के साथ निःशुल्क शिपिंग प्राप्त करें",
 			"headings": {
 				"product": "उत्पाद",
 				"price": "कीमत",
@@ -355,8 +398,16 @@
 				"paragraph_html": "तेजी से चेक आउट करने के लिए <a href=\"{{ link }}\" class=\"link underlined-link\">लॉग इन</a> करें।"
 			}
 		},
+		"compare_products": {
+			"this_item": "यह आइटम",
+			"price": "कीमत",
+			"brand": "ब्रांड",
+			"rating": "रेटिंग",
+			"availability": "उपलब्धता"
+		},
 		"footer": {
-			"payment": "भुगतान की विधि"
+			"payment": "भुगतान की विधि",
+			"back_to_top": "वापस शीर्ष पर"
 		},
 		"featured_blog": {
 			"view_all": "सभी देखें",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "सभी देखें",
 			"title": "संग्रह"
+		},
+		"child_collections": {
+			"shop_all": "सभी खरीदारी करें"
 		},
 		"collection_template": {
 			"empty_collection_message": "इस संग्रह में कोई उत्पाद नहीं है",
@@ -519,6 +573,13 @@
 			"expired": "खत्म हो चुका",
 			"copy_code_success": "कोड सफलतापूर्वक कॉपी किया गया",
 			"print_gift_card": "छाप"
+		},
+		"recipient_form": {
+			"checkbox_label": "मैं इसे उपहार के रूप में भेजना चाहता हूं",
+			"email_label": "प्राप्तकर्ता का ई - मेल",
+			"name_label": "प्राप्तकर्ता का नाम (वैकल्पिक)",
+			"message_label": "संदेश (वैकल्पिक)",
+			"max_chars_warn": "*{{ chars }} अधिकतम वर्ण"
 		}
 	}
 }

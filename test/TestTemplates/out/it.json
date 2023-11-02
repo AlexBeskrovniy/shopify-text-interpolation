@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Visualizza dettagli",
+			"announcement": "Annuncio",
+			"cart": "Carrello",
+			"search": "Ricerca",
+			"home": "Casa"
+		},
 		"date_types": {
 			"days": "Giorni",
 			"hours": "Ore",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Condividi su Facebook",
-				"share_on_twitter": "Twitta su Twitter",
+				"share_on_twitter": "Pubblica su X",
 				"share_by_email": "Condividi via e-mail",
 				"share_on_pinterest": "Pin su Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Pagina successiva",
 			"previous": "Pagina precedente",
 			"next_short": "Prossimo",
-			"previous_short": "Precedente"
+			"previous_short": "Precedente",
+			"view_more": "Visualizza altro"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Mostra tutto",
+				"show_less": "Mostra meno"
+			},
 			"search": "Ricerca",
 			"search_placeholder": "Digita per cercare...",
-			"info": "Usa la barra di ricerca per trovare i prodotti"
+			"info": "Usa la barra di ricerca per trovare i prodotti",
+			"predictive_search": {
+				"suggestions": "Suggerimenti",
+				"collections": "Collezioni",
+				"products": "Prodotti",
+				"posts": "I post del blog",
+				"pages": "Pagine"
+			}
 		},
 		"cart": {
 			"view": "Visualizza il mio carrello ({{ count }})",
 			"open": "Carrello aperto",
 			"qty_max_note": "Tutti gli articoli disponibili nel carrello",
+			"qty_max_note_short": "Tutti gli articoli nel carrello",
 			"item_added": "Prodotto aggiunto al tuo carrello",
 			"recommendations": {
 				"heading": "Potrebbe piacerti anche"
 			},
 			"notification": {
 				"title": "Aggiunto al carrello",
-				"go_to_cart": "Vai al carrello"
+				"go_to_cart": "Vai al carrello",
+				"error": "Qualcosa è andato storto. Per favore prova più tardi"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Collegamento",
 			"success_message": "Link copiato negli appunti",
 			"facebook": "Condividere",
-			"twitter": "Twitta",
+			"twitter": "Inviare",
 			"pinterest": "Spillo",
 			"email": "E-mail"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Selezionato",
 		"currently_viewing": "Attualmente in visione",
 		"add_count_items_to_cart_html": "Aggiungi <span data-i18n-amount=\"\">{{ amount }}</span> di articoli al carrello",
+		"wishlist": {
+			"button_add": "Aggiungi alla lista dei desideri",
+			"button_remove": "Rimuovi dalla lista dei desideri",
+			"empty_note": {
+				"heading": "La tua lista dei desideri è vuota",
+				"subheading": "Esplora di più e seleziona alcuni elementi"
+			}
+		},
 		"product": {
 			"add_to_cart": "Aggiungi al carrello",
 			"express_add_to_cart": "Aggiungere",
 			"description": "Descrizione",
-			"description_read_mode": "Leggi di più",
+			"description_read_more": "Per saperne di più",
+			"description_read_less": "Leggi di meno",
 			"on_sale": "Vendita",
 			"saved_amount": "{{ value }} disattivato",
 			"product_variants": "Varianti di prodotto",
 			"back_to_product": "Torna al prodotto",
-			"quick_view": "Un'occhiata",
+			"quick_view": "Negozio veloce",
+			"more_details": "Maggiori dettagli sul prodotto",
+			"more_options": "Più opzioni",
 			"show_options": "Mostra opzioni",
 			"express_show_options": "Opzioni",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "L'immagine {{ index }} è ora disponibile nella visualizzazione galleria",
 				"open_media": "Apri media {{ index }} in modale",
 				"play_model": "Avvia Visualizzatore 3D",
-				"play_video": "Riproduci video"
+				"play_video": "Riproduci video",
+				"expanded_view_label": "Fare clic per aprire la visualizzazione espansa"
 			},
 			"quantity": {
 				"label": "Quantità",
@@ -241,7 +274,8 @@
 			"label": "Galleria multimediale"
 		},
 		"facets": {
-			"apply": "Applicare",
+			"apply": "Applica filtri",
+			"filtered": "Filtrato per:",
 			"clear": "Chiaro",
 			"clear_all": "Cancella tutto",
 			"from": "A partire dal",
@@ -268,7 +302,7 @@
 			"clear_filter": "Filtro pulito"
 		},
 		"product_options": {
-			"view_all_options": "Visualizza tutte le opzioni come un elenco",
+			"view_all_options": "Confronta le opzioni del prodotto",
 			"only_in_stock": "Mostra solo i prodotti disponibili",
 			"in_stock_only": "Solo in magazzino",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} elemento",
 				"other": "{{ count }} elementi"
-			}
+			},
+			"store": "Negozio",
+			"search": "Ricerca",
+			"language": "Lingua",
+			"country": "Paese",
+			"account": "Account",
+			"my_account": "Il mio conto",
+			"login": "Login",
+			"wishlist": "Lista dei desideri",
+			"my": "Mio"
 		},
 		"cart": {
 			"title": "Il tuo carrello",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Tasse incluse. <a href=\"{{ link }}\">Spedizione</a> calcolata al momento del pagamento.",
 			"taxes_and_shipping_at_checkout": "Tasse e spedizione calcolate al momento del pagamento",
 			"free_shipping_aligible": "Stai ricevendo la spedizione GRATUITA!",
-			"free_shipping_shortage": "Ottieni la spedizione gratuita con {{ amount }} in più",
+			"free_shipping_shortage_html": "Ottieni la spedizione gratuita con <span data-i18n-amount=\"\">{{ amount }}</span> in più",
 			"headings": {
 				"product": "Prodotto",
 				"price": "Prezzo",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Accedi</a> per pagare più velocemente."
 			}
 		},
+		"compare_products": {
+			"this_item": "Questo oggetto",
+			"price": "Prezzo",
+			"brand": "Marca",
+			"rating": "Valutazione",
+			"availability": "Disponibilità"
+		},
 		"footer": {
-			"payment": "Modalità di pagamento"
+			"payment": "Modalità di pagamento",
+			"back_to_top": "Torna in cima"
 		},
 		"featured_blog": {
 			"view_all": "Mostra tutto",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Mostra tutto",
 			"title": "Collezioni"
+		},
+		"child_collections": {
+			"shop_all": "Acquista tutto"
 		},
 		"collection_template": {
 			"empty_collection_message": "Questa collezione non ha prodotti",
@@ -519,6 +573,13 @@
 			"expired": "Scaduto",
 			"copy_code_success": "Codice copiato con successo",
 			"print_gift_card": "Stampa"
+		},
+		"recipient_form": {
+			"checkbox_label": "Voglio inviarlo come regalo",
+			"email_label": "Destinatario dell'email",
+			"name_label": "Nome del destinatario (facoltativo)",
+			"message_label": "Messaggio (facoltativo)",
+			"max_chars_warn": "*{{ chars }} caratteri max"
 		}
 	}
 }

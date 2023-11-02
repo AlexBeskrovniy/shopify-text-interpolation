@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Details anzeigen",
+			"announcement": "Bekanntmachung",
+			"cart": "Wagen",
+			"search": "Suchen",
+			"home": "Heim"
+		},
 		"date_types": {
 			"days": "Tage",
 			"hours": "Std",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Auf Facebook teilen",
-				"share_on_twitter": "Twittern Sie auf Twitter",
+				"share_on_twitter": "Beitrag auf X",
 				"share_by_email": "Per E-Mail teilen",
 				"share_on_pinterest": "Auf Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Nächste Seite",
 			"previous": "Vorherige Seite",
 			"next_short": "Nächste",
-			"previous_short": "Vorherige"
+			"previous_short": "Vorherige",
+			"view_more": "Mehr sehen"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Zeige alles",
+				"show_less": "Zeige weniger"
+			},
 			"search": "Suche",
 			"search_placeholder": "Tippe um zu suchen...",
-			"info": "Verwenden Sie die Suchleiste, um Produkte zu finden"
+			"info": "Verwenden Sie die Suchleiste, um Produkte zu finden",
+			"predictive_search": {
+				"suggestions": "Vorschläge",
+				"collections": "Sammlungen",
+				"products": "Produkte",
+				"posts": "Blogeinträge",
+				"pages": "Seiten"
+			}
 		},
 		"cart": {
 			"view": "Warenkorb ansehen ({{ count }})",
 			"open": "Warenkorb öffnen",
 			"qty_max_note": "Alle verfügbaren Artikel im Warenkorb",
+			"qty_max_note_short": "Alle Artikel im Warenkorb",
 			"item_added": "Artikel wurde Ihrem Warenkorb hinzugefügt",
 			"recommendations": {
 				"heading": "Das könnte Ihnen auch gefallen"
 			},
 			"notification": {
 				"title": "Zum Warenkorb hinzugefügt",
-				"go_to_cart": "Zum Einkaufskorb gehen"
+				"go_to_cart": "Zum Einkaufskorb gehen",
+				"error": "Etwas ist schief gelaufen. Bitte versuch es später"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Verknüpfung",
 			"success_message": "Link in die Zwischenablage kopiert",
 			"facebook": "Teilen",
-			"twitter": "Twittern",
+			"twitter": "Post",
 			"pinterest": "Stift",
 			"email": "Email"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Ausgewählt",
 		"currently_viewing": "Wird gerade angesehen",
 		"add_count_items_to_cart_html": "<span data-i18n-amount=\"\">{{ amount }}</span> Artikel in den Warenkorb legen",
+		"wishlist": {
+			"button_add": "Zur Wunschliste hinzufügen",
+			"button_remove": "Von der Wunschliste entfernen",
+			"empty_note": {
+				"heading": "Deine Wunschliste ist leer",
+				"subheading": "Entdecken Sie mehr und nehmen Sie einige Artikel in die engere Auswahl"
+			}
+		},
 		"product": {
 			"add_to_cart": "In den Warenkorb legen",
 			"express_add_to_cart": "Hinzufügen",
 			"description": "Beschreibung",
-			"description_read_mode": "Weiterlesen",
+			"description_read_more": "Mehr lesen",
+			"description_read_less": "Lese weniger",
 			"on_sale": "Verkauf",
 			"saved_amount": "{{ value }} aus",
 			"product_variants": "Produktvarianten",
 			"back_to_product": "Zurück zum Produkt",
-			"quick_view": "Schnellansicht",
+			"quick_view": "Schnellkauf",
+			"more_details": "Weitere Produktdetails",
+			"more_options": "Mehr Optionen",
 			"show_options": "Optionen anzeigen",
 			"express_show_options": "Optionen",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Bild {{ index }} ist jetzt in der Galerieansicht verfügbar",
 				"open_media": "Öffnen Sie den Medien-{{ index }} im Modalmodus",
 				"play_model": "3D-Viewer abspielen",
-				"play_video": "Video abspielen"
+				"play_video": "Video abspielen",
+				"expanded_view_label": "Klicken Sie hier, um die erweiterte Ansicht zu öffnen"
 			},
 			"quantity": {
 				"label": "Menge",
@@ -241,7 +274,8 @@
 			"label": "Medien Gallerie"
 		},
 		"facets": {
-			"apply": "Anwenden",
+			"apply": "Wenden Sie Filter an",
+			"filtered": "Gefiltert nach:",
 			"clear": "Klar",
 			"clear_all": "Alles löschen",
 			"from": "Von",
@@ -268,7 +302,7 @@
 			"clear_filter": "Filter löschen"
 		},
 		"product_options": {
-			"view_all_options": "Zeigen Sie alle Optionen als Liste an",
+			"view_all_options": "Vergleichen Sie Produktoptionen",
 			"only_in_stock": "Nur vorrätige Produkte anzeigen",
 			"in_stock_only": "Nur auf Lager",
 			"sku": "Artikelnummer",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} Element",
 				"other": "{{ count }}"
-			}
+			},
+			"store": "Speichern",
+			"search": "Suchen",
+			"language": "Sprache",
+			"country": "Land",
+			"account": "Konto",
+			"my_account": "Mein Konto",
+			"login": "Anmeldung",
+			"wishlist": "Wunschzettel",
+			"my": "Mein"
 		},
 		"cart": {
 			"title": "Ihr Warenkorb",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Steuern inklusive. <a href=\"{{ link }}\">Versand</a> wird an der Kasse berechnet.",
 			"taxes_and_shipping_at_checkout": "Steuern und Versandkosten werden an der Kasse berechnet",
 			"free_shipping_aligible": "Sie erhalten KOSTENLOSEN Versand!",
-			"free_shipping_shortage": "Erhalten Sie kostenlosen Versand mit {{ amount }} mehr",
+			"free_shipping_shortage_html": "Ab einem höheren <span data-i18n-amount=\"\">{{ amount }}</span> erhalten Sie kostenlosen Versand",
 			"headings": {
 				"product": "Produkt",
 				"price": "Preis",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Melden Sie sich an</a> , um schneller auszuchecken."
 			}
 		},
+		"compare_products": {
+			"this_item": "Dieser Gegenstand",
+			"price": "Preis",
+			"brand": "Marke",
+			"rating": "Bewertung",
+			"availability": "Verfügbarkeit"
+		},
 		"footer": {
-			"payment": "Zahlungsmethoden"
+			"payment": "Zahlungsmethoden",
+			"back_to_top": "Zurück nach oben"
 		},
 		"featured_blog": {
 			"view_all": "Alle ansehen",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Alle ansehen",
 			"title": "Sammlungen"
+		},
+		"child_collections": {
+			"shop_all": "Alles shoppen"
 		},
 		"collection_template": {
 			"empty_collection_message": "Diese Sammlung enthält keine Produkte",
@@ -519,6 +573,13 @@
 			"expired": "Abgelaufen",
 			"copy_code_success": "Code erfolgreich kopiert",
 			"print_gift_card": "Drucken"
+		},
+		"recipient_form": {
+			"checkbox_label": "Ich möchte das als Geschenk verschicken",
+			"email_label": "Empfänger E-Mail",
+			"name_label": "Empfängername (optional)",
+			"message_label": "Nachricht (optional)",
+			"max_chars_warn": "*{{ chars }} Zeichen max"
 		}
 	}
 }

@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Ogled podrobnosti",
+			"announcement": "Obvestilo",
+			"cart": "Voziček",
+			"search": "Iskanje",
+			"home": "domov"
+		},
 		"date_types": {
 			"days": "Dnevi",
 			"hours": "Ure",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Delite na Facebook",
-				"share_on_twitter": "Tweet na Twitter",
+				"share_on_twitter": "Objavi na X",
 				"share_by_email": "Deli po e-pošti",
 				"share_on_pinterest": "Pripni na Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Naslednja stran",
 			"previous": "Prejšnja stran",
 			"next_short": "Naslednji",
-			"previous_short": "Prejšnja"
+			"previous_short": "Prejšnja",
+			"view_more": "Poglej več"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Pokaži vse",
+				"show_less": "Prikaži manj"
+			},
 			"search": "Iskanje",
 			"search_placeholder": "Vnesite za iskanje ...",
-			"info": "Za iskanje izdelkov uporabite iskalno vrstico"
+			"info": "Za iskanje izdelkov uporabite iskalno vrstico",
+			"predictive_search": {
+				"suggestions": "Predlogi",
+				"collections": "Zbirke",
+				"products": "Izdelki",
+				"posts": "Objave v spletnem dnevniku",
+				"pages": "Strani"
+			}
 		},
 		"cart": {
 			"view": "Poglej mojo košarico ({{ count }})",
 			"open": "Odpri voziček",
 			"qty_max_note": "Vsi razpoložljivi artikli v košarici",
+			"qty_max_note_short": "Vsi artikli v košarici",
 			"item_added": "Artikel dodan v košarico",
 			"recommendations": {
 				"heading": "Morda vam bo všeč tudi"
 			},
 			"notification": {
 				"title": "Dodano v košarico",
-				"go_to_cart": "Pojdi v košarico"
+				"go_to_cart": "Pojdi v košarico",
+				"error": "Nekaj je šlo narobe. Prosim, poskusite pozneje"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Povezava",
 			"success_message": "Povezava je bila kopirana v odložišče",
 			"facebook": "Deliti",
-			"twitter": "Tweet",
+			"twitter": "Objavi",
 			"pinterest": "Pin",
 			"email": "E-naslov"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Izbrano",
 		"currently_viewing": "Trenutno gledam",
 		"add_count_items_to_cart_html": "Dodajte <span data-i18n-amount=\"\">{{ amount }}</span> artiklov v košarico",
+		"wishlist": {
+			"button_add": "Dodaj na seznam želja",
+			"button_remove": "Odstrani s seznama želja",
+			"empty_note": {
+				"heading": "Vaš seznam želja je prazen",
+				"subheading": "Raziščite več in izberite nekaj elementov v ožjem izboru"
+			}
+		},
 		"product": {
 			"add_to_cart": "Dodaj v voziček",
 			"express_add_to_cart": "Dodaj",
 			"description": "Opis",
-			"description_read_mode": "Preberi več",
+			"description_read_more": "Preberi več",
+			"description_read_less": "Berite manj",
 			"on_sale": "Prodaja",
 			"saved_amount": "{{ value }} off",
 			"product_variants": "Različice izdelkov",
 			"back_to_product": "Nazaj na izdelek",
-			"quick_view": "Hiter pogled",
+			"quick_view": "Hitra trgovina",
+			"more_details": "Več podrobnosti o izdelku",
+			"more_options": "Več možnosti",
 			"show_options": "Pokaži možnosti",
 			"express_show_options": "Opcije",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Slika {{ index }} je zdaj na voljo v pogledu galerije",
 				"open_media": "Odpri medij {{ index }} v modalnem",
 				"play_model": "Predvajaj 3D Viewer",
-				"play_video": "Predvajaj video"
+				"play_video": "Predvajaj video",
+				"expanded_view_label": "Kliknite, da odprete razširjen pogled"
 			},
 			"quantity": {
 				"label": "Količina",
@@ -241,7 +274,8 @@
 			"label": "Medijska galerija"
 		},
 		"facets": {
-			"apply": "Prijavite se",
+			"apply": "Uporabite filtre",
+			"filtered": "Filtrirano po:",
 			"clear": "jasno",
 			"clear_all": "Počisti vse",
 			"from": "Od",
@@ -268,7 +302,7 @@
 			"clear_filter": "Počisti filter"
 		},
 		"product_options": {
-			"view_all_options": "Oglejte si vse možnosti kot seznam",
+			"view_all_options": "Primerjajte možnosti izdelkov",
 			"only_in_stock": "Prikaži le izdelke na zalogi",
 			"in_stock_only": "Samo na zalogi",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} elementa",
 				"other": "{{ count }} elementov"
-			}
+			},
+			"store": "Trgovina",
+			"search": "Iskanje",
+			"language": "Jezik",
+			"country": "Država",
+			"account": "račun",
+			"my_account": "Moj račun",
+			"login": "Vpiši se",
+			"wishlist": "Seznam želja",
+			"my": "moj"
 		},
 		"cart": {
 			"title": "Vaš voziček",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Davek vključen. <a href=\"{{ link }}\">Poštnina</a> se izračuna na blagajni.",
 			"taxes_and_shipping_at_checkout": "Davki in poštnina se obračunajo na blagajni",
 			"free_shipping_aligible": "Prejmete BREZPLAČNO poštnino!",
-			"free_shipping_shortage": "Zagotovite si brezplačno dostavo z dodatnim {{ amount }}",
+			"free_shipping_shortage_html": "Zagotovite si brezplačno dostavo z več <span data-i18n-amount=\"\">{{ amount }}</span>",
 			"headings": {
 				"product": "Izdelek",
 				"price": "Cena",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prijavite se</a> za hitrejšo odjavo."
 			}
 		},
+		"compare_products": {
+			"this_item": "Ta predmet",
+			"price": "Cena",
+			"brand": "Znamka",
+			"rating": "Ocena",
+			"availability": "Razpoložljivost"
+		},
 		"footer": {
-			"payment": "Načini plačila"
+			"payment": "Načini plačila",
+			"back_to_top": "Nazaj na vrh"
 		},
 		"featured_blog": {
 			"view_all": "Poglej vse",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Poglej vse",
 			"title": "Zbirke"
+		},
+		"child_collections": {
+			"shop_all": "Nakupujte vse"
 		},
 		"collection_template": {
 			"empty_collection_message": "Ta zbirka nima izdelkov",
@@ -519,6 +573,13 @@
 			"expired": "potekel",
 			"copy_code_success": "Koda je bila uspešno kopirana",
 			"print_gift_card": "Tiskanje"
+		},
+		"recipient_form": {
+			"checkbox_label": "To želim poslati kot darilo",
+			"email_label": "E-pošta prejemnika",
+			"name_label": "Ime prejemnika (neobvezno)",
+			"message_label": "Sporočilo (neobvezno)",
+			"max_chars_warn": "*{{ chars }} znakov največ"
 		}
 	}
 }

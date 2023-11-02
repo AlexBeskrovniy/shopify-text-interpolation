@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "ดูรายละเอียด",
+			"announcement": "ประกาศ",
+			"cart": "รถเข็น",
+			"search": "ค้นหา",
+			"home": "บ้าน"
+		},
 		"date_types": {
 			"days": "วัน",
 			"hours": "ชั่วโมง",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "แบ่งปันบน Facebook",
-				"share_on_twitter": "ทวีตบน Twitter",
+				"share_on_twitter": "โพสต์บน X",
 				"share_by_email": "แบ่งปันทางอีเมล",
 				"share_on_pinterest": "ปักหมุดบน Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "หน้าต่อไป",
 			"previous": "หน้าก่อนหน้า",
 			"next_short": "ถัดไป",
-			"previous_short": "ก่อนหน้า"
+			"previous_short": "ก่อนหน้า",
+			"view_more": "ดูเพิ่มเติม"
 		},
 		"search": {
+			"filters": {
+				"show_all": "แสดงทั้งหมด",
+				"show_less": "แสดงน้อยลง"
+			},
 			"search": "ค้นหา",
 			"search_placeholder": "พิมพ์เพื่อค้นหา...",
-			"info": "ใช้แถบค้นหาเพื่อค้นหาสินค้า"
+			"info": "ใช้แถบค้นหาเพื่อค้นหาสินค้า",
+			"predictive_search": {
+				"suggestions": "ข้อเสนอแนะ",
+				"collections": "คอลเลกชัน",
+				"products": "สินค้า",
+				"posts": "โพสต์ในบล็อก",
+				"pages": "หน้า"
+			}
 		},
 		"cart": {
 			"view": "ดูรถเข็นของฉัน ({{ count }})",
 			"open": "เปิดรถเข็น",
 			"qty_max_note": "รายการที่มีอยู่ทั้งหมดในรถเข็น",
+			"qty_max_note_short": "รายการทั้งหมดในรถเข็น",
 			"item_added": "เพิ่มรายการในรถเข็นของคุณแล้ว",
 			"recommendations": {
 				"heading": "คุณอาจชอบ"
 			},
 			"notification": {
 				"title": "เพิ่มในรถเข็นแล้ว",
-				"go_to_cart": "ไปที่รถเข็น"
+				"go_to_cart": "ไปที่รถเข็น",
+				"error": "บางอย่างผิดพลาด. กรุณาลองในภายหลัง"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "ลิงค์",
 			"success_message": "คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว",
 			"facebook": "แบ่งปัน",
-			"twitter": "ทวีต",
+			"twitter": "โพสต์",
 			"pinterest": "เข็มหมุด",
 			"email": "อีเมล"
 		},
@@ -145,16 +166,27 @@
 		"selected": "เลือกแล้ว",
 		"currently_viewing": "กำลังดูอยู่",
 		"add_count_items_to_cart_html": "เพิ่ม <span data-i18n-amount=\"\">{{ amount }}</span> รายการในรถเข็น",
+		"wishlist": {
+			"button_add": "เพิ่มเข้าในรายการที่ต้องการ",
+			"button_remove": "ลบออกจากสิ่งที่อยากได้",
+			"empty_note": {
+				"heading": "สิ่งที่ปรารถนาของคุณว่างเปล่า",
+				"subheading": "สำรวจเพิ่มเติมและคัดเลือกบางรายการ"
+			}
+		},
 		"product": {
 			"add_to_cart": "หยิบใส่ตะกร้า",
 			"express_add_to_cart": "เพิ่ม",
 			"description": "คำอธิบาย",
-			"description_read_mode": "อ่านเพิ่มเติม",
+			"description_read_more": "อ่านเพิ่มเติม",
+			"description_read_less": "อ่านให้น้อยลง",
 			"on_sale": "ขาย",
 			"saved_amount": "{{ value }} ปิด",
 			"product_variants": "ตัวแปรของผลิตภัณฑ์",
 			"back_to_product": "กลับไปที่ผลิตภัณฑ์",
-			"quick_view": "มุมมองด่วน",
+			"quick_view": "ร้านด่วน",
+			"more_details": "รายละเอียดสินค้าเพิ่มเติม",
+			"more_options": "ตัวเลือกเพิ่มเติม",
 			"show_options": "แสดงตัวเลือก",
 			"express_show_options": "ตัวเลือก",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "รูปภาพ {{ index }} พร้อมใช้งานแล้วในมุมมองแกลเลอรี",
 				"open_media": "เปิดสื่อ {{ index }} ในโมดอล",
 				"play_model": "เล่น 3D Viewer",
-				"play_video": "เล่นวีดีโอ"
+				"play_video": "เล่นวีดีโอ",
+				"expanded_view_label": "คลิกเพื่อเปิดมุมมองแบบขยาย"
 			},
 			"quantity": {
 				"label": "ปริมาณ",
@@ -241,7 +274,8 @@
 			"label": "แกลเลอรี่สื่อ"
 		},
 		"facets": {
-			"apply": "นำมาใช้",
+			"apply": "ใช้ตัวกรอง",
+			"filtered": "กรองโดย:",
 			"clear": "ชัดเจน",
 			"clear_all": "ลบทั้งหมด",
 			"from": "จาก",
@@ -268,7 +302,7 @@
 			"clear_filter": "ล้างตัวกรอง"
 		},
 		"product_options": {
-			"view_all_options": "ดูตัวเลือกทั้งหมดเป็นรายการ",
+			"view_all_options": "เปรียบเทียบตัวเลือกผลิตภัณฑ์",
 			"only_in_stock": "แสดงเฉพาะสินค้าในสต็อก",
 			"in_stock_only": "ในสต็อกเท่านั้น",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} รายการ",
 				"other": "{{ count }} รายการ"
-			}
+			},
+			"store": "เก็บ",
+			"search": "ค้นหา",
+			"language": "ภาษา",
+			"country": "ประเทศ",
+			"account": "บัญชี",
+			"my_account": "บัญชีของฉัน",
+			"login": "เข้าสู่ระบบ",
+			"wishlist": "สิ่งที่ปรารถนา",
+			"my": "ของฉัน"
 		},
 		"cart": {
 			"title": "รถเข็นของคุณ",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "รวมภาษี. คำนวณการ <a href=\"{{ link }}\">จัดส่ง</a> เมื่อชำระเงิน",
 			"taxes_and_shipping_at_checkout": "ภาษีและค่าขนส่งคำนวณเมื่อชำระเงิน",
 			"free_shipping_aligible": "คุณกำลังได้รับการจัดส่งฟรี!",
-			"free_shipping_shortage": "รับการจัดส่งฟรีด้วย {{ amount }} เพิ่มเติม",
+			"free_shipping_shortage_html": "รับสิทธิ์จัดส่งฟรีเมื่อมี <span data-i18n-amount=\"\">{{ amount }}</span> มากขึ้น",
 			"headings": {
 				"product": "ผลิตภัณฑ์",
 				"price": "ราคา",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">เข้าสู่ระบบ</a> เพื่อตรวจสอบได้เร็วขึ้น"
 			}
 		},
+		"compare_products": {
+			"this_item": "รายการนี้",
+			"price": "ราคา",
+			"brand": "ยี่ห้อ",
+			"rating": "เรตติ้ง",
+			"availability": "ความพร้อมใช้งาน"
+		},
 		"footer": {
-			"payment": "วิธีการชำระเงิน"
+			"payment": "วิธีการชำระเงิน",
+			"back_to_top": "กลับไปด้านบน"
 		},
 		"featured_blog": {
 			"view_all": "ดูทั้งหมด",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "ดูทั้งหมด",
 			"title": "คอลเลกชัน"
+		},
+		"child_collections": {
+			"shop_all": "ช้อปครบ"
 		},
 		"collection_template": {
 			"empty_collection_message": "คอลเลกชันนี้ไม่มีสินค้า",
@@ -519,6 +573,13 @@
 			"expired": "หมดอายุ",
 			"copy_code_success": "คัดลอกโค้ดสำเร็จแล้ว",
 			"print_gift_card": "พิมพ์"
+		},
+		"recipient_form": {
+			"checkbox_label": "ฉันอยากส่งสิ่งนี้เป็นของขวัญ",
+			"email_label": "อีเมลผู้รับ",
+			"name_label": "ชื่อผู้รับ (ไม่บังคับ)",
+			"message_label": "ข้อความ (ไม่บังคับ)",
+			"max_chars_warn": "*{{ chars }} อักขระสูงสุด"
 		}
 	}
 }

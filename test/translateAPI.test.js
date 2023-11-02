@@ -18,7 +18,7 @@ const translatedINTRPLStrings = [
     "{{ rating_value }} из {{ rating_max }} звезд",   
     "Самовывоз доступен в <span class=\"color-foreground\">{{ location_name }}</span>",
     "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">удалите все</a>",
-    "<a href=\"{{ link }}\" class=\"link underlined-link\">Войдите</a> , чтобы проверить быстрее.",
+    "<a href=\"{{ link }}\" class=\"link underlined-link\">Войдите</a> , чтобы оформить заказ быстрее.",
     "{{ number }}",   
     "Самовывоз в настоящее время недоступен в <span class=\"color-foreground\">{{ location_name }}</span>"
 ]

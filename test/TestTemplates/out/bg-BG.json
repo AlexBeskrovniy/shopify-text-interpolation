@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Виж детайлите",
+			"announcement": "Съобщение",
+			"cart": "Количка",
+			"search": "Търсене",
+			"home": "У дома"
+		},
 		"date_types": {
 			"days": "Дни",
 			"hours": "Часа",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Споделете във Facebook",
-				"share_on_twitter": "Tweet в Twitter",
+				"share_on_twitter": "Публикувай на X",
 				"share_by_email": "Споделете по имейл",
 				"share_on_pinterest": "Закачете в Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Следваща страница",
 			"previous": "Предишна страница",
 			"next_short": "Следващия",
-			"previous_short": "Предишен"
+			"previous_short": "Предишен",
+			"view_more": "Виж повече"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Покажи всички",
+				"show_less": "Покажи по-малко"
+			},
 			"search": "Търсене",
 			"search_placeholder": "Въведете за търсене...",
-			"info": "Използвайте лентата за търсене, за да намерите продукти"
+			"info": "Използвайте лентата за търсене, за да намерите продукти",
+			"predictive_search": {
+				"suggestions": "Предложения",
+				"collections": "Колекции",
+				"products": "Продукти",
+				"posts": "Публикации в блогове",
+				"pages": "Страници"
+			}
 		},
 		"cart": {
 			"view": "Вижте моята количка ({{ count }})",
 			"open": "Отворете количката",
 			"qty_max_note": "Всички налични артикули в количката",
+			"qty_max_note_short": "Всички артикули в количката",
 			"item_added": "Артикулът е добавен към вашата количка",
 			"recommendations": {
 				"heading": "Може да харесате също и"
 			},
 			"notification": {
 				"title": "Добавен в количката",
-				"go_to_cart": "Отидете в количката"
+				"go_to_cart": "Отидете в количката",
+				"error": "Нещо се обърка. Моля опитайте по-късно"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Връзка",
 			"success_message": "Връзката е копирана в клипборда",
 			"facebook": "Дял",
-			"twitter": "Tweet",
+			"twitter": "Публикувай",
 			"pinterest": "ПИН",
 			"email": "Електронна поща"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Избрано",
 		"currently_viewing": "В момента гледам",
 		"add_count_items_to_cart_html": "Добавяне на <span data-i18n-amount=\"\">{{ amount }}</span> артикули в количката",
+		"wishlist": {
+			"button_add": "Добавяне към списък с желания",
+			"button_remove": "Премахване от списък с желания",
+			"empty_note": {
+				"heading": "Вашият списък с желания е празен",
+				"subheading": "Разгледайте повече и изберете някои артикули"
+			}
+		},
 		"product": {
 			"add_to_cart": "Добави в кошницата",
 			"express_add_to_cart": "Добавете",
 			"description": "Описание",
-			"description_read_mode": "Прочетете още",
+			"description_read_more": "Прочетете още",
+			"description_read_less": "Четете по-малко",
 			"on_sale": "Разпродажба",
 			"saved_amount": "{{ value }} изключена",
 			"product_variants": "Варианти на продукта",
 			"back_to_product": "Назад към продукта",
-			"quick_view": "Бърз поглед",
+			"quick_view": "Бърз магазин",
+			"more_details": "Повече подробности за продукта",
+			"more_options": "Повече опций",
 			"show_options": "Покажи опциите",
 			"express_show_options": "Настроики",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Изображението {{ index }} вече е достъпно в изглед на галерия",
 				"open_media": "Отворете медия {{ index }} в модален",
 				"play_model": "Играйте 3D Viewer",
-				"play_video": "Възпроизвеждане на видео"
+				"play_video": "Възпроизвеждане на видео",
+				"expanded_view_label": "Кликнете, за да отворите разширен изглед"
 			},
 			"quantity": {
 				"label": "Количество",
@@ -241,7 +274,8 @@
 			"label": "Медийна галерия"
 		},
 		"facets": {
-			"apply": "Приложи",
+			"apply": "Прилагане на филтри",
+			"filtered": "Филтриран по:",
 			"clear": "ясно",
 			"clear_all": "Изчисти всичко",
 			"from": "от",
@@ -268,7 +302,7 @@
 			"clear_filter": "Изчистване на филтъра"
 		},
 		"product_options": {
-			"view_all_options": "Вижте всички опции като списък",
+			"view_all_options": "Сравнете опциите на продукта",
 			"only_in_stock": "Показване само на налични продукти",
 			"in_stock_only": "Само в наличност",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} елемент",
 				"other": "{{ count }} елементи"
-			}
+			},
+			"store": "Магазин",
+			"search": "Търсене",
+			"language": "език",
+			"country": "Държава",
+			"account": "Сметка",
+			"my_account": "Моята сметка",
+			"login": "Влизам",
+			"wishlist": "Списък с желания",
+			"my": "моя"
 		},
 		"cart": {
 			"title": "Вашата количка",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Включен данък. <a href=\"{{ link }}\">Доставката се</a> изчислява при плащане.",
 			"taxes_and_shipping_at_checkout": "Данъците и доставката се изчисляват при плащане",
 			"free_shipping_aligible": "Получавате БЕЗПЛАТНА доставка!",
-			"free_shipping_shortage": "Вземете безплатна доставка с още {{ amount }}",
+			"free_shipping_shortage_html": "Вземете безплатна доставка с повече <span data-i18n-amount=\"\">{{ amount }}</span>",
 			"headings": {
 				"product": "Продукт",
 				"price": "Цена",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Влезте, за</a> да проверите по-бързо."
 			}
 		},
+		"compare_products": {
+			"this_item": "Този артикул",
+			"price": "Цена",
+			"brand": "Марка",
+			"rating": "Рейтинг",
+			"availability": "Наличност"
+		},
 		"footer": {
-			"payment": "Начини за плащане"
+			"payment": "Начини за плащане",
+			"back_to_top": "Върнете се в началото"
 		},
 		"featured_blog": {
 			"view_all": "Виж всички",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Виж всички",
 			"title": "Колекции"
+		},
+		"child_collections": {
+			"shop_all": "Пазарувайте всички"
 		},
 		"collection_template": {
 			"empty_collection_message": "Тази колекция няма продукти",
@@ -519,6 +573,13 @@
 			"expired": "Просрочен",
 			"copy_code_success": "Кодът е копиран успешно",
 			"print_gift_card": "Печат"
+		},
+		"recipient_form": {
+			"checkbox_label": "Искам да изпратя това като подарък",
+			"email_label": "Имейл на получателя",
+			"name_label": "Име на получателя (по избор)",
+			"message_label": "Съобщение (по избор)",
+			"max_chars_warn": "*{{ chars }} макс"
 		}
 	}
 }

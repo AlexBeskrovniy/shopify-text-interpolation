@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Részletek megtekintése",
+			"announcement": "Közlemény",
+			"cart": "Kosár",
+			"search": "Keresés",
+			"home": "itthon"
+		},
 		"date_types": {
 			"days": "Napok",
 			"hours": "Órák",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Oszd meg a Facebook",
-				"share_on_twitter": "Tweet a Twitter",
+				"share_on_twitter": "Hozzászólás X-en",
 				"share_by_email": "Oszd meg e-mailben",
 				"share_on_pinterest": "Pin a Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Következő oldal",
 			"previous": "Előző oldal",
 			"next_short": "Következő",
-			"previous_short": "Előző"
+			"previous_short": "Előző",
+			"view_more": "Mutass többet"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Mutasd az összeset",
+				"show_less": "Mutass kevesebbet"
+			},
 			"search": "Keresés",
 			"search_placeholder": "Gépeljen a kereséshez...",
-			"info": "Termékek kereséséhez használja a keresősávot"
+			"info": "Termékek kereséséhez használja a keresősávot",
+			"predictive_search": {
+				"suggestions": "Javaslatok",
+				"collections": "Gyűjtemények",
+				"products": "Termékek",
+				"posts": "Blogbejegyzések",
+				"pages": "Oldalak"
+			}
 		},
 		"cart": {
 			"view": "Kosár megtekintése ({{ count }})",
 			"open": "Nyitott kosár",
 			"qty_max_note": "Minden elérhető termék a kosárban",
+			"qty_max_note_short": "A kosárban lévő összes elem",
 			"item_added": "Tétel hozzáadva a kosárhoz",
 			"recommendations": {
 				"heading": "Akár ez is tetszhet"
 			},
 			"notification": {
 				"title": "Hozzáadva a kosárhoz",
-				"go_to_cart": "Tovább a kosárhoz"
+				"go_to_cart": "Tovább a kosárhoz",
+				"error": "Valami elromlott. Kérjük, próbálja később"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Link",
 			"success_message": "Link a vágólapra másolva",
 			"facebook": "Ossza meg",
-			"twitter": "Csipog",
+			"twitter": "Hozzászólás",
 			"pinterest": "Pin",
 			"email": "Email"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Kiválasztott",
 		"currently_viewing": "Jelenleg megtekintés alatt",
 		"add_count_items_to_cart_html": "Tedd a kosárba <span data-i18n-amount=\"\">{{ amount }}</span>",
+		"wishlist": {
+			"button_add": "Hozzáadni a Kívánságlistához",
+			"button_remove": "Eltávolítás a kívánságlistáról",
+			"empty_note": {
+				"heading": "A Kívánságlistád üres",
+				"subheading": "Fedezzen fel többet, és vegyen fel néhány elemet a szűkített listára"
+			}
+		},
 		"product": {
 			"add_to_cart": "Kosárba",
 			"express_add_to_cart": "Hozzáadás",
 			"description": "Leírás",
-			"description_read_mode": "Olvass tovább",
+			"description_read_more": "Olvass tovább",
+			"description_read_less": "Olvass kevesebbet",
 			"on_sale": "Eladás",
 			"saved_amount": "{{ value }} kikapcsolva",
 			"product_variants": "Termékváltozatok",
 			"back_to_product": "Vissza a termékhez",
-			"quick_view": "Gyors nézet",
+			"quick_view": "Gyors bolt",
+			"more_details": "További termékadatok",
+			"more_options": "Több lehetőség",
 			"show_options": "Beállítások megjelenítése",
 			"express_show_options": "Opciók",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "A {{ index }} kép már elérhető a galéria nézetben",
 				"open_media": "Nyissa meg a média {{ index }} modálisan",
 				"play_model": "Játssz 3D Viewer-t",
-				"play_video": "Videó lejátszása"
+				"play_video": "Videó lejátszása",
+				"expanded_view_label": "Kattintson a kibontott nézet megnyitásához"
 			},
 			"quantity": {
 				"label": "Mennyiség",
@@ -241,7 +274,8 @@
 			"label": "Médiagaléria"
 		},
 		"facets": {
-			"apply": "Alkalmaz",
+			"apply": "Szűrők alkalmazása",
+			"filtered": "Szűrés:",
 			"clear": "Egyértelmű",
 			"clear_all": "Mindent kitöröl",
 			"from": "Tól től",
@@ -268,7 +302,7 @@
 			"clear_filter": "Tiszta szűrő"
 		},
 		"product_options": {
-			"view_all_options": "Az összes opció megtekintése listaként",
+			"view_all_options": "Hasonlítsa össze a terméklehetőségeket",
 			"only_in_stock": "Csak a készleten lévő termékeket jelenítse meg",
 			"in_stock_only": "Csak raktáron",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} elem",
 				"other": "{{ count }} elemet"
-			}
+			},
+			"store": "Bolt",
+			"search": "Keresés",
+			"language": "Nyelv",
+			"country": "Ország",
+			"account": "fiók",
+			"my_account": "A fiókom",
+			"login": "Belépés",
+			"wishlist": "Kívánság lista",
+			"my": "Az én"
 		},
 		"cart": {
 			"title": "A kosarad",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Tartalmazza az adót. A kiszállítás a <a href=\"{{ link }}\">pénztárnál</a> számítva.",
 			"taxes_and_shipping_at_checkout": "Az adókat és a szállítási költséget a fizetéskor számítják ki",
 			"free_shipping_aligible": "INGYENES kiszállítást kapsz!",
-			"free_shipping_shortage": "Ingyenes kiszállítás {{ amount }} többletével",
+			"free_shipping_shortage_html": "Több <span data-i18n-amount=\"\">{{ amount }}</span> ingyenes szállítást kap",
 			"headings": {
 				"product": "Termék",
 				"price": "Ár",
@@ -355,8 +398,16 @@
 				"paragraph_html": "A gyorsabb kijelentkezés érdekében <a href=\"{{ link }}\" class=\"link underlined-link\">jelentkezzen</a> be."
 			}
 		},
+		"compare_products": {
+			"this_item": "Ez a dolog",
+			"price": "Ár",
+			"brand": "Márka",
+			"rating": "Értékelés",
+			"availability": "Elérhetőség"
+		},
 		"footer": {
-			"payment": "Fizetési módok"
+			"payment": "Fizetési módok",
+			"back_to_top": "Vissza a tetejére"
 		},
 		"featured_blog": {
 			"view_all": "Összes megtekintése",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Összes megtekintése",
 			"title": "Gyűjtemények"
+		},
+		"child_collections": {
+			"shop_all": "Vásároljon mindent"
 		},
 		"collection_template": {
 			"empty_collection_message": "Ebben a kollekcióban nincsenek termékek",
@@ -519,6 +573,13 @@
 			"expired": "Lejárt",
 			"copy_code_success": "A kód sikeresen másolva",
 			"print_gift_card": "Nyomtatás"
+		},
+		"recipient_form": {
+			"checkbox_label": "Ezt szeretném ajándékba küldeni",
+			"email_label": "Címzett e-mail",
+			"name_label": "Címzett neve (nem kötelező)",
+			"message_label": "Üzenet (opcionális)",
+			"max_chars_warn": "*{{ chars }} karakter max"
 		}
 	}
 }

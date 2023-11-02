@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Melihat rincian",
+			"announcement": "Pengumuman",
+			"cart": "Keranjang",
+			"search": "Mencari",
+			"home": "Rumah"
+		},
 		"date_types": {
 			"days": "Hari",
 			"hours": "Jam",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Bagikan di Facebook",
-				"share_on_twitter": "Tweet di Twitter",
+				"share_on_twitter": "Posting di X",
 				"share_by_email": "Bagikan melalui email",
 				"share_on_pinterest": "Pin di Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Halaman selanjutnya",
 			"previous": "Halaman sebelumnya",
 			"next_short": "Lanjut",
-			"previous_short": "Sebelumnya"
+			"previous_short": "Sebelumnya",
+			"view_more": "Lihat lebih banyak"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Tunjukkan semua",
+				"show_less": "Tampilkan lebih sedikit"
+			},
 			"search": "Mencari",
 			"search_placeholder": "Ketik untuk mencari...",
-			"info": "Gunakan bilah pencarian untuk menemukan produk"
+			"info": "Gunakan bilah pencarian untuk menemukan produk",
+			"predictive_search": {
+				"suggestions": "Saran",
+				"collections": "Koleksi",
+				"products": "Produk",
+				"posts": "Postingan Blog",
+				"pages": "Halaman"
+			}
 		},
 		"cart": {
 			"view": "Lihat keranjang saya ({{ count }})",
 			"open": "Buka gerobak",
 			"qty_max_note": "Semua item yang tersedia di keranjang",
+			"qty_max_note_short": "Semua item di keranjang",
 			"item_added": "Item ditambahkan ke keranjang Anda",
 			"recommendations": {
 				"heading": "Anda mungkin juga suka"
 			},
 			"notification": {
 				"title": "Ditambahkan ke troli",
-				"go_to_cart": "Pergi ke Keranjang"
+				"go_to_cart": "Pergi ke Keranjang",
+				"error": "Ada yang salah. Silakan coba lagi nanti"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Tautan",
 			"success_message": "Tautan disalin ke papan klip",
 			"facebook": "Membagikan",
-			"twitter": "Menciak",
+			"twitter": "Pos",
 			"pinterest": "Pin",
 			"email": "Surel"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Terpilih",
 		"currently_viewing": "Sedang melihat",
 		"add_count_items_to_cart_html": "Tambahkan <span data-i18n-amount=\"\">{{ amount }}</span> item ke troli",
+		"wishlist": {
+			"button_add": "Tambahkan ke Daftar Keinginan b Indonesia",
+			"button_remove": "Hapus dari Daftar Keinginan",
+			"empty_note": {
+				"heading": "Daftar keinginan anda kosong",
+				"subheading": "Jelajahi lebih lanjut dan pilih beberapa item"
+			}
+		},
 		"product": {
 			"add_to_cart": "Masukkan ke keranjang",
 			"express_add_to_cart": "Menambahkan",
 			"description": "Keterangan",
-			"description_read_mode": "Baca lebih banyak",
+			"description_read_more": "Baca selengkapnya",
+			"description_read_less": "Baca lebih sedikit",
 			"on_sale": "Penjualan",
 			"saved_amount": "{{ value }} nonaktif",
 			"product_variants": "Varian produk",
 			"back_to_product": "Kembali ke produk",
-			"quick_view": "Lihat sekilas",
+			"quick_view": "Toko cepat",
+			"more_details": "Detail produk lebih lanjut",
+			"more_options": "Lebih banyak pilihan",
 			"show_options": "Tampilkan opsi",
 			"express_show_options": "Pilihan",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Gambar {{ index }} sekarang tersedia dalam tampilan galeri",
 				"open_media": "Buka media {{ index }} dalam modal",
 				"play_model": "Mainkan Penampil 3D",
-				"play_video": "Putar video"
+				"play_video": "Putar video",
+				"expanded_view_label": "Klik untuk membuka tampilan yang diperluas"
 			},
 			"quantity": {
 				"label": "Kuantitas",
@@ -241,7 +274,8 @@
 			"label": "Galeri media"
 		},
 		"facets": {
-			"apply": "Berlaku",
+			"apply": "Terapkan filter",
+			"filtered": "Difilter berdasarkan:",
 			"clear": "Jernih",
 			"clear_all": "Bersihkan semua",
 			"from": "Dari",
@@ -268,7 +302,7 @@
 			"clear_filter": "Hapus filter"
 		},
 		"product_options": {
-			"view_all_options": "Lihat semua opsi sebagai daftar",
+			"view_all_options": "Bandingkan pilihan produk",
 			"only_in_stock": "Hanya tampilkan produk yang ada stoknya",
 			"in_stock_only": "Stok hanya ada",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "item {{ count }}",
 				"other": "{{ count }} item"
-			}
+			},
+			"store": "Toko",
+			"search": "Mencari",
+			"language": "Bahasa",
+			"country": "Negara",
+			"account": "Akun",
+			"my_account": "Akun saya",
+			"login": "Gabung",
+			"wishlist": "Daftar Keinginan",
+			"my": "-ku"
 		},
 		"cart": {
 			"title": "gerobak Anda",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Termasuk pajak. <a href=\"{{ link }}\">Pengiriman</a> dihitung saat checkout.",
 			"taxes_and_shipping_at_checkout": "Pajak dan pengiriman dihitung saat checkout",
 			"free_shipping_aligible": "Anda mendapatkan pengiriman GRATIS!",
-			"free_shipping_shortage": "Dapatkan pengiriman gratis dengan {{ amount }} lagi",
+			"free_shipping_shortage_html": "Dapatkan gratis ongkos kirim dengan <span data-i18n-amount=\"\">{{ amount }}</span> lebih banyak",
 			"headings": {
 				"product": "Produk",
 				"price": "Harga",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Masuk</a> untuk check out lebih cepat."
 			}
 		},
+		"compare_products": {
+			"this_item": "Barang ini",
+			"price": "Harga",
+			"brand": "Merek",
+			"rating": "Peringkat",
+			"availability": "Ketersediaan"
+		},
 		"footer": {
-			"payment": "Cara Pembayaran"
+			"payment": "Cara Pembayaran",
+			"back_to_top": "Kembali ke atas"
 		},
 		"featured_blog": {
 			"view_all": "Lihat semua",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Lihat semua",
 			"title": "Koleksi"
+		},
+		"child_collections": {
+			"shop_all": "Belanja semuanya"
 		},
 		"collection_template": {
 			"empty_collection_message": "Koleksi ini tidak memiliki produk",
@@ -519,6 +573,13 @@
 			"expired": "Kedaluwarsa",
 			"copy_code_success": "Kode berhasil disalin",
 			"print_gift_card": "Mencetak"
+		},
+		"recipient_form": {
+			"checkbox_label": "Saya ingin mengirimkan ini sebagai hadiah",
+			"email_label": "Penerima e-mail",
+			"name_label": "Nama penerima (opsional)",
+			"message_label": "pesan (pilihan)",
+			"max_chars_warn": "*{{ chars }} karakter maks"
 		}
 	}
 }

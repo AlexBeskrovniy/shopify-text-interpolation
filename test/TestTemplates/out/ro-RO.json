@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Vezi detalii",
+			"announcement": "Anunţ",
+			"cart": "Cart",
+			"search": "Căutare",
+			"home": "Acasă"
+		},
 		"date_types": {
 			"days": "Zile",
 			"hours": "Ore",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Distribuie pe Facebook",
-				"share_on_twitter": "Tweet pe Twitter",
+				"share_on_twitter": "Postează pe X",
 				"share_by_email": "Distribuie prin e-mail",
 				"share_on_pinterest": "Pin pe Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Pagina următoare",
 			"previous": "Pagina anterioară",
 			"next_short": "Următorul",
-			"previous_short": "Anterior"
+			"previous_short": "Anterior",
+			"view_more": "Vezi mai mult"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Arata tot",
+				"show_less": "Arata mai putin"
+			},
 			"search": "Căutare",
 			"search_placeholder": "Tastați pentru a căuta...",
-			"info": "Utilizați bara de căutare pentru a găsi produse"
+			"info": "Utilizați bara de căutare pentru a găsi produse",
+			"predictive_search": {
+				"suggestions": "Sugestii",
+				"collections": "Colecții",
+				"products": "Produse",
+				"posts": "Postări pe blog",
+				"pages": "Pagini"
+			}
 		},
 		"cart": {
 			"view": "Vizualizați coșul meu ({{ count }})",
 			"open": "Deschideți căruciorul",
 			"qty_max_note": "Toate articolele disponibile în coș",
+			"qty_max_note_short": "Toate articolele din coș",
 			"item_added": "Articol adăugat în coș",
 			"recommendations": {
 				"heading": "S-ar putea sa-ti placa si"
 			},
 			"notification": {
 				"title": "Adăugat în coș",
-				"go_to_cart": "Mergi la Coș"
+				"go_to_cart": "Mergi la Coș",
+				"error": "Ceva n-a mers bine. Te rog incearca mai tarziu"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Legătură",
 			"success_message": "Link copiat în clipboard",
 			"facebook": "Acțiune",
-			"twitter": "Tweet",
+			"twitter": "Post",
 			"pinterest": "Pin",
 			"email": "E-mail"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Selectat",
 		"currently_viewing": "Vizualizare în prezent",
 		"add_count_items_to_cart_html": "Adăugați <span data-i18n-amount=\"\">{{ amount }}</span> de articole în coș",
+		"wishlist": {
+			"button_add": "Adaugă la lista de dorințe",
+			"button_remove": "Eliminați din lista de dorințe",
+			"empty_note": {
+				"heading": "Lista ta de dorințe este goală",
+				"subheading": "Explorați mai multe și selectați câteva articole"
+			}
+		},
 		"product": {
 			"add_to_cart": "Adaugă in coş",
 			"express_add_to_cart": "Adăuga",
 			"description": "Descriere",
-			"description_read_mode": "Citeste mai mult",
+			"description_read_more": "Citeşte mai mult",
+			"description_read_less": "Citiți mai puțin",
 			"on_sale": "Vânzare",
 			"saved_amount": "{{ value }} dezactivată",
 			"product_variants": "Variante de produs",
 			"back_to_product": "Înapoi la produs",
-			"quick_view": "Vizualizare rapidă",
+			"quick_view": "Magazin rapid",
+			"more_details": "Mai multe detalii despre produs",
+			"more_options": "Mai multe opțiuni",
 			"show_options": "Afișați opțiuni",
 			"express_show_options": "Opțiuni",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Imaginea {{ index }} este acum disponibilă în vizualizarea galeriei",
 				"open_media": "Deschideți media {{ index }} în mod modal",
 				"play_model": "Joacă 3D Viewer",
-				"play_video": "Rulează video"
+				"play_video": "Rulează video",
+				"expanded_view_label": "Faceți clic pentru a deschide vizualizarea extinsă"
 			},
 			"quantity": {
 				"label": "Cantitate",
@@ -241,7 +274,8 @@
 			"label": "Galeria media"
 		},
 		"facets": {
-			"apply": "aplica",
+			"apply": "Aplicați filtre",
+			"filtered": "Filtrată după:",
 			"clear": "clar",
 			"clear_all": "Curata tot",
 			"from": "Din",
@@ -268,7 +302,7 @@
 			"clear_filter": "Șterge filtrul"
 		},
 		"product_options": {
-			"view_all_options": "Vizualizați toate opțiunile ca o listă",
+			"view_all_options": "Comparați opțiunile de produs",
 			"only_in_stock": "Afișați numai produsele în stoc",
 			"in_stock_only": "Doar in stoc",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} element",
 				"other": "{{ count }} elemente"
-			}
+			},
+			"store": "Magazin",
+			"search": "Căutare",
+			"language": "Limba",
+			"country": "Țară",
+			"account": "Cont",
+			"my_account": "Contul meu",
+			"login": "Log in",
+			"wishlist": "lista de dorințe",
+			"my": "Ale mele"
 		},
 		"cart": {
 			"title": "Coșul tău",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Taxă inclusă. <a href=\"{{ link }}\">Livrare</a> calculată la checkout.",
 			"taxes_and_shipping_at_checkout": "Taxele și transportul sunt calculate la finalizare",
 			"free_shipping_aligible": "Primești transport GRATUIT!",
-			"free_shipping_shortage": "Obțineți livrare gratuită cu {{ amount }} în plus",
+			"free_shipping_shortage_html": "Primiți transport gratuit cu <span data-i18n-amount=\"\">{{ amount }}</span> mai mare",
 			"headings": {
 				"product": "Produs",
 				"price": "Preț",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Conectați-vă</a> pentru a verifica mai rapid."
 			}
 		},
+		"compare_products": {
+			"this_item": "Acest obiect",
+			"price": "Preț",
+			"brand": "Marca",
+			"rating": "Evaluare",
+			"availability": "Disponibilitate"
+		},
 		"footer": {
-			"payment": "Metode de plata"
+			"payment": "Metode de plata",
+			"back_to_top": "Inapoi sus"
 		},
 		"featured_blog": {
 			"view_all": "A vedea tot",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "A vedea tot",
 			"title": "Colecții"
+		},
+		"child_collections": {
+			"shop_all": "Cumpără toate"
 		},
 		"collection_template": {
 			"empty_collection_message": "Această colecție nu are produse",
@@ -519,6 +573,13 @@
 			"expired": "Expirat",
 			"copy_code_success": "Cod copiat cu succes",
 			"print_gift_card": "Imprimare"
+		},
+		"recipient_form": {
+			"checkbox_label": "Vreau să trimit asta ca un cadou",
+			"email_label": "E-mailul destinatarului",
+			"name_label": "Numele destinatarului (opțional)",
+			"message_label": "Mesaj (opțional)",
+			"max_chars_warn": "*{{ chars }} caractere max"
 		}
 	}
 }

@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Tarkemmat tiedot",
+			"announcement": "Ilmoitus",
+			"cart": "Kärry",
+			"search": "Hae",
+			"home": "Koti"
+		},
 		"date_types": {
 			"days": "päivää",
 			"hours": "Tuntia",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Jaa Facebook",
-				"share_on_twitter": "Twiittaa Twitter",
+				"share_on_twitter": "Postaa X",
 				"share_by_email": "Jaa sähköpostilla",
 				"share_on_pinterest": "Pin Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Seuraava sivu",
 			"previous": "Edellinen sivu",
 			"next_short": "Seuraava",
-			"previous_short": "Edellinen"
+			"previous_short": "Edellinen",
+			"view_more": "Katso lisää"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Näytä kaikki",
+				"show_less": "Näytä vähemmän"
+			},
 			"search": "Hae",
 			"search_placeholder": "Hae kirjoittamalla...",
-			"info": "Käytä hakupalkkia löytääksesi tuotteita"
+			"info": "Käytä hakupalkkia löytääksesi tuotteita",
+			"predictive_search": {
+				"suggestions": "Ehdotukset",
+				"collections": "Kokoelmat",
+				"products": "Tuotteet",
+				"posts": "Blogiviestit",
+				"pages": "Sivut"
+			}
 		},
 		"cart": {
 			"view": "Näytä ostoskorini ({{ count }})",
 			"open": "Avaa kori",
 			"qty_max_note": "Kaikki ostoskorissa saatavilla olevat tuotteet",
+			"qty_max_note_short": "Kaikki tuotteet ostoskorissa",
 			"item_added": "Tuote lisätty ostoskoriin",
 			"recommendations": {
 				"heading": "saatat myös pitää"
 			},
 			"notification": {
 				"title": "Lisätty ostoskoriin",
-				"go_to_cart": "Siirry ostoskoriin"
+				"go_to_cart": "Siirry ostoskoriin",
+				"error": "Jotain meni pieleen. Ole hyvä ja yritä myöhemmin"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Linkki",
 			"success_message": "Linkki kopioitu leikepöydälle",
 			"facebook": "Jaa",
-			"twitter": "Tweet",
+			"twitter": "Lähettää",
 			"pinterest": "Pin",
 			"email": "Sähköposti"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Valittu",
 		"currently_viewing": "Tällä hetkellä katselussa",
 		"add_count_items_to_cart_html": "Lisää <span data-i18n-amount=\"\">{{ amount }}</span> ostoskoriin",
+		"wishlist": {
+			"button_add": "Lisää toivelistaan",
+			"button_remove": "Poista toivelistalta",
+			"empty_note": {
+				"heading": "Sinun toivelistasi on tyhjä",
+				"subheading": "Tutustu tarkemmin ja listaa joitain kohteita"
+			}
+		},
 		"product": {
 			"add_to_cart": "Lisää ostoskoriin",
 			"express_add_to_cart": "Lisätä",
 			"description": "Kuvaus",
-			"description_read_mode": "Lue lisää",
+			"description_read_more": "Lue lisää",
+			"description_read_less": "Lue vähemmän",
 			"on_sale": "Myynti",
 			"saved_amount": "{{ value }} pois päältä",
 			"product_variants": "Tuotevariaatiot",
 			"back_to_product": "Takaisin tuotteeseen",
-			"quick_view": "Katsaus",
+			"quick_view": "Pikakauppa",
+			"more_details": "Lisää tuotetietoja",
+			"more_options": "Lisää vaihtoehtoja",
 			"show_options": "Näytä vaihtoehdot",
 			"express_show_options": "Vaihtoehdot",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Kuva {{ index }} on nyt saatavilla gallerianäkymässä",
 				"open_media": "Avaa median {{ index }} modaalisesti",
 				"play_model": "Pelaa 3D Vieweria",
-				"play_video": "Toista video"
+				"play_video": "Toista video",
+				"expanded_view_label": "Napsauta avataksesi laajennettu näkymä"
 			},
 			"quantity": {
 				"label": "Määrä",
@@ -241,7 +274,8 @@
 			"label": "Media galleria"
 		},
 		"facets": {
-			"apply": "Käytä",
+			"apply": "Käytä suodattimia",
+			"filtered": "Suodatusperuste:",
 			"clear": "Asia selvä",
 			"clear_all": "Tyhjennä",
 			"from": "From",
@@ -268,7 +302,7 @@
 			"clear_filter": "Tyhjennä suodatin"
 		},
 		"product_options": {
-			"view_all_options": "Näytä kaikki vaihtoehdot luettelona",
+			"view_all_options": "Vertaile tuotevaihtoehtoja",
 			"only_in_stock": "Näytä vain varastossa olevat tuotteet",
 			"in_stock_only": "Vain varastossa",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} kohde",
 				"other": "{{ count }} kohdetta"
-			}
+			},
+			"store": "Store",
+			"search": "Hae",
+			"language": "Kieli",
+			"country": "Maa",
+			"account": "Tili",
+			"my_account": "Tilini",
+			"login": "Kirjaudu sisään",
+			"wishlist": "Toivelista",
+			"my": "Minun"
 		},
 		"cart": {
 			"title": "Ostoskorisi",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Verot mukaanlukien. <a href=\"{{ link }}\">Toimituskulut</a> lasketaan kassalla.",
 			"taxes_and_shipping_at_checkout": "Verot ja toimituskulut lasketaan kassalla",
 			"free_shipping_aligible": "Saat ILMAISEN toimituksen!",
-			"free_shipping_shortage": "Saat ilmaisen toimituksen {{ amount }} lisää",
+			"free_shipping_shortage_html": "Saat ilmaisen toimituksen <span data-i18n-amount=\"\">{{ amount }}</span>",
 			"headings": {
 				"product": "Tuote",
 				"price": "Hinta",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Kirjaudu sisään</a> tarkistaaksesi nopeammin."
 			}
 		},
+		"compare_products": {
+			"this_item": "Tämä esine",
+			"price": "Hinta",
+			"brand": "Brändi",
+			"rating": "Luokitus",
+			"availability": "Saatavuus"
+		},
 		"footer": {
-			"payment": "Maksutavat"
+			"payment": "Maksutavat",
+			"back_to_top": "Takaisin alkuun"
 		},
 		"featured_blog": {
 			"view_all": "Näytä kaikki",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Näytä kaikki",
 			"title": "Kokoelmat"
+		},
+		"child_collections": {
+			"shop_all": "Osta kaikki"
 		},
 		"collection_template": {
 			"empty_collection_message": "Tässä kokoelmassa ei ole tuotteita",
@@ -519,6 +573,13 @@
 			"expired": "Vanhentunut",
 			"copy_code_success": "Koodi kopioitu onnistuneesti",
 			"print_gift_card": "Tulosta"
+		},
+		"recipient_form": {
+			"checkbox_label": "Haluan lähettää tämän lahjaksi",
+			"email_label": "Vastaanottajan Sähköposti",
+			"name_label": "Vastaanottajan nimi (valinnainen)",
+			"message_label": "Viesti (valinnainen)",
+			"max_chars_warn": "*{{ chars }} merkkiä enintään"
 		}
 	}
 }

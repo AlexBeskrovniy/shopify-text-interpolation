@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "詳細を見る",
+			"announcement": "発表",
+			"cart": "カート",
+			"search": "検索",
+			"home": "家"
+		},
 		"date_types": {
 			"days": "日々",
 			"hours": "時間",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Facebookでシェア",
-				"share_on_twitter": "Twitterでつぶやく",
+				"share_on_twitter": "Xに投稿する",
 				"share_by_email": "メールで共有",
 				"share_on_pinterest": "ボード「 Pinterest 」のピン"
 			},
@@ -54,24 +61,38 @@
 			"next": "次のページ",
 			"previous": "前のページ",
 			"next_short": "次",
-			"previous_short": "前"
+			"previous_short": "前",
+			"view_more": "もっと見る"
 		},
 		"search": {
+			"filters": {
+				"show_all": "すべて表示する",
+				"show_less": "表示を少なくする"
+			},
 			"search": "探す",
 			"search_placeholder": "入力して検索...",
-			"info": "検索バーを使用して製品を検索する"
+			"info": "検索バーを使用して製品を検索する",
+			"predictive_search": {
+				"suggestions": "提案",
+				"collections": "コレクション",
+				"products": "製品",
+				"posts": "ブログ投稿",
+				"pages": "ページ"
+			}
 		},
 		"cart": {
 			"view": "カートを見る ({{ count }})",
 			"open": "カートを開く",
 			"qty_max_note": "カート内のすべての利用可能なアイテム",
+			"qty_max_note_short": "カート内のすべての商品",
 			"item_added": "カートに商品が追加されました",
 			"recommendations": {
 				"heading": "あなたはおそらくそれも好きでしょう"
 			},
 			"notification": {
 				"title": "カートに追加",
-				"go_to_cart": "カートに行く"
+				"go_to_cart": "カートに行く",
+				"error": "何か問題が発生しました。後でお試しください"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "リンク",
 			"success_message": "リンクをクリップボードにコピーしました",
 			"facebook": "共有",
-			"twitter": "つぶやき",
+			"twitter": "役職",
 			"pinterest": "ピン",
 			"email": "Eメール"
 		},
@@ -145,16 +166,27 @@
 		"selected": "選択済み",
 		"currently_viewing": "現在閲覧中",
 		"add_count_items_to_cart_html": "<span data-i18n-amount=\"\">{{ amount }}</span>商品をカートに入れる",
+		"wishlist": {
+			"button_add": "ほしい物リストに追加する",
+			"button_remove": "ウィッシュリストから削除",
+			"empty_note": {
+				"heading": "あなたのウィッシュリストは空です",
+				"subheading": "さらに詳しく調べていくつかの項目を候補リストに挙げる"
+			}
+		},
 		"product": {
 			"add_to_cart": "カートに追加",
 			"express_add_to_cart": "追加",
 			"description": "説明",
-			"description_read_mode": "続きを読む",
+			"description_read_more": "続きを読む",
+			"description_read_less": "読む量を減らす",
 			"on_sale": "セール",
 			"saved_amount": "{{ value }} オフ",
 			"product_variants": "製品バリエーション",
 			"back_to_product": "製品に戻る",
-			"quick_view": "クイックビュー",
+			"quick_view": "クイックショップ",
+			"more_details": "製品の詳細",
+			"more_options": "より多くのオプション",
 			"show_options": "オプションを表示",
 			"express_show_options": "オプション",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "画像 {{ index }} がギャラリー ビューで利用できるようになりました",
 				"open_media": "メディア {{ index }} をモーダルで開く",
 				"play_model": "3D ビューアを再生",
-				"play_video": "動画を再生します"
+				"play_video": "動画を再生します",
+				"expanded_view_label": "クリックして展開ビューを開きます"
 			},
 			"quantity": {
 				"label": "量",
@@ -241,7 +274,8 @@
 			"label": "メディアギャラリー"
 		},
 		"facets": {
-			"apply": "申し込み",
+			"apply": "フィルターを適用する",
+			"filtered": "フィルタリング:",
 			"clear": "クリア",
 			"clear_all": "すべてクリア",
 			"from": "から",
@@ -268,7 +302,7 @@
 			"clear_filter": "フィルターをクリア"
 		},
 		"product_options": {
-			"view_all_options": "すべてのオプションをリストとして表示",
+			"view_all_options": "製品オプションを比較する",
 			"only_in_stock": "在庫のある商品のみ表示",
 			"in_stock_only": "在庫のみ",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} 個のアイテム",
 				"other": "{{ count }} 個のアイテム"
-			}
+			},
+			"store": "店",
+			"search": "検索",
+			"language": "言語",
+			"country": "国",
+			"account": "アカウント",
+			"my_account": "私のアカウント",
+			"login": "ログイン",
+			"wishlist": "ウィッシュリスト",
+			"my": "私の"
 		},
 		"cart": {
 			"title": "あなたのカート",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "税込み。<a href=\"{{ link }}\">配送</a>料はチェックアウト時に計算されます。",
 			"taxes_and_shipping_at_checkout": "チェックアウト時に計算される税金と配送料",
 			"free_shipping_aligible": "送料無料です！",
-			"free_shipping_shortage": "{{ amount }} 以上で送料無料",
+			"free_shipping_shortage_html": "それ以上の<span data-i18n-amount=\"\">{{ amount }}</span>で送料が無料になります",
 			"headings": {
 				"product": "製品",
 				"price": "価格",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">ログインし</a>て、より速くチェックアウトしてください。"
 			}
 		},
+		"compare_products": {
+			"this_item": "この物",
+			"price": "価格",
+			"brand": "ブランド",
+			"rating": "評価",
+			"availability": "可用性"
+		},
 		"footer": {
-			"payment": "お支払い方法"
+			"payment": "お支払い方法",
+			"back_to_top": "トップに戻る"
 		},
 		"featured_blog": {
 			"view_all": "すべて見る",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "すべて見る",
 			"title": "コレクション"
+		},
+		"child_collections": {
+			"shop_all": "すべて購入する"
 		},
 		"collection_template": {
 			"empty_collection_message": "このコレクションには商品がありません",
@@ -519,6 +573,13 @@
 			"expired": "期限切れ",
 			"copy_code_success": "コードが正常にコピーされました",
 			"print_gift_card": "印刷する"
+		},
+		"recipient_form": {
+			"checkbox_label": "これをギフトとして送りたいです",
+			"email_label": "受信者のEメール",
+			"name_label": "受信者名 (オプション)",
+			"message_label": "メッセージ (オプション)",
+			"max_chars_warn": "*最大{{ chars }} 文字"
 		}
 	}
 }

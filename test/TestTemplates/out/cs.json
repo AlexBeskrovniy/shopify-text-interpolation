@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Zobrazit podrobnosti",
+			"announcement": "Oznámení",
+			"cart": "Vozík",
+			"search": "Vyhledávání",
+			"home": "Domov"
+		},
 		"date_types": {
 			"days": "Dny",
 			"hours": "hodiny",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Sdílejte na Facebook",
-				"share_on_twitter": "Tweetujte na Twitter",
+				"share_on_twitter": "Příspěvek na X",
 				"share_by_email": "Sdílejte e-mailem",
 				"share_on_pinterest": "Připnout na Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Další strana",
 			"previous": "Předchozí stránka",
 			"next_short": "další",
-			"previous_short": "Předchozí"
+			"previous_short": "Předchozí",
+			"view_more": "Ukázat více"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Ukázat vše",
+				"show_less": "Ukaž méně"
+			},
 			"search": "Vyhledávání",
 			"search_placeholder": "Zadejte a vyhledejte...",
-			"info": "Pro vyhledání produktů použijte vyhledávací lištu"
+			"info": "Pro vyhledání produktů použijte vyhledávací lištu",
+			"predictive_search": {
+				"suggestions": "Návrhy",
+				"collections": "Sbírky",
+				"products": "produkty",
+				"posts": "Příspěvky na blogu",
+				"pages": "Stránky"
+			}
 		},
 		"cart": {
 			"view": "Zobrazit můj košík ({{ count }})",
 			"open": "Otevřete košík",
 			"qty_max_note": "Všechny dostupné položky v košíku",
+			"qty_max_note_short": "Všechny položky v košíku",
 			"item_added": "Položka přidána do košíku",
 			"recommendations": {
 				"heading": "může se vám také libit"
 			},
 			"notification": {
 				"title": "Přidáno do košíku",
-				"go_to_cart": "Přejít do košíku"
+				"go_to_cart": "Přejít do košíku",
+				"error": "Něco se pokazilo. Prosím zkuste později"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Odkaz",
 			"success_message": "Odkaz zkopírován do schránky",
 			"facebook": "Podíl",
-			"twitter": "tweet",
+			"twitter": "Pošta",
 			"pinterest": "Kolík",
 			"email": "E-mailem"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Vybraný",
 		"currently_viewing": "Aktuálně zobrazeno",
 		"add_count_items_to_cart_html": "Přidejte <span data-i18n-amount=\"\">{{ amount }}</span> položek do košíku",
+		"wishlist": {
+			"button_add": "Přidat do seznamu přání",
+			"button_remove": "Odebrat ze seznamu přání",
+			"empty_note": {
+				"heading": "Váš seznam přání je prázdný",
+				"subheading": "Prozkoumejte více a vyberte některé položky do užšího výběru"
+			}
+		},
 		"product": {
 			"add_to_cart": "Přidat do košíku",
 			"express_add_to_cart": "Přidat",
 			"description": "Popis",
-			"description_read_mode": "Přečtěte si více",
+			"description_read_more": "Přečtěte si více",
+			"description_read_less": "Méně čtěte",
 			"on_sale": "Prodej",
 			"saved_amount": "{{ value }} vypnuta",
 			"product_variants": "Varianty produktu",
 			"back_to_product": "Zpět k produktu",
-			"quick_view": "Rychlý pohled",
+			"quick_view": "Rychlý obchod",
+			"more_details": "Další podrobnosti o produktu",
+			"more_options": "Více možností",
 			"show_options": "Zobrazit možnosti",
 			"express_show_options": "Možnosti",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Obrázek {{ index }} je nyní k dispozici v zobrazení galerie",
 				"open_media": "Otevřít {{ index }} média v modálním režimu",
 				"play_model": "Přehrát 3D prohlížeč",
-				"play_video": "Přehrát video"
+				"play_video": "Přehrát video",
+				"expanded_view_label": "Kliknutím otevřete rozšířené zobrazení"
 			},
 			"quantity": {
 				"label": "Množství",
@@ -241,7 +274,8 @@
 			"label": "Galerie médií"
 		},
 		"facets": {
-			"apply": "Aplikovat",
+			"apply": "Použijte filtry",
+			"filtered": "Filtrováno podle:",
 			"clear": "Průhledná",
 			"clear_all": "Vymazat vše",
 			"from": "Z",
@@ -268,7 +302,7 @@
 			"clear_filter": "Vymazat filtr"
 		},
 		"product_options": {
-			"view_all_options": "Zobrazit všechny možnosti jako seznam",
+			"view_all_options": "Porovnejte možnosti produktů",
 			"only_in_stock": "Zobrazit pouze produkty skladem",
 			"in_stock_only": "Pouze skladem",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} položka",
 				"other": "{{ count }} položky"
-			}
+			},
+			"store": "Obchod",
+			"search": "Vyhledávání",
+			"language": "Jazyk",
+			"country": "Země",
+			"account": "Účet",
+			"my_account": "Můj účet",
+			"login": "Přihlásit se",
+			"wishlist": "Seznam přání",
+			"my": "Můj"
 		},
 		"cart": {
 			"title": "Váš košík",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Včetně daně. <a href=\"{{ link }}\">Poštovné</a> kalkulováno při pokladně.",
 			"taxes_and_shipping_at_checkout": "Daně a doprava vypočítané při pokladně",
 			"free_shipping_aligible": "Získáváte dopravu ZDARMA!",
-			"free_shipping_shortage": "Získejte dopravu zdarma s {{ amount }} navíc",
+			"free_shipping_shortage_html": "Získejte dopravu zdarma s větším <span data-i18n-amount=\"\">{{ amount }}</span>",
 			"headings": {
 				"product": "Produkt",
 				"price": "Cena",
@@ -355,8 +398,16 @@
 				"paragraph_html": "Pro rychlejší odhlášení se <a href=\"{{ link }}\" class=\"link underlined-link\">přihlaste</a> ."
 			}
 		},
+		"compare_products": {
+			"this_item": "Tento předmět",
+			"price": "Cena",
+			"brand": "Značka",
+			"rating": "Hodnocení",
+			"availability": "Dostupnost"
+		},
 		"footer": {
-			"payment": "Platební metody"
+			"payment": "Platební metody",
+			"back_to_top": "Zpět na začátek"
 		},
 		"featured_blog": {
 			"view_all": "Zobrazit vše",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Zobrazit vše",
 			"title": "Sbírky"
+		},
+		"child_collections": {
+			"shop_all": "Nakupujte vše"
 		},
 		"collection_template": {
 			"empty_collection_message": "Tato kolekce neobsahuje žádné produkty",
@@ -519,6 +573,13 @@
 			"expired": "Platnost vypršela",
 			"copy_code_success": "Kód byl úspěšně zkopírován",
 			"print_gift_card": "Tisk"
+		},
+		"recipient_form": {
+			"checkbox_label": "Chci to poslat jako dárek",
+			"email_label": "Příjemce e-mailu",
+			"name_label": "Jméno příjemce (volitelné)",
+			"message_label": "Zpráva (volitelné)",
+			"max_chars_warn": "*{{ chars }} znaků max"
 		}
 	}
 }

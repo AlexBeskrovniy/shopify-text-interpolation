@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Ver detalles",
+			"announcement": "Anuncio",
+			"cart": "Carro",
+			"search": "Buscar",
+			"home": "Hogar"
+		},
 		"date_types": {
 			"days": "Días",
 			"hours": "Horas",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Compartir en Facebook",
-				"share_on_twitter": "Twittear en Twitter",
+				"share_on_twitter": "Publicar en X",
 				"share_by_email": "Compartir por correo electrónico",
 				"share_on_pinterest": "Pin en Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Siguiente página",
 			"previous": "Pagina anterior",
 			"next_short": "Próximo",
-			"previous_short": "Anterior"
+			"previous_short": "Anterior",
+			"view_more": "Ver más"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Mostrar todo",
+				"show_less": "Muestra menos"
+			},
 			"search": "Buscar",
 			"search_placeholder": "Escribe para buscar...",
-			"info": "Utilice la barra de búsqueda para encontrar productos"
+			"info": "Utilice la barra de búsqueda para encontrar productos",
+			"predictive_search": {
+				"suggestions": "Sugerencias",
+				"collections": "Colecciones",
+				"products": "Productos",
+				"posts": "Publicaciones de blog",
+				"pages": "paginas"
+			}
 		},
 		"cart": {
 			"view": "Ver mi carrito ({{ count }})",
 			"open": "carrito abierto",
 			"qty_max_note": "Todos los artículos disponibles en el carrito.",
+			"qty_max_note_short": "Todos los artículos en el carrito",
 			"item_added": "Artículo añadido a tu carrito",
 			"recommendations": {
 				"heading": "También podría gustarte"
 			},
 			"notification": {
 				"title": "Añadido al carrito",
-				"go_to_cart": "Ir al carrito"
+				"go_to_cart": "Ir al carrito",
+				"error": "Algo salió mal. Por favor intente mas tarde"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Enlace",
 			"success_message": "link copiado al portapapeles",
 			"facebook": "Cuota",
-			"twitter": "Pío",
+			"twitter": "Correo",
 			"pinterest": "Alfiler",
 			"email": "Correo electrónico"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Seleccionado",
 		"currently_viewing": "Viendo actualmente",
 		"add_count_items_to_cart_html": "Agregar <span data-i18n-amount=\"\">{{ amount }}</span> de artículos al carrito",
+		"wishlist": {
+			"button_add": "Añadir a la lista de deseos",
+			"button_remove": "Eliminar de la lista de deseos",
+			"empty_note": {
+				"heading": "Tu lista de deseos Esta vacía",
+				"subheading": "Explore más y seleccione algunos elementos"
+			}
+		},
 		"product": {
 			"add_to_cart": "Añadir a la cesta",
 			"express_add_to_cart": "Agregar",
 			"description": "Descripción",
-			"description_read_mode": "Lee mas",
+			"description_read_more": "Leer más",
+			"description_read_less": "Leer menos",
 			"on_sale": "Venta",
 			"saved_amount": "{{ undefined }} desactivado",
 			"product_variants": "Variantes del producto",
 			"back_to_product": "volver al producto",
-			"quick_view": "Vista rápida",
+			"quick_view": "Compra rápida",
+			"more_details": "Más detalles del producto",
+			"more_options": "Mas opciones",
 			"show_options": "Mostrar opciones",
 			"express_show_options": "Opciones",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "La imagen {{ index }} ya está disponible en la vista de galería",
 				"open_media": "Abrir medios {{ index }} en modal",
 				"play_model": "Reproducir Visor 3D",
-				"play_video": "Reproduce el video"
+				"play_video": "Reproduce el video",
+				"expanded_view_label": "Haga clic para abrir la vista ampliada"
 			},
 			"quantity": {
 				"label": "Cantidad",
@@ -241,7 +274,8 @@
 			"label": "Galería media"
 		},
 		"facets": {
-			"apply": "Solicitar",
+			"apply": "Aplicar filtros",
+			"filtered": "Filtrado por:",
 			"clear": "Claro",
 			"clear_all": "Limpiar todo",
 			"from": "De",
@@ -268,7 +302,7 @@
 			"clear_filter": "Filtro claro"
 		},
 		"product_options": {
-			"view_all_options": "Ver todas las opciones como una lista",
+			"view_all_options": "Comparar opciones de productos",
 			"only_in_stock": "Mostrar solo productos en stock",
 			"in_stock_only": "Solo en stock",
 			"sku": "SKU",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "elemento {{ count }}",
 				"other": "{{ count }} elementos"
-			}
+			},
+			"store": "Almacenar",
+			"search": "Buscar",
+			"language": "Idioma",
+			"country": "País",
+			"account": "Cuenta",
+			"my_account": "Mi cuenta",
+			"login": "Acceso",
+			"wishlist": "Lista de deseos",
+			"my": "Mi"
 		},
 		"cart": {
 			"title": "tu carrito",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Impuesto incluido. <a href=\"{{ link }}\">Envío</a> calculado al finalizar la compra.",
 			"taxes_and_shipping_at_checkout": "Impuestos y gastos de envío calculados al finalizar la compra",
 			"free_shipping_aligible": "¡Tienes envío GRATIS!",
-			"free_shipping_shortage": "Obtenga envío gratis con {{ amount }} más",
+			"free_shipping_shortage_html": "Consigue envío gratis con <span data-i18n-amount=\"\">{{ amount }}</span> más",
 			"headings": {
 				"product": "Producto",
 				"price": "Precio",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicie sesión</a> para pagar más rápido."
 			}
 		},
+		"compare_products": {
+			"this_item": "Éste ítem",
+			"price": "Precio",
+			"brand": "Marca",
+			"rating": "Clasificación",
+			"availability": "Disponibilidad"
+		},
 		"footer": {
-			"payment": "Métodos de pago"
+			"payment": "Métodos de pago",
+			"back_to_top": "Volver arriba"
 		},
 		"featured_blog": {
 			"view_all": "Ver todo",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Ver todo",
 			"title": "Colecciones"
+		},
+		"child_collections": {
+			"shop_all": "Comprar todo"
 		},
 		"collection_template": {
 			"empty_collection_message": "Esta colección no tiene productos.",
@@ -519,6 +573,13 @@
 			"expired": "Venció",
 			"copy_code_success": "Código copiado con éxito",
 			"print_gift_card": "Imprimir"
+		},
+		"recipient_form": {
+			"checkbox_label": "quiero enviar esto como regalo",
+			"email_label": "Receptor de E-mail",
+			"name_label": "Nombre del destinatario (opcional)",
+			"message_label": "mensaje (opcional)",
+			"max_chars_warn": "*{{ chars }} caracteres máx."
 		}
 	}
 }

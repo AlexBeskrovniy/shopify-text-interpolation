@@ -1,10 +1,17 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Посмотреть детали",
+			"announcement": "Объявление",
+			"cart": "Корзина",
+			"search": "Поиск",
+			"home": "Дом"
+		},
 		"date_types": {
-			"days": "Days",
-			"hours": "Hours",
-			"minutes": "Minutes",
-			"seconds": "Seconds"
+			"days": "Дней",
+			"hours": "Часы",
+			"minutes": "Минуты",
+			"seconds": "Секунды"
 		},
 		"editor": {
 			"default_heading": "В этом разделе сейчас нет контента.",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Поделиться на Facebook",
-				"share_on_twitter": "Твитнуть в Twitter",
+				"share_on_twitter": "Опубликовать на X",
 				"share_by_email": "Поделиться по электронной почте",
 				"share_on_pinterest": "Пин на Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Следущая страница",
 			"previous": "Предыдущая страница",
 			"next_short": "Следующий",
-			"previous_short": "Предыдущий"
+			"previous_short": "Предыдущий",
+			"view_more": "Посмотреть больше"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Показать все",
+				"show_less": "Показывай меньше"
+			},
 			"search": "Поиск",
 			"search_placeholder": "Введите для поиска...",
-			"info": "Используйте строку поиска, чтобы найти товары"
+			"info": "Используйте строку поиска, чтобы найти товары",
+			"predictive_search": {
+				"suggestions": "Предложения",
+				"collections": "Коллекции",
+				"products": "Продукты",
+				"posts": "Сообщения в блоге",
+				"pages": "Страницы"
+			}
 		},
 		"cart": {
 			"view": "Посмотреть мою корзину ({{ count }})",
 			"open": "Открыть корзину",
 			"qty_max_note": "Все доступные товары в корзине",
+			"qty_max_note_short": "Все товары в корзине",
 			"item_added": "Товар добавлен в Вашу корзину",
 			"recommendations": {
 				"heading": "Вам также может понравиться"
 			},
 			"notification": {
 				"title": "Добавлено в корзину",
-				"go_to_cart": "Перейти в корзину"
+				"go_to_cart": "Перейти в корзину",
+				"error": "Что-то пошло не так. Пожалуйста, попробуйте позднее"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "Связь",
 			"success_message": "Ссылка скопирована в буфер обмена",
 			"facebook": "Делиться",
-			"twitter": "Твитнуть",
+			"twitter": "Почта",
 			"pinterest": "Приколоть",
 			"email": "Эл. адрес"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Выбрано",
 		"currently_viewing": "Сейчас просматривается",
 		"add_count_items_to_cart_html": "Добавьте <span data-i18n-amount=\"\">{{ amount }}</span> товаров в корзину",
+		"wishlist": {
+			"button_add": "Добавить в список желаний",
+			"button_remove": "Удалить из списка желаний",
+			"empty_note": {
+				"heading": "Ваш список желаний пуст",
+				"subheading": "Узнайте больше и составьте список некоторых товаров"
+			}
+		},
 		"product": {
 			"add_to_cart": "Добавить в корзину",
 			"express_add_to_cart": "Добавлять",
 			"description": "Описание",
-			"description_read_mode": "Читать больше",
+			"description_read_more": "Читать далее",
+			"description_read_less": "Читать меньше",
 			"on_sale": "Распродажа",
 			"saved_amount": "{{ value }} выкл.",
 			"product_variants": "Варианты продукта",
 			"back_to_product": "Назад к продукту",
-			"quick_view": "Быстрый просмотр",
+			"quick_view": "Быстрый магазин",
+			"more_details": "Более подробная информация о продукте",
+			"more_options": "Больше вариантов",
 			"show_options": "Показать параметры",
 			"express_show_options": "Опции",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Изображение {{ index }} теперь доступно в виде галереи.",
 				"open_media": "Открыть мультимедийный {{ index }} в модальном режиме",
 				"play_model": "Воспроизвести средство 3D-просмотра",
-				"play_video": "Проиграть видео"
+				"play_video": "Проиграть видео",
+				"expanded_view_label": "Нажмите, чтобы открыть развернутый вид"
 			},
 			"quantity": {
 				"label": "Количество",
@@ -241,7 +274,8 @@
 			"label": "Медиа-галерея"
 		},
 		"facets": {
-			"apply": "Применять",
+			"apply": "Применить фильтры",
+			"filtered": "Отфильтровано по:",
 			"clear": "Очистить",
 			"clear_all": "Очистить все",
 			"from": "Из",
@@ -268,7 +302,7 @@
 			"clear_filter": "Очистить фильтр"
 		},
 		"product_options": {
-			"view_all_options": "Просмотреть все варианты в виде списка",
+			"view_all_options": "Сравнить варианты продукта",
 			"only_in_stock": "Показать только товары в наличии",
 			"in_stock_only": "Только в наличии",
 			"sku": "Артикул",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "Элемент {{ count }}",
 				"other": "{{ count }} элементов"
-			}
+			},
+			"store": "Магазин",
+			"search": "Поиск",
+			"language": "Язык",
+			"country": "Страна",
+			"account": "Счет",
+			"my_account": "Мой счет",
+			"login": "Авторизоваться",
+			"wishlist": "Список желаний",
+			"my": "Мой"
 		},
 		"cart": {
 			"title": "Ваша корзина",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Включая налоги. <a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении.",
 			"taxes_and_shipping_at_checkout": "Налоги и стоимость доставки рассчитываются при оформлении заказа",
 			"free_shipping_aligible": "Вы получаете БЕСПЛАТНУЮ доставку!",
-			"free_shipping_shortage": "Получите бесплатную доставку на {{ amount }} больше",
+			"free_shipping_shortage_html": "Получите бесплатную доставку на <span data-i18n-amount=\"\">{{ amount }}</span> больше",
 			"headings": {
 				"product": "Продукт",
 				"price": "Цена",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Войдите</a> , чтобы проверить быстрее."
 			}
 		},
+		"compare_products": {
+			"this_item": "Эта вещь",
+			"price": "Цена",
+			"brand": "Бренд",
+			"rating": "Рейтинг",
+			"availability": "Доступность"
+		},
 		"footer": {
-			"payment": "Способы оплаты"
+			"payment": "Способы оплаты",
+			"back_to_top": "Вернуться наверх"
 		},
 		"featured_blog": {
 			"view_all": "Посмотреть все",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Посмотреть все",
 			"title": "Коллекции"
+		},
+		"child_collections": {
+			"shop_all": "Купить все"
 		},
 		"collection_template": {
 			"empty_collection_message": "В этой коллекции нет товаров",
@@ -519,6 +573,13 @@
 			"expired": "Истекший",
 			"copy_code_success": "Код успешно скопирован",
 			"print_gift_card": "Распечатать"
+		},
+		"recipient_form": {
+			"checkbox_label": "Я хочу отправить это в подарок",
+			"email_label": "Электронная почта получателя",
+			"name_label": "Имя получателя (необязательно)",
+			"message_label": "Сообщение (необязательно)",
+			"max_chars_warn": "*{{ chars }} максимум символов"
 		}
 	}
 }

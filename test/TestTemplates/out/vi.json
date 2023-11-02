@@ -1,5 +1,12 @@
 {
 	"general": {
+		"accessibility": {
+			"any_link": "Xem chi tiết",
+			"announcement": "Thông báo",
+			"cart": "Xe đẩy",
+			"search": "Tìm kiếm",
+			"home": "Trang chủ"
+		},
 		"date_types": {
 			"days": "ngày",
 			"hours": "Giờ",
@@ -31,7 +38,7 @@
 		"social": {
 			"alt_text": {
 				"share_on_facebook": "Chia sẻ trên Facebook",
-				"share_on_twitter": "Tweet trên Twitter",
+				"share_on_twitter": "Đăng trên X",
 				"share_by_email": "Chia sẻ qua email",
 				"share_on_pinterest": "Ghim trên Pinterest"
 			},
@@ -54,24 +61,38 @@
 			"next": "Trang tiếp theo",
 			"previous": "Trang trước",
 			"next_short": "Kế tiếp",
-			"previous_short": "Trước"
+			"previous_short": "Trước",
+			"view_more": "Xem thêm"
 		},
 		"search": {
+			"filters": {
+				"show_all": "Hiển thị tất cả",
+				"show_less": "Hiện ít hơn"
+			},
 			"search": "Tìm kiếm",
 			"search_placeholder": "Nhập để tìm kiếm...",
-			"info": "Sử dụng thanh tìm kiếm để tìm sản phẩm"
+			"info": "Sử dụng thanh tìm kiếm để tìm sản phẩm",
+			"predictive_search": {
+				"suggestions": "Đề xuất",
+				"collections": "Bộ sưu tập",
+				"products": "Các sản phẩm",
+				"posts": "Bài đăng trên blog",
+				"pages": "Trang"
+			}
 		},
 		"cart": {
 			"view": "Xem giỏ hàng của tôi ({{ count }})",
 			"open": "mở giỏ hàng",
 			"qty_max_note": "Tất cả các mặt hàng có sẵn trong giỏ hàng",
+			"qty_max_note_short": "Tất cả các mặt hàng trong giỏ hàng",
 			"item_added": "Mục được thêm vào giỏ hàng của bạn",
 			"recommendations": {
 				"heading": "Bạn cũng có thể thích"
 			},
 			"notification": {
 				"title": "Đã thêm vào giỏ hàng",
-				"go_to_cart": "Đi tới xe đẩy hàng"
+				"go_to_cart": "Đi tới xe đẩy hàng",
+				"error": "Đã xảy ra lỗi. Vui lòng thử lại sau"
 			}
 		},
 		"share": {
@@ -80,7 +101,7 @@
 			"share_url": "liên kết",
 			"success_message": "Liên kết được sao chép vào khay nhớ tạm",
 			"facebook": "Chia sẻ",
-			"twitter": "tiếng riu ríu",
+			"twitter": "Bưu kiện",
 			"pinterest": "Ghim",
 			"email": "E-mail"
 		},
@@ -145,16 +166,27 @@
 		"selected": "Đã chọn",
 		"currently_viewing": "đang xem",
 		"add_count_items_to_cart_html": "Thêm <span data-i18n-amount=\"\">{{ amount }}</span> mặt hàng vào giỏ hàng",
+		"wishlist": {
+			"button_add": "Thêm vào danh sách yêu thích",
+			"button_remove": "Xóa khỏi danh sách yêu thích",
+			"empty_note": {
+				"heading": "Danh sách mong muốn của bạn đang trống",
+				"subheading": "Khám phá thêm và liệt kê một số mặt hàng"
+			}
+		},
 		"product": {
 			"add_to_cart": "Thêm vào giỏ hàng",
 			"express_add_to_cart": "Thêm vào",
 			"description": "Sự miêu tả",
-			"description_read_mode": "Đọc thêm",
+			"description_read_more": "Đọc thêm",
+			"description_read_less": "Đọc ít hơn",
 			"on_sale": "Giảm giá",
 			"saved_amount": "{{ value }} tắt",
 			"product_variants": "biến thể sản phẩm",
 			"back_to_product": "Quay lại sản phẩm",
-			"quick_view": "Xem lướt qua",
+			"quick_view": "Cửa hàng nhanh chóng",
+			"more_details": "Thêm chi tiết sản phẩm",
+			"more_options": "Lựa chọn khác",
 			"show_options": "Hiển thị tùy chọn",
 			"express_show_options": "Tùy chọn",
 			"review_count": {
@@ -196,7 +228,8 @@
 				"image_available": "Hình ảnh {{ index }} hiện đã có trong chế độ xem thư viện",
 				"open_media": "Mở phương tiện {{ index }} theo phương thức",
 				"play_model": "Phát Trình xem 3D",
-				"play_video": "phát video"
+				"play_video": "phát video",
+				"expanded_view_label": "Nhấp để mở chế độ xem mở rộng"
 			},
 			"quantity": {
 				"label": "Định lượng",
@@ -241,7 +274,8 @@
 			"label": "thư viện phương tiện"
 		},
 		"facets": {
-			"apply": "Ứng dụng",
+			"apply": "Áp dụng các bộ lọc",
+			"filtered": "Lọc bởi:",
 			"clear": "Thông thoáng",
 			"clear_all": "Quet sạch tât cả",
 			"from": "Từ",
@@ -268,7 +302,7 @@
 			"clear_filter": "LÀm sạch bộ lọc"
 		},
 		"product_options": {
-			"view_all_options": "Xem tất cả các tùy chọn dưới dạng danh sách",
+			"view_all_options": "So sánh các lựa chọn sản phẩm",
 			"only_in_stock": "Chỉ hiển thị sản phẩm trong kho",
 			"in_stock_only": "chỉ có trong kho",
 			"sku": "Mã hàng",
@@ -320,7 +354,16 @@
 			"cart_count": {
 				"one": "{{ count }} mục",
 				"other": "{{ count }} mục"
-			}
+			},
+			"store": "Cửa hàng",
+			"search": "Tìm kiếm",
+			"language": "Ngôn ngữ",
+			"country": "Quốc gia",
+			"account": "Tài khoản",
+			"my_account": "Tài khoản của tôi",
+			"login": "Đăng nhập",
+			"wishlist": "Danh sách yêu thích",
+			"my": "Của tôi"
 		},
 		"cart": {
 			"title": "giỏ hàng của bạn",
@@ -342,7 +385,7 @@
 			"taxes_included_and_shipping_policy_html": "Đã bao gồm thuế. <a href=\"{{ link }}\">Vận chuyển</a> được tính khi thanh toán.",
 			"taxes_and_shipping_at_checkout": "Thuế và vận chuyển được tính khi thanh toán",
 			"free_shipping_aligible": "Bạn đang được MIỄN PHÍ vận chuyển!",
-			"free_shipping_shortage": "Nhận giao hàng miễn phí với {{ amount }} hơn",
+			"free_shipping_shortage_html": "Nhận giao hàng miễn phí với <span data-i18n-amount=\"\">{{ amount }}</span> nhiều hơn",
 			"headings": {
 				"product": "Sản phẩm",
 				"price": "Giá bán",
@@ -355,8 +398,16 @@
 				"paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Đăng nhập</a> để kiểm tra nhanh hơn."
 			}
 		},
+		"compare_products": {
+			"this_item": "Vật phẩm này",
+			"price": "Giá",
+			"brand": "Thương hiệu",
+			"rating": "Xếp hạng",
+			"availability": "khả dụng"
+		},
 		"footer": {
-			"payment": "Phương thức thanh toán"
+			"payment": "Phương thức thanh toán",
+			"back_to_top": "Trở lại đầu trang"
 		},
 		"featured_blog": {
 			"view_all": "Xem tất cả",
@@ -370,6 +421,9 @@
 		"collection_list": {
 			"view_all": "Xem tất cả",
 			"title": "bộ sưu tập"
+		},
+		"child_collections": {
+			"shop_all": "Mua sắm tất cả"
 		},
 		"collection_template": {
 			"empty_collection_message": "Bộ sưu tập này không có sản phẩm",
@@ -519,6 +573,13 @@
 			"expired": "Hết hạn",
 			"copy_code_success": "Đã sao chép mã thành công",
 			"print_gift_card": "In"
+		},
+		"recipient_form": {
+			"checkbox_label": "Tôi muốn gửi cái này như một món quà",
+			"email_label": "Người nhận E-mail",
+			"name_label": "Tên người nhận (tùy chọn)",
+			"message_label": "Tin nhắn (tùy chọn)",
+			"max_chars_warn": "*{{ chars }} tối đa ký tự"
 		}
 	}
 }
