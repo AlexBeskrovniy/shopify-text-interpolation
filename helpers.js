@@ -64,7 +64,7 @@ const translateBySteps = async (steps, obj, lang, exeptions) => {
     const step = steps.shift();
     if (typeof obj[step] === 'string') {
         const translatable = new Promise((res) => {
-            setTimeout(() => res(translateStr(obj[step], lang, exeptions)), 200)
+            setTimeout(() => res(translateStr(obj[step], lang, exeptions)), 300)
         })
         obj[step] = await translatable;
         return;
@@ -76,7 +76,6 @@ const translateBySteps = async (steps, obj, lang, exeptions) => {
 const translateStr = async (str, lang, exeptions) => {
     const interpolatedStr = interpolateExeptions(interpolate(str), exeptions);
     counter.lang = counter.lang ? counter.lang + 1 : 1;
-    console.log();
     const [translation] = await translateApi.translate(interpolatedStr, lang);
     return deinterpolateExeptions(deinterpolate(translation));
     // return deinterpolateExeptions(deinterpolate(interpolatedStr)); // NOTE: for tests

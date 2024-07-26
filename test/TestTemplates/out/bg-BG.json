@@ -5,7 +5,9 @@
 			"announcement": "Съобщение",
 			"cart": "Количка",
 			"search": "Търсене",
-			"home": "У дома"
+			"home": "У дома",
+			"sidescroll_title": "Хоризонтално превъртане",
+			"sidescroll_msg": "Натиснете клавиша Shift и превъртете колелцето на мишката"
 		},
 		"date_types": {
 			"days": "Дни",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Забележка: Този шаблон е предназначен само за бързи персонализации на изгледа. Не го използвайте като самостоятелен продуктов шаблон.",
 			"empty_collection_message": "Забележка: Тази колекция е празна.",
 			"empty_fallback_collection_message": "Забележка: Резервната колекция „{{ title }}“ няма продукти.",
-			"cart_drawer_no_blocks": "Забележка: Секцията на чекмеджето на пазарската количка няма блокове."
+			"cart_drawer_no_blocks": "Забележка: Секцията на чекмеджето на пазарската количка няма блокове.",
+			"compared_images_blocks_requirements": "Забележка: За този раздел са необходими два блока."
 		},
 		"browsing_history": {
 			"fallback": "Нямате наскоро разглеждани елементи."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Споделете във Facebook",
 				"share_on_twitter": "Публикувай на X",
 				"share_by_email": "Споделете по имейл",
-				"share_on_pinterest": "Закачете в Pinterest"
+				"share_on_pinterest": "Закачете в Pinterest",
+				"copy_to_clipboard": "Копиране в клипборда"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Следвайте на X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Търсене",
 			"search_placeholder": "Въведете за търсене...",
+			"search_product_type_default_option": "всичко",
 			"info": "Използвайте лентата за търсене, за да намерите продукти",
 			"predictive_search": {
 				"suggestions": "Предложения",
@@ -78,10 +83,17 @@
 				"products": "Продукти",
 				"posts": "Публикации в блогове",
 				"pages": "Страници"
+			},
+			"voice_search": {
+				"default_message": "Слушам...",
+				"repeat_message": "Нищо разпознато",
+				"repeat_link": "Опитай пак?"
 			}
 		},
 		"cart": {
+			"change_variant": "Промяна на опциите",
 			"view": "Вижте моята количка ({{ count }})",
+			"only_available": "Наличен е само {{ count }}",
 			"open": "Отворете количката",
 			"qty_max_note": "Всички налични артикули в количката",
 			"qty_max_note_short": "Всички артикули в количката",
@@ -93,11 +105,13 @@
 				"title": "Добавен в количката",
 				"go_to_cart": "Отидете в количката",
 				"error": "Нещо се обърка. Моля опитайте по-късно"
-			}
+			},
+			"preorder": "Предварителна поръчка"
 		},
 		"share": {
 			"close": "Затворете споделянето",
 			"copy_to_clipboard": "Копирай връзка",
+			"copy_to_clipboard_success": "URL адресът е копиран в клипборда",
 			"share_url": "Връзка",
 			"success_message": "Връзката е копирана в клипборда",
 			"facebook": "Дял",
@@ -161,6 +175,7 @@
 		"blog_title": "Примерно заглавие на блог"
 	},
 	"products": {
+		"limited_deal_badge": "Сделка за ограничено време",
 		"total_price": "Обща цена:",
 		"select": "Изберете",
 		"selected": "Избрано",
@@ -188,6 +203,7 @@
 			"more_details": "Повече подробности за продукта",
 			"more_options": "Повече опций",
 			"show_options": "Покажи опциите",
+			"view_options": "Вижте опциите",
 			"express_show_options": "Настроики",
 			"review_count": {
 				"one": "преглед",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "На склад и готов за изпращане",
+				"in_stock_short_msg": "В наличност",
+				"now_in_stock_msg": "{{ value }} на склад и готова за изпращане",
+				"now_in_stock_short_msg": "{{ value }} на склад",
 				"out_of_stock_msg": "Няма в наличност",
-				"low_stock_msg": "Само {{ value }} остана на склад!"
+				"low_stock_msg": "Само {{ value }} остана на склад!",
+				"low_stock_short_msg": "Остана само {{ value }}!",
+				"pre_order_msg": "Предлага се за предварителна поръчка"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Споделете този продукт",
 			"sold_out": "Продадено",
+			"low_stock": "Нисък запас",
 			"unavailable": "Недостъпен",
 			"vendor": "Доставчик",
 			"video_exit_message": "{{ title }} отваря видео на цял екран в същия прозорец.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Сравнете",
+			"products": "Продукти",
+			"remove": "Премахване",
+			"options": "Настроики",
+			"cancel": "Отказ",
 			"this_item": "Този артикул",
 			"price": "Цена",
 			"brand": "Марка",
 			"rating": "Рейтинг",
-			"availability": "Наличност"
+			"availability": "Наличност",
+			"weight": "Тегло",
+			"type": "Вид на продукта",
+			"description": "Описание",
+			"quantity_error_msg": "Изберете още продукти за сравнение",
+			"quantity_error_title": "Нищо за сравнение"
 		},
 		"footer": {
 			"payment": "Начини за плащане",
@@ -426,11 +458,13 @@
 			"shop_all": "Пазарувайте всички"
 		},
 		"collection_template": {
+			"loading_products": "Продуктите се зареждат...",
 			"empty_collection_message": "Тази колекция няма продукти",
 			"empty": "Няма намерени продукти",
 			"title": "колекция",
 			"use_fewer_filters_html": "Използвайте по-малко филтри или <a class=\"{{ class }}\" href=\"{{ link }}\">изчистете всички</a>",
-			"use_fewer_filters": "Използвайте по-малко филтри"
+			"use_fewer_filters": "Използвайте по-малко филтри",
+			"view_switch_title": "Виж като:"
 		},
 		"video": {
 			"load_video": "Зареждане на видео: {{ description }}"

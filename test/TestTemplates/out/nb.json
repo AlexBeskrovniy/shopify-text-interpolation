@@ -5,7 +5,9 @@
 			"announcement": "Kunngjøring",
 			"cart": "Handlevogn",
 			"search": "Søk",
-			"home": "Hjem"
+			"home": "Hjem",
+			"sidescroll_title": "Horisontal rulling",
+			"sidescroll_msg": "Trykk på Shift-tasten og rull musehjulet"
 		},
 		"date_types": {
 			"days": "Dager",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Merk: Denne malen er kun laget for hurtigvisningstilpasninger. Ikke bruk den som frittstående produktmal.",
 			"empty_collection_message": "Merk: Denne samlingen er tom.",
 			"empty_fallback_collection_message": "Merk: Reservesamlingen «{{ title }}» har ingen produkter.",
-			"cart_drawer_no_blocks": "Merk: Handlevognskuffdelen har ingen blokker."
+			"cart_drawer_no_blocks": "Merk: Handlevognskuffdelen har ingen blokker.",
+			"compared_images_blocks_requirements": "Merk: To blokker kreves for denne delen."
 		},
 		"browsing_history": {
 			"fallback": "Du har ingen nylig sett elementer."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Del på Facebook",
 				"share_on_twitter": "Post på X",
 				"share_by_email": "Del på e-post",
-				"share_on_pinterest": "Fest på Pinterest"
+				"share_on_pinterest": "Fest på Pinterest",
+				"copy_to_clipboard": "Kopiere til utklippstavle"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Følg med på X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Søk",
 			"search_placeholder": "Skriv for å søke...",
+			"search_product_type_default_option": "Alle",
 			"info": "Bruk søkefeltet for å finne produkter",
 			"predictive_search": {
 				"suggestions": "Forslag",
@@ -78,10 +83,17 @@
 				"products": "Produkter",
 				"posts": "Blogginnlegg",
 				"pages": "Sider"
+			},
+			"voice_search": {
+				"default_message": "Lytter...",
+				"repeat_message": "Ingenting gjenkjent",
+				"repeat_link": "Prøv igjen?"
 			}
 		},
 		"cart": {
+			"change_variant": "Endre alternativer",
 			"view": "Se handlekurven min ({{ count }})",
+			"only_available": "Bare {{ count }} er tilgjengelig",
 			"open": "Åpen vogn",
 			"qty_max_note": "Alle tilgjengelige varer i handlekurven",
 			"qty_max_note_short": "Alle varer i handlekurven",
@@ -93,11 +105,13 @@
 				"title": "Lagt til i handlekurven",
 				"go_to_cart": "Gå til handlekurven",
 				"error": "Noe gikk galt. Vennligst prøv senere"
-			}
+			},
+			"preorder": "Forhåndsbestille"
 		},
 		"share": {
 			"close": "Lukk andel",
 			"copy_to_clipboard": "Kopier link",
+			"copy_to_clipboard_success": "URL kopiert til utklippstavlen",
 			"share_url": "Link",
 			"success_message": "Linken er kopiert til utklippstavlen",
 			"facebook": "Dele",
@@ -161,6 +175,7 @@
 		"blog_title": "Eksempel på bloggtittel"
 	},
 	"products": {
+		"limited_deal_badge": "Tidsbegrenset avtale",
 		"total_price": "Totalpris:",
 		"select": "Plukke ut",
 		"selected": "Valgt",
@@ -188,6 +203,7 @@
 			"more_details": "Flere produktdetaljer",
 			"more_options": "Flere valg",
 			"show_options": "Vis alternativer",
+			"view_options": "Vis alternativer",
 			"express_show_options": "Alternativer",
 			"review_count": {
 				"one": "anmeldelse",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "På lager og klar for frakt",
+				"in_stock_short_msg": "På lager",
+				"now_in_stock_msg": "{{ value }} på lager og klar for frakt",
+				"now_in_stock_short_msg": "{{ value }} på lager",
 				"out_of_stock_msg": "Utsolgt",
-				"low_stock_msg": "Kun {{ value }} igjen på lager!"
+				"low_stock_msg": "Kun {{ value }} igjen på lager!",
+				"low_stock_short_msg": "Bare {{ value }} igjen!",
+				"pre_order_msg": "Tilgjengelig for forhåndsbestilling"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Del dette produktet",
 			"sold_out": "Utsolgt",
+			"low_stock": "Lite lager",
 			"unavailable": "Utilgjengelig",
 			"vendor": "Leverandør",
 			"video_exit_message": "{{ title }} åpner fullskjermvideo i samme vindu.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Sammenligne",
+			"products": "Produkter",
+			"remove": "Fjerne",
+			"options": "Alternativer",
+			"cancel": "Avbryt",
 			"this_item": "Denne gjenstanden",
 			"price": "Pris",
 			"brand": "Merke",
 			"rating": "Vurdering",
-			"availability": "Tilgjengelighet"
+			"availability": "Tilgjengelighet",
+			"weight": "Vekt",
+			"type": "Produkttype",
+			"description": "Beskrivelse",
+			"quantity_error_msg": "Velg flere produkter for å sammenligne",
+			"quantity_error_title": "Ingenting å sammenligne med"
 		},
 		"footer": {
 			"payment": "Betalingsmetoder",
@@ -426,11 +458,13 @@
 			"shop_all": "Handle alt"
 		},
 		"collection_template": {
+			"loading_products": "Laster inn produkter...",
 			"empty_collection_message": "Denne samlingen har ingen produkter",
 			"empty": "Ingen produkter funnet",
 			"title": "Samling",
 			"use_fewer_filters_html": "Bruk færre filtre eller <a class=\"{{ class }}\" href=\"{{ link }}\">fjern alle</a>",
-			"use_fewer_filters": "Bruk færre filtre"
+			"use_fewer_filters": "Bruk færre filtre",
+			"view_switch_title": "Se som:"
 		},
 		"video": {
 			"load_video": "Last inn video: {{ description }}"

@@ -5,7 +5,9 @@
 			"announcement": "発表",
 			"cart": "カート",
 			"search": "検索",
-			"home": "家"
+			"home": "家",
+			"sidescroll_title": "水平スクロール",
+			"sidescroll_msg": "Shiftキーを押しながらマウスホイールをスクロールします"
 		},
 		"date_types": {
 			"days": "日々",
@@ -20,7 +22,8 @@
 			"quick_view_message": "注: このテンプレートは、クイック ビューのカスタマイズ専用に設計されています。スタンドアロンの製品テンプレートとして使用しないでください。",
 			"empty_collection_message": "注: このコレクションは空です。",
 			"empty_fallback_collection_message": "注: フォールバック コレクション \"{{ title }}\" には商品がありません。",
-			"cart_drawer_no_blocks": "注: ショッピング カートの引き出しセクションにはブロックがありません。"
+			"cart_drawer_no_blocks": "注: ショッピング カートの引き出しセクションにはブロックがありません。",
+			"compared_images_blocks_requirements": "注: このセクションには 2 つのブロックが必要です。"
 		},
 		"browsing_history": {
 			"fallback": "最近閲覧したアイテムはありません。"
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Facebookでシェア",
 				"share_on_twitter": "Xに投稿する",
 				"share_by_email": "メールで共有",
-				"share_on_pinterest": "ボード「 Pinterest 」のピン"
+				"share_on_pinterest": "ボード「 Pinterest 」のピン",
+				"copy_to_clipboard": "クリップボードにコピー"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Xをフォロー",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "探す",
 			"search_placeholder": "入力して検索...",
+			"search_product_type_default_option": "全て",
 			"info": "検索バーを使用して製品を検索する",
 			"predictive_search": {
 				"suggestions": "提案",
@@ -78,10 +83,17 @@
 				"products": "製品",
 				"posts": "ブログ投稿",
 				"pages": "ページ"
+			},
+			"voice_search": {
+				"default_message": "聞いている...",
+				"repeat_message": "何も認識されません",
+				"repeat_link": "もう一度やり直してください？"
 			}
 		},
 		"cart": {
+			"change_variant": "オプションを変更する",
 			"view": "カートを見る ({{ count }})",
+			"only_available": "利用できるのは {{ count }} のみです",
 			"open": "カートを開く",
 			"qty_max_note": "カート内のすべての利用可能なアイテム",
 			"qty_max_note_short": "カート内のすべての商品",
@@ -93,11 +105,13 @@
 				"title": "カートに追加",
 				"go_to_cart": "カートに行く",
 				"error": "何か問題が発生しました。後でお試しください"
-			}
+			},
+			"preorder": "予約注文"
 		},
 		"share": {
 			"close": "シェアを閉じる",
 			"copy_to_clipboard": "リンクをコピーする",
+			"copy_to_clipboard_success": "URL をクリップボードにコピーしました",
 			"share_url": "リンク",
 			"success_message": "リンクをクリップボードにコピーしました",
 			"facebook": "共有",
@@ -161,6 +175,7 @@
 		"blog_title": "ブログタイトルの例"
 	},
 	"products": {
+		"limited_deal_badge": "期間限定セール",
 		"total_price": "合計金額：",
 		"select": "選択する",
 		"selected": "選択済み",
@@ -188,6 +203,7 @@
 			"more_details": "製品の詳細",
 			"more_options": "より多くのオプション",
 			"show_options": "オプションを表示",
+			"view_options": "表示オプション",
 			"express_show_options": "オプション",
 			"review_count": {
 				"one": "レビュー",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "在庫あり、発送準備完了",
+				"in_stock_short_msg": "在庫あり",
+				"now_in_stock_msg": "{{ value }} 在庫あり、すぐに発送できます",
+				"now_in_stock_short_msg": "{{ value }} 在庫あり",
 				"out_of_stock_msg": "在庫切れ",
-				"low_stock_msg": "在庫は残り {{ value }} のみです!"
+				"low_stock_msg": "在庫は残り {{ value }} のみです!",
+				"low_stock_short_msg": "残りは {{ value }} のみです。",
+				"pre_order_msg": "予約注文可能"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "この商品を共有する",
 			"sold_out": "完売",
+			"low_stock": "在庫が少ない",
 			"unavailable": "利用不可",
 			"vendor": "ベンダー",
 			"video_exit_message": "{{ title }} は同じウィンドウで全画面ビデオを開きます。",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "比較する",
+			"products": "製品",
+			"remove": "取り除く",
+			"options": "オプション",
+			"cancel": "キャンセル",
 			"this_item": "この物",
 			"price": "価格",
 			"brand": "ブランド",
 			"rating": "評価",
-			"availability": "可用性"
+			"availability": "可用性",
+			"weight": "重さ",
+			"type": "製品の種類",
+			"description": "説明",
+			"quantity_error_msg": "比較する製品をさらに選択",
+			"quantity_error_title": "比較するものがない"
 		},
 		"footer": {
 			"payment": "お支払い方法",
@@ -426,11 +458,13 @@
 			"shop_all": "すべて購入する"
 		},
 		"collection_template": {
+			"loading_products": "製品を読み込んでいます...",
 			"empty_collection_message": "このコレクションには商品がありません",
 			"empty": "商品が見つかりません",
 			"title": "コレクション",
 			"use_fewer_filters_html": "使用するフィルターを減らすか、<a class=\"{{ class }}\" href=\"{{ link }}\">すべてクリアする</a>",
-			"use_fewer_filters": "使用するフィルターを減らす"
+			"use_fewer_filters": "使用するフィルターを減らす",
+			"view_switch_title": "表示方法:"
 		},
 		"video": {
 			"load_video": "ビデオを読み込む: {{ description }}"

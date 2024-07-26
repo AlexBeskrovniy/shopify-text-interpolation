@@ -5,7 +5,9 @@
 			"announcement": "Skelbimas",
 			"cart": "Krepšelis",
 			"search": "Paieška",
-			"home": "Namai"
+			"home": "Namai",
+			"sidescroll_title": "Horizontalus slinkimas",
+			"sidescroll_msg": "Paspauskite Shift klavišą ir slinkite pelės ratuku"
 		},
 		"date_types": {
 			"days": "Dienos",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Pastaba: šis šablonas skirtas tik greitam peržiūros tinkinimui. Nenaudokite jo kaip atskiro gaminio šablono.",
 			"empty_collection_message": "Pastaba: ši kolekcija tuščia.",
 			"empty_fallback_collection_message": "Pastaba: atsarginėje kolekcijoje „{{ title }}“ nėra produktų.",
-			"cart_drawer_no_blocks": "Pastaba: Pirkinių krepšelio stalčių skyriuje nėra blokų."
+			"cart_drawer_no_blocks": "Pastaba: Pirkinių krepšelio stalčių skyriuje nėra blokų.",
+			"compared_images_blocks_requirements": "Pastaba: Šiam skyriui reikalingi du blokai."
 		},
 		"browsing_history": {
 			"fallback": "Neturite jokių neseniai peržiūrėtų elementų."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Dalintis Facebook",
 				"share_on_twitter": "Paskelbti X",
 				"share_by_email": "Pasidalinkite el",
-				"share_on_pinterest": "Prisegti prie Pinterest"
+				"share_on_pinterest": "Prisegti prie Pinterest",
+				"copy_to_clipboard": "Nukopijuoti į iškarpinę"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Sekite X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Paieška",
 			"search_placeholder": "Įveskite norėdami ieškoti...",
+			"search_product_type_default_option": "Visi",
 			"info": "Norėdami rasti produktus, naudokite paieškos juostą",
 			"predictive_search": {
 				"suggestions": "Pasiūlymai",
@@ -78,10 +83,17 @@
 				"products": "Produktai",
 				"posts": "Tinklaraščio įrašai",
 				"pages": "Puslapiai"
+			},
+			"voice_search": {
+				"default_message": "Klausau...",
+				"repeat_message": "Nieko nepripažino",
+				"repeat_link": "Bandyk iš naujo?"
 			}
 		},
 		"cart": {
+			"change_variant": "Keisti parinktis",
 			"view": "Peržiūrėti mano krepšelį ({{ count }})",
+			"only_available": "Galimas tik {{ count }}",
 			"open": "Atidaryti krepšelį",
 			"qty_max_note": "Visos turimos prekės krepšelyje",
 			"qty_max_note_short": "Visos prekės krepšelyje",
@@ -93,11 +105,13 @@
 				"title": "Įdėta į krepšelį",
 				"go_to_cart": "Eikite į krepšelį",
 				"error": "Kažkas nutiko. Pabandykite vėliau"
-			}
+			},
+			"preorder": "Išankstinis užsakymas"
 		},
 		"share": {
 			"close": "Uždaryti bendrinimą",
 			"copy_to_clipboard": "Nukopijuoti nuorodą",
+			"copy_to_clipboard_success": "URL nukopijuotas į mainų sritį",
 			"share_url": "Nuoroda",
 			"success_message": "Nuoroda nukopijuota į mainų sritį",
 			"facebook": "Dalintis",
@@ -161,6 +175,7 @@
 		"blog_title": "Tinklaraščio pavadinimo pavyzdys"
 	},
 	"products": {
+		"limited_deal_badge": "Riboto laiko sandoris",
 		"total_price": "Bendra kaina:",
 		"select": "Pasirinkite",
 		"selected": "Pasirinkta",
@@ -188,6 +203,7 @@
 			"more_details": "Daugiau informacijos apie gaminį",
 			"more_options": "Daugiau pasirinkimų",
 			"show_options": "Rodyti parinktis",
+			"view_options": "Peržiūrėti parinktis",
 			"express_show_options": "Galimybės",
 			"review_count": {
 				"one": "apžvalga",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Yra sandėlyje ir paruoštas siuntimui",
+				"in_stock_short_msg": "Prekyboje",
+				"now_in_stock_msg": "{{ value }} yra sandėlyje ir paruošta siuntimui",
+				"now_in_stock_short_msg": "{{ value }} sandėlyje",
 				"out_of_stock_msg": "Išparduota",
-				"low_stock_msg": "Sandėlyje liko tik {{ value }}!"
+				"low_stock_msg": "Sandėlyje liko tik {{ value }}!",
+				"low_stock_short_msg": "Liko tik {{ value }}!",
+				"pre_order_msg": "Galima užsisakyti iš anksto"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Pasidalinkite šiuo produktu",
 			"sold_out": "Išparduota",
+			"low_stock": "Mažos atsargos",
 			"unavailable": "Nepasiekiamas",
 			"vendor": "Pardavėjas",
 			"video_exit_message": "{{ title }} atidaro viso ekrano vaizdo įrašą tame pačiame lange.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Palyginti",
+			"products": "Produktai",
+			"remove": "Pašalinti",
+			"options": "Galimybės",
+			"cancel": "Atšaukti",
 			"this_item": "Šis elementas",
 			"price": "Kaina",
 			"brand": "Prekės ženklas",
 			"rating": "Įvertinimas",
-			"availability": "Prieinamumas"
+			"availability": "Prieinamumas",
+			"weight": "Svoris",
+			"type": "Produkto tipas",
+			"description": "apibūdinimas",
+			"quantity_error_msg": "Pasirinkite daugiau produktų, kuriuos norite palyginti",
+			"quantity_error_title": "Nėra su kuo lyginti"
 		},
 		"footer": {
 			"payment": "Mokėjimo metodai",
@@ -426,11 +458,13 @@
 			"shop_all": "Pirkite viską"
 		},
 		"collection_template": {
+			"loading_products": "Įkeliami produktai...",
 			"empty_collection_message": "Šioje kolekcijoje produktų nėra",
 			"empty": "Produktų nerasta",
 			"title": "Kolekcija",
 			"use_fewer_filters_html": "Naudokite mažiau filtrų arba <a class=\"{{ class }}\" href=\"{{ link }}\">išvalykite viską</a>",
-			"use_fewer_filters": "Naudokite mažiau filtrų"
+			"use_fewer_filters": "Naudokite mažiau filtrų",
+			"view_switch_title": "Žiūrėti kaip:"
 		},
 		"video": {
 			"load_video": "Įkelti vaizdo įrašą: {{ description }}"

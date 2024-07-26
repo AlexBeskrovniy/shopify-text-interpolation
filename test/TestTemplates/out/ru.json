@@ -5,7 +5,9 @@
 			"announcement": "Объявление",
 			"cart": "Корзина",
 			"search": "Поиск",
-			"home": "Дом"
+			"home": "Дом",
+			"sidescroll_title": "Горизонтальная прокрутка",
+			"sidescroll_msg": "Нажмите клавишу Shift и прокрутите колесо мыши"
 		},
 		"date_types": {
 			"days": "Дней",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Примечание. Этот шаблон предназначен только для настройки быстрого просмотра. Не используйте его как отдельный шаблон продукта.",
 			"empty_collection_message": "Примечание. Эта коллекция пуста.",
 			"empty_fallback_collection_message": "Примечание. В резервной коллекции \"{{ title }}\" нет продуктов.",
-			"cart_drawer_no_blocks": "Примечание. Секция ящика корзины для покупок не имеет блоков."
+			"cart_drawer_no_blocks": "Примечание. Секция ящика корзины для покупок не имеет блоков.",
+			"compared_images_blocks_requirements": "Примечание. Для этого раздела необходимы два блока."
 		},
 		"browsing_history": {
 			"fallback": "У Вас нет недавно просмотренных пунктов."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Поделиться на Facebook",
 				"share_on_twitter": "Опубликовать на X",
 				"share_by_email": "Поделиться по электронной почте",
-				"share_on_pinterest": "Пин на Pinterest"
+				"share_on_pinterest": "Пин на Pinterest",
+				"copy_to_clipboard": "Скопировать в буфер обмена"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Следуй за Х",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Поиск",
 			"search_placeholder": "Введите для поиска...",
+			"search_product_type_default_option": "Все",
 			"info": "Используйте строку поиска, чтобы найти товары",
 			"predictive_search": {
 				"suggestions": "Предложения",
@@ -78,10 +83,17 @@
 				"products": "Продукты",
 				"posts": "Сообщения в блоге",
 				"pages": "Страницы"
+			},
+			"voice_search": {
+				"default_message": "Слушаю...",
+				"repeat_message": "Ничего не распознано",
+				"repeat_link": "Попробуйте еще раз?"
 			}
 		},
 		"cart": {
+			"change_variant": "Изменить параметры",
 			"view": "Посмотреть мою корзину ({{ count }})",
+			"only_available": "Доступен только {{ count }}.",
 			"open": "Открыть корзину",
 			"qty_max_note": "Все доступные товары в корзине",
 			"qty_max_note_short": "Все товары в корзине",
@@ -93,11 +105,13 @@
 				"title": "Добавлено в корзину",
 				"go_to_cart": "Перейти в корзину",
 				"error": "Что-то пошло не так. Пожалуйста, попробуйте позднее"
-			}
+			},
+			"preorder": "Предварительный заказ"
 		},
 		"share": {
 			"close": "Закрыть общий доступ",
 			"copy_to_clipboard": "Копировать ссылку",
+			"copy_to_clipboard_success": "URL-адрес скопирован в буфер обмена",
 			"share_url": "Связь",
 			"success_message": "Ссылка скопирована в буфер обмена",
 			"facebook": "Делиться",
@@ -161,6 +175,7 @@
 		"blog_title": "Пример названия блога"
 	},
 	"products": {
+		"limited_deal_badge": "Ограниченное по времени предложение",
 		"total_price": "Итоговая цена:",
 		"select": "Выбирать",
 		"selected": "Выбрано",
@@ -188,6 +203,7 @@
 			"more_details": "Более подробная информация о продукте",
 			"more_options": "Больше вариантов",
 			"show_options": "Показать параметры",
+			"view_options": "Посмотреть варианты",
 			"express_show_options": "Опции",
 			"review_count": {
 				"one": "обзор",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "В наличии и готовы к отправке",
+				"in_stock_short_msg": "В наличии",
+				"now_in_stock_msg": "{{ value }} на складе и готово к отправке.",
+				"now_in_stock_short_msg": "{{ value }} на складе",
 				"out_of_stock_msg": "Нет на складе",
-				"low_stock_msg": "В наличии осталось только {{ value }}!"
+				"low_stock_msg": "В наличии осталось только {{ value }}!",
+				"low_stock_short_msg": "Осталось только {{ value }}!",
+				"pre_order_msg": "Доступно для предварительного заказа"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Поделитесь этим продуктом",
 			"sold_out": "Распроданный",
+			"low_stock": "Низкий запас",
 			"unavailable": "Недоступен",
 			"vendor": "Продавец",
 			"video_exit_message": "{{ title }} открывает полноэкранное видео в том же окне.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Сравнивать",
+			"products": "Продукты",
+			"remove": "Удалять",
+			"options": "Параметры",
+			"cancel": "Отмена",
 			"this_item": "Эта вещь",
 			"price": "Цена",
 			"brand": "Бренд",
 			"rating": "Рейтинг",
-			"availability": "Доступность"
+			"availability": "Доступность",
+			"weight": "Масса",
+			"type": "Тип продукта",
+			"description": "Описание",
+			"quantity_error_msg": "Выберите больше товаров для сравнения",
+			"quantity_error_title": "Не с чем сравнивать"
 		},
 		"footer": {
 			"payment": "Способы оплаты",
@@ -426,11 +458,13 @@
 			"shop_all": "Купить все"
 		},
 		"collection_template": {
+			"loading_products": "Загрузка товаров...",
 			"empty_collection_message": "В этой коллекции нет товаров",
 			"empty": "Товары не найдены",
 			"title": "Коллекция",
 			"use_fewer_filters_html": "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">удалите все</a>",
-			"use_fewer_filters": "Используйте меньше фильтров"
+			"use_fewer_filters": "Используйте меньше фильтров",
+			"view_switch_title": "Посмотреть, как:"
 		},
 		"video": {
 			"load_video": "Загрузить видео: {{ description }}"

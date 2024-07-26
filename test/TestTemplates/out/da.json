@@ -5,7 +5,9 @@
 			"announcement": "Bekendtgørelse",
 			"cart": "Vogn",
 			"search": "Søg",
-			"home": "Hjem"
+			"home": "Hjem",
+			"sidescroll_title": "Vandret rulning",
+			"sidescroll_msg": "Tryk på Shift-tasten og rul med musehjulet"
 		},
 		"date_types": {
 			"days": "Dage",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Bemærk: Denne skabelon er kun designet til hurtige visningstilpasninger. Brug den ikke som en selvstændig produktskabelon.",
 			"empty_collection_message": "Bemærk: Denne samling er tom.",
 			"empty_fallback_collection_message": "Bemærk: Reservesamlingen \"{{ title }}\" har ingen produkter.",
-			"cart_drawer_no_blocks": "Bemærk: Indkøbskurvskuffesektionen har ingen blokke."
+			"cart_drawer_no_blocks": "Bemærk: Indkøbskurvskuffesektionen har ingen blokke.",
+			"compared_images_blocks_requirements": "Bemærk: Der kræves to blokke til dette afsnit."
 		},
 		"browsing_history": {
 			"fallback": "Du har ingen for nylig sete elementer."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Del på Facebook",
 				"share_on_twitter": "Post på X",
 				"share_by_email": "Del på e-mail",
-				"share_on_pinterest": "Fastgør på Pinterest"
+				"share_on_pinterest": "Fastgør på Pinterest",
+				"copy_to_clipboard": "Kopier til udklipsholder"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Følg med på X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Søg",
 			"search_placeholder": "Skriv for at søge...",
+			"search_product_type_default_option": "Alle",
 			"info": "Brug søgefeltet til at finde produkter",
 			"predictive_search": {
 				"suggestions": "Forslag",
@@ -78,10 +83,17 @@
 				"products": "Produkter",
 				"posts": "Blogindlæg",
 				"pages": "sider"
+			},
+			"voice_search": {
+				"default_message": "Hører efter...",
+				"repeat_message": "Intet genkendt",
+				"repeat_link": "Prøv igen?"
 			}
 		},
 		"cart": {
+			"change_variant": "Skift muligheder",
 			"view": "Se min indkøbskurv ({{ count }})",
+			"only_available": "Kun {{ count }} er tilgængelig",
 			"open": "Åben vogn",
 			"qty_max_note": "Alle tilgængelige varer i indkøbskurven",
 			"qty_max_note_short": "Alle varer i kurven",
@@ -93,11 +105,13 @@
 				"title": "Tilføjet til kurv",
 				"go_to_cart": "Gå til indkøbsvogn",
 				"error": "Noget gik galt. Prøv venligst senere"
-			}
+			},
+			"preorder": "Forudbestille"
 		},
 		"share": {
 			"close": "Luk andel",
 			"copy_to_clipboard": "Kopier link",
+			"copy_to_clipboard_success": "URL kopieret til udklipsholder",
 			"share_url": "Link",
 			"success_message": "Linket er kopieret til udklipsholderen",
 			"facebook": "Del",
@@ -161,6 +175,7 @@
 		"blog_title": "Eksempel på blogtitel"
 	},
 	"products": {
+		"limited_deal_badge": "Tidsbegrænset aftale",
 		"total_price": "Total pris:",
 		"select": "Vælg",
 		"selected": "Valgte",
@@ -188,6 +203,7 @@
 			"more_details": "Flere produktdetaljer",
 			"more_options": "Flere muligheder",
 			"show_options": "Vis muligheder",
+			"view_options": "Se muligheder",
 			"express_show_options": "Muligheder",
 			"review_count": {
 				"one": "anmeldelse",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "På lager og klar til forsendelse",
+				"in_stock_short_msg": "På lager",
+				"now_in_stock_msg": "{{ value }} på lager og klar til forsendelse",
+				"now_in_stock_short_msg": "{{ value }} på lager",
 				"out_of_stock_msg": "Udsolgt",
-				"low_stock_msg": "Kun {{ value }} tilbage på lager!"
+				"low_stock_msg": "Kun {{ value }} tilbage på lager!",
+				"low_stock_short_msg": "Kun {{ value }} tilbage!",
+				"pre_order_msg": "Kan forudbestilles"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Del dette produkt",
 			"sold_out": "Udsolgt",
+			"low_stock": "Lavt lager",
 			"unavailable": "Ikke tilgængelig",
 			"vendor": "Sælger",
 			"video_exit_message": "{{ title }} åbner fuldskærmsvideo i samme vindue.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Sammenligne",
+			"products": "Produkter",
+			"remove": "Fjerne",
+			"options": "Muligheder",
+			"cancel": "Afbestille",
 			"this_item": "Denne vare",
 			"price": "Pris",
 			"brand": "Mærke",
 			"rating": "Bedømmelse",
-			"availability": "Tilgængelighed"
+			"availability": "Tilgængelighed",
+			"weight": "Vægt",
+			"type": "Produkttype",
+			"description": "Beskrivelse",
+			"quantity_error_msg": "Vælg flere produkter for at sammenligne",
+			"quantity_error_title": "Intet at sammenligne med"
 		},
 		"footer": {
 			"payment": "Betalingsmetoder",
@@ -426,11 +458,13 @@
 			"shop_all": "Shop alt"
 		},
 		"collection_template": {
+			"loading_products": "Indlæser produkter...",
 			"empty_collection_message": "Denne kollektion har ingen produkter",
 			"empty": "Ingen produkter fundet",
 			"title": "Kollektion",
 			"use_fewer_filters_html": "Brug færre filtre, eller <a class=\"{{ class }}\" href=\"{{ link }}\">ryd alle</a>",
-			"use_fewer_filters": "Brug færre filtre"
+			"use_fewer_filters": "Brug færre filtre",
+			"view_switch_title": "Se som:"
 		},
 		"video": {
 			"load_video": "Indlæs video: {{ description }}"

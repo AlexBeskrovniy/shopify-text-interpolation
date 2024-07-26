@@ -5,7 +5,9 @@
 			"announcement": "Obvestilo",
 			"cart": "Voziček",
 			"search": "Iskanje",
-			"home": "domov"
+			"home": "domov",
+			"sidescroll_title": "Vodoravno drsenje",
+			"sidescroll_msg": "Pritisnite tipko Shift in se pomaknite z miškinim kolescem"
 		},
 		"date_types": {
 			"days": "Dnevi",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Opomba: ta predloga je zasnovana samo za hitre prilagoditve pogleda. Ne uporabljajte ga kot samostojne predloge izdelka.",
 			"empty_collection_message": "Opomba: Ta zbirka je prazna.",
 			"empty_fallback_collection_message": "Opomba: Nadomestna zbirka \"{{ title }}\" nima izdelkov.",
-			"cart_drawer_no_blocks": "Opomba: del predala nakupovalnega vozička nima blokov."
+			"cart_drawer_no_blocks": "Opomba: del predala nakupovalnega vozička nima blokov.",
+			"compared_images_blocks_requirements": "Opomba: za ta razdelek sta potrebna dva bloka."
 		},
 		"browsing_history": {
 			"fallback": "Nimate nedavno ogledanih predmetov."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Delite na Facebook",
 				"share_on_twitter": "Objavi na X",
 				"share_by_email": "Deli po e-pošti",
-				"share_on_pinterest": "Pripni na Pinterest"
+				"share_on_pinterest": "Pripni na Pinterest",
+				"copy_to_clipboard": "Kopirati v odložišče"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Sledi na X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Iskanje",
 			"search_placeholder": "Vnesite za iskanje ...",
+			"search_product_type_default_option": "Vse",
 			"info": "Za iskanje izdelkov uporabite iskalno vrstico",
 			"predictive_search": {
 				"suggestions": "Predlogi",
@@ -78,10 +83,17 @@
 				"products": "Izdelki",
 				"posts": "Objave v spletnem dnevniku",
 				"pages": "Strani"
+			},
+			"voice_search": {
+				"default_message": "Poslušanje ...",
+				"repeat_message": "Nič prepoznano",
+				"repeat_link": "Poskusi ponovno?"
 			}
 		},
 		"cart": {
+			"change_variant": "Spremeni možnosti",
 			"view": "Poglej mojo košarico ({{ count }})",
+			"only_available": "Na voljo je samo {{ count }}",
 			"open": "Odpri voziček",
 			"qty_max_note": "Vsi razpoložljivi artikli v košarici",
 			"qty_max_note_short": "Vsi artikli v košarici",
@@ -93,11 +105,13 @@
 				"title": "Dodano v košarico",
 				"go_to_cart": "Pojdi v košarico",
 				"error": "Nekaj je šlo narobe. Prosim, poskusite pozneje"
-			}
+			},
+			"preorder": "Prednaročilo"
 		},
 		"share": {
 			"close": "Zapri skupno rabo",
 			"copy_to_clipboard": "Kopiraj povezavo",
+			"copy_to_clipboard_success": "URL kopiran v odložišče",
 			"share_url": "Povezava",
 			"success_message": "Povezava je bila kopirana v odložišče",
 			"facebook": "Deliti",
@@ -161,6 +175,7 @@
 		"blog_title": "Primer naslova bloga"
 	},
 	"products": {
+		"limited_deal_badge": "Časovno omejen dogovor",
 		"total_price": "Skupna cena:",
 		"select": "Izberite",
 		"selected": "Izbrano",
@@ -188,6 +203,7 @@
 			"more_details": "Več podrobnosti o izdelku",
 			"more_options": "Več možnosti",
 			"show_options": "Pokaži možnosti",
+			"view_options": "Ogled možnosti",
 			"express_show_options": "Opcije",
 			"review_count": {
 				"one": "pregled",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Na zalogi in pripravljeno za pošiljanje",
+				"in_stock_short_msg": "Na zalogi",
+				"now_in_stock_msg": "{{ value }} na zalogi in pripravljena za pošiljanje",
+				"now_in_stock_short_msg": "{{ value }} na zalogi",
 				"out_of_stock_msg": "Ni na zalogi",
-				"low_stock_msg": "Samo še {{ value }} na zalogi!"
+				"low_stock_msg": "Samo še {{ value }} na zalogi!",
+				"low_stock_short_msg": "Samo še {{ value }}!",
+				"pre_order_msg": "Na voljo za prednaročilo"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Delite ta izdelek",
 			"sold_out": "Razprodano",
+			"low_stock": "Majhna zaloga",
 			"unavailable": "Ni na voljo",
 			"vendor": "Prodajalec",
 			"video_exit_message": "{{ title }} odpre celozaslonski video v istem oknu.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Primerjaj",
+			"products": "Izdelki",
+			"remove": "Odstrani",
+			"options": "Opcije",
+			"cancel": "Prekliči",
 			"this_item": "Ta predmet",
 			"price": "Cena",
 			"brand": "Znamka",
 			"rating": "Ocena",
-			"availability": "Razpoložljivost"
+			"availability": "Razpoložljivost",
+			"weight": "Utež",
+			"type": "Tip izdelka",
+			"description": "Opis",
+			"quantity_error_msg": "Izberite več izdelkov za primerjavo",
+			"quantity_error_title": "Nič za primerjati"
 		},
 		"footer": {
 			"payment": "Načini plačila",
@@ -426,11 +458,13 @@
 			"shop_all": "Nakupujte vse"
 		},
 		"collection_template": {
+			"loading_products": "Nalaganje izdelkov ...",
 			"empty_collection_message": "Ta zbirka nima izdelkov",
 			"empty": "Ni najdenih izdelkov",
 			"title": "Zbirka",
 			"use_fewer_filters_html": "Uporabite manj filtrov ali <a class=\"{{ class }}\" href=\"{{ link }}\">počistite vse</a>",
-			"use_fewer_filters": "Uporabite manj filtrov"
+			"use_fewer_filters": "Uporabite manj filtrov",
+			"view_switch_title": "Poglej kot:"
 		},
 		"video": {
 			"load_video": "Naloži video: {{ description }}"

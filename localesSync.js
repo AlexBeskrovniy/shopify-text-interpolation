@@ -52,7 +52,7 @@ const updateLocaleDB = async ({fileName}) => {
 const translateLocales = async () => {
     const DBLocales = await getAllLocales();
     const { oldSource, locales } = getLocalesData(DBLocales);
-    const enDefaultAsset = await shopify.asset.get(process.env.TEST_THEME_ID, { 'asset[key]': "locales/en.default.json" });
+    const enDefaultAsset = await shopify.asset.get(process.env.THEME_ID, { 'asset[key]': "locales/en.default.json" });
     const newSource = JSON.parse(enDefaultAsset.value);
     const updatedLocales = await Promise.all(locales.map(async ({lang, fileName, locale}) => {
         return await updateLocale(fileName, locale, lang, getSourceState(oldSource, newSource))

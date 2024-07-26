@@ -5,7 +5,9 @@
 			"announcement": "Anunţ",
 			"cart": "Cart",
 			"search": "Căutare",
-			"home": "Acasă"
+			"home": "Acasă",
+			"sidescroll_title": "Defilare orizontală",
+			"sidescroll_msg": "Apăsați tasta Shift și derulați rotița mouse-ului"
 		},
 		"date_types": {
 			"days": "Zile",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Notă: acest șablon este conceput numai pentru personalizări rapide de vizualizare. Nu îl utilizați ca șablon de produs independent.",
 			"empty_collection_message": "Notă: această colecție este goală.",
 			"empty_fallback_collection_message": "Notă: Colecția alternativă „{{ title }}” nu are produse.",
-			"cart_drawer_no_blocks": "Notă: Secțiunea sertarului coșului de cumpărături nu are blocuri."
+			"cart_drawer_no_blocks": "Notă: Secțiunea sertarului coșului de cumpărături nu are blocuri.",
+			"compared_images_blocks_requirements": "Notă: Sunt necesare două blocuri pentru această secțiune."
 		},
 		"browsing_history": {
 			"fallback": "Nu aveți articole vizualizate recent."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Distribuie pe Facebook",
 				"share_on_twitter": "Postează pe X",
 				"share_by_email": "Distribuie prin e-mail",
-				"share_on_pinterest": "Pin pe Pinterest"
+				"share_on_pinterest": "Pin pe Pinterest",
+				"copy_to_clipboard": "Copiați în clipboard"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Urmăriți pe X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Căutare",
 			"search_placeholder": "Tastați pentru a căuta...",
+			"search_product_type_default_option": "Toate",
 			"info": "Utilizați bara de căutare pentru a găsi produse",
 			"predictive_search": {
 				"suggestions": "Sugestii",
@@ -78,10 +83,17 @@
 				"products": "Produse",
 				"posts": "Postări pe blog",
 				"pages": "Pagini"
+			},
+			"voice_search": {
+				"default_message": "Ascultare...",
+				"repeat_message": "Nimic recunoscut",
+				"repeat_link": "Încearcă din nou?"
 			}
 		},
 		"cart": {
+			"change_variant": "Schimbați opțiunile",
 			"view": "Vizualizați coșul meu ({{ count }})",
+			"only_available": "Numai {{ count }} este disponibil",
 			"open": "Deschideți căruciorul",
 			"qty_max_note": "Toate articolele disponibile în coș",
 			"qty_max_note_short": "Toate articolele din coș",
@@ -93,11 +105,13 @@
 				"title": "Adăugat în coș",
 				"go_to_cart": "Mergi la Coș",
 				"error": "Ceva n-a mers bine. Te rog incearca mai tarziu"
-			}
+			},
+			"preorder": "Pre-comanda"
 		},
 		"share": {
 			"close": "Distribuie aproape",
 			"copy_to_clipboard": "Copiază legătură",
+			"copy_to_clipboard_success": "Adresa URL a fost copiată în clipboard",
 			"share_url": "Legătură",
 			"success_message": "Link copiat în clipboard",
 			"facebook": "Acțiune",
@@ -161,6 +175,7 @@
 		"blog_title": "Exemplu de titlu de blog"
 	},
 	"products": {
+		"limited_deal_badge": "Oferta pe timp limitat",
 		"total_price": "Pretul total:",
 		"select": "Selectați",
 		"selected": "Selectat",
@@ -188,6 +203,7 @@
 			"more_details": "Mai multe detalii despre produs",
 			"more_options": "Mai multe opțiuni",
 			"show_options": "Afișați opțiuni",
+			"view_options": "Vizualizați opțiunile",
 			"express_show_options": "Opțiuni",
 			"review_count": {
 				"one": "revizuire",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "În stoc și gata de livrare",
+				"in_stock_short_msg": "În stoc",
+				"now_in_stock_msg": "{{ value }} în stoc și gata de livrare",
+				"now_in_stock_short_msg": "{{ value }} în stoc",
 				"out_of_stock_msg": "Epuizat",
-				"low_stock_msg": "Doar {{ value }} a rămas în stoc!"
+				"low_stock_msg": "Doar {{ value }} a rămas în stoc!",
+				"low_stock_short_msg": "A mai rămas doar {{ value }}!",
+				"pre_order_msg": "Disponibil pentru precomandă"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Distribuie acest produs",
 			"sold_out": "Vândut",
+			"low_stock": "Stoc redus",
 			"unavailable": "Indisponibil",
 			"vendor": "Furnizor",
 			"video_exit_message": "{{ title }} deschide videoclipul pe ecran complet în aceeași fereastră.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Comparaţie",
+			"products": "Produse",
+			"remove": "Elimina",
+			"options": "Opțiuni",
+			"cancel": "Anulare",
 			"this_item": "Acest obiect",
 			"price": "Preț",
 			"brand": "Marca",
 			"rating": "Evaluare",
-			"availability": "Disponibilitate"
+			"availability": "Disponibilitate",
+			"weight": "Greutate",
+			"type": "Tip produs",
+			"description": "Descriere",
+			"quantity_error_msg": "Selectați mai multe produse pentru a compara",
+			"quantity_error_title": "Nimic de comparat"
 		},
 		"footer": {
 			"payment": "Metode de plata",
@@ -426,11 +458,13 @@
 			"shop_all": "Cumpără toate"
 		},
 		"collection_template": {
+			"loading_products": "Se încarcă produsele...",
 			"empty_collection_message": "Această colecție nu are produse",
 			"empty": "Nu s-au găsit produse",
 			"title": "Colectie",
 			"use_fewer_filters_html": "Folosiți mai puține filtre sau <a class=\"{{ class }}\" href=\"{{ link }}\">ștergeți-le pe toate</a>",
-			"use_fewer_filters": "Folosiți mai puține filtre"
+			"use_fewer_filters": "Folosiți mai puține filtre",
+			"view_switch_title": "Vizualizare ca:"
 		},
 		"video": {
 			"load_video": "Încărcați videoclipul: {{ description }}"

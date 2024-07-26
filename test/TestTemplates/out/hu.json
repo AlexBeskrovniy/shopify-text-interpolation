@@ -5,7 +5,9 @@
 			"announcement": "Közlemény",
 			"cart": "Kosár",
 			"search": "Keresés",
-			"home": "itthon"
+			"home": "itthon",
+			"sidescroll_title": "Vízszintes görgetés",
+			"sidescroll_msg": "Nyomja meg a Shift billentyűt, és görgessen az egér görgőjével"
 		},
 		"date_types": {
 			"days": "Napok",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Megjegyzés: Ez a sablon csak a gyorsnézet testreszabásához készült. Ne használja önálló terméksablonként.",
 			"empty_collection_message": "Megjegyzés: Ez a gyűjtemény üres.",
 			"empty_fallback_collection_message": "Megjegyzés: A \"{{ title }}\" tartalék gyűjtemény nem tartalmaz termékeket.",
-			"cart_drawer_no_blocks": "Megjegyzés: A bevásárlókosár fiókjában nincsenek blokkok."
+			"cart_drawer_no_blocks": "Megjegyzés: A bevásárlókosár fiókjában nincsenek blokkok.",
+			"compared_images_blocks_requirements": "Megjegyzés: Ehhez a szakaszhoz két blokk szükséges."
 		},
 		"browsing_history": {
 			"fallback": "Nincsenek nemrégiben megtekintett elemei."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Oszd meg a Facebook",
 				"share_on_twitter": "Hozzászólás X-en",
 				"share_by_email": "Oszd meg e-mailben",
-				"share_on_pinterest": "Pin a Pinterest"
+				"share_on_pinterest": "Pin a Pinterest",
+				"copy_to_clipboard": "Másolja a vágólapra"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Kövess X-en",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Keresés",
 			"search_placeholder": "Gépeljen a kereséshez...",
+			"search_product_type_default_option": "Minden",
 			"info": "Termékek kereséséhez használja a keresősávot",
 			"predictive_search": {
 				"suggestions": "Javaslatok",
@@ -78,10 +83,17 @@
 				"products": "Termékek",
 				"posts": "Blogbejegyzések",
 				"pages": "Oldalak"
+			},
+			"voice_search": {
+				"default_message": "Hallgat...",
+				"repeat_message": "Semmit sem ismertek fel",
+				"repeat_link": "Próbáld újra?"
 			}
 		},
 		"cart": {
+			"change_variant": "Beállítások módosítása",
 			"view": "Kosár megtekintése ({{ count }})",
+			"only_available": "Csak a {{ count }} elérhető",
 			"open": "Nyitott kosár",
 			"qty_max_note": "Minden elérhető termék a kosárban",
 			"qty_max_note_short": "A kosárban lévő összes elem",
@@ -93,11 +105,13 @@
 				"title": "Hozzáadva a kosárhoz",
 				"go_to_cart": "Tovább a kosárhoz",
 				"error": "Valami elromlott. Kérjük, próbálja később"
-			}
+			},
+			"preorder": "Előrendelés"
 		},
 		"share": {
 			"close": "Megosztás bezárása",
 			"copy_to_clipboard": "Link másolása",
+			"copy_to_clipboard_success": "Az URL a vágólapra másolva",
 			"share_url": "Link",
 			"success_message": "Link a vágólapra másolva",
 			"facebook": "Ossza meg",
@@ -161,6 +175,7 @@
 		"blog_title": "Példa a blog címére"
 	},
 	"products": {
+		"limited_deal_badge": "Korlátozott idejű üzlet",
 		"total_price": "Teljes ár:",
 		"select": "Válassza ki",
 		"selected": "Kiválasztott",
@@ -188,6 +203,7 @@
 			"more_details": "További termékadatok",
 			"more_options": "Több lehetőség",
 			"show_options": "Beállítások megjelenítése",
+			"view_options": "Opciók megtekintése",
 			"express_show_options": "Opciók",
 			"review_count": {
 				"one": "felülvizsgálat",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Raktáron, szállításra készen",
+				"in_stock_short_msg": "Raktáron",
+				"now_in_stock_msg": "A {{ value }} raktáron van, és készen áll a szállításra",
+				"now_in_stock_short_msg": "{{ value }} raktáron",
 				"out_of_stock_msg": "Nincs raktáron",
-				"low_stock_msg": "Csak {{ value }} maradt raktáron!"
+				"low_stock_msg": "Csak {{ value }} maradt raktáron!",
+				"low_stock_short_msg": "Csak {{ value }} maradt!",
+				"pre_order_msg": "Előrendelhető"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Oszd meg ezt a terméket",
 			"sold_out": "Eladva",
+			"low_stock": "Alacsony készletek",
 			"unavailable": "Nem érhető el",
 			"vendor": "Eladó",
 			"video_exit_message": "A {{ title }} teljes képernyős videót nyit meg ugyanabban az ablakban.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Hasonlítsa össze",
+			"products": "Termékek",
+			"remove": "Távolítsa el",
+			"options": "Lehetőségek",
+			"cancel": "Megszünteti",
 			"this_item": "Ez a dolog",
 			"price": "Ár",
 			"brand": "Márka",
 			"rating": "Értékelés",
-			"availability": "Elérhetőség"
+			"availability": "Elérhetőség",
+			"weight": "Súly",
+			"type": "Terméktípus",
+			"description": "Leírás",
+			"quantity_error_msg": "Válasszon több terméket az összehasonlításhoz",
+			"quantity_error_title": "Nincs mihez hasonlítani"
 		},
 		"footer": {
 			"payment": "Fizetési módok",
@@ -426,11 +458,13 @@
 			"shop_all": "Vásároljon mindent"
 		},
 		"collection_template": {
+			"loading_products": "Termékek betöltése...",
 			"empty_collection_message": "Ebben a kollekcióban nincsenek termékek",
 			"empty": "Nem található termék",
 			"title": "Gyűjtemény",
 			"use_fewer_filters_html": "Használjon kevesebb szűrőt, vagy <a class=\"{{ class }}\" href=\"{{ link }}\">törölje az összeset</a>",
-			"use_fewer_filters": "Használjon kevesebb szűrőt"
+			"use_fewer_filters": "Használjon kevesebb szűrőt",
+			"view_switch_title": "Nézet:"
 		},
 		"video": {
 			"load_video": "Videó betöltése: {{ description }}"

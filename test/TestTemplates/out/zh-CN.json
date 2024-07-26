@@ -5,7 +5,9 @@
 			"announcement": "公告",
 			"cart": "大车",
 			"search": "搜索",
-			"home": "家"
+			"home": "家",
+			"sidescroll_title": "水平滚动",
+			"sidescroll_msg": "按下 Shift 键并滚动鼠标滚轮"
 		},
 		"date_types": {
 			"days": "天",
@@ -20,7 +22,8 @@
 			"quick_view_message": "注意：此模板专为快速查看自定义而设计。不要将其用作独立的产品模板。",
 			"empty_collection_message": "注意：此集合为空。",
 			"empty_fallback_collection_message": "注意：回退集合“{{ title }}”没有产品。",
-			"cart_drawer_no_blocks": "注意：购物车抽屉部分没有积木。"
+			"cart_drawer_no_blocks": "注意：购物车抽屉部分没有积木。",
+			"compared_images_blocks_requirements": "注意：此部分需要两个块。"
 		},
 		"browsing_history": {
 			"fallback": "您没有最近查看过的项目。"
@@ -40,10 +43,11 @@
 				"share_on_facebook": "在脸书上Facebook",
 				"share_on_twitter": "发布在 X",
 				"share_by_email": "通过电子邮件分享",
-				"share_on_pinterest": "Pin 在Pinterest上"
+				"share_on_pinterest": "Pin 在Pinterest上",
+				"copy_to_clipboard": "复制到剪贴板"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "关注 X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "搜索",
 			"search_placeholder": "键入以搜索...",
+			"search_product_type_default_option": "全部",
 			"info": "使用搜索栏查找产品",
 			"predictive_search": {
 				"suggestions": "建议",
@@ -78,10 +83,17 @@
 				"products": "产品",
 				"posts": "博客文章",
 				"pages": "页数"
+			},
+			"voice_search": {
+				"default_message": "正在聆听...",
+				"repeat_message": "沒有任何識別",
+				"repeat_link": "再试一次？"
 			}
 		},
 		"cart": {
+			"change_variant": "更改选项",
 			"view": "查看我的购物车（{{ count }}）",
+			"only_available": "仅 {{ count }} 可用",
 			"open": "打开购物车",
 			"qty_max_note": "购物车中的所有可用商品",
 			"qty_max_note_short": "购物车中的所有商品",
@@ -93,11 +105,13 @@
 				"title": "加入购物车",
 				"go_to_cart": "去购物车",
 				"error": "出了些问题。请稍后再试"
-			}
+			},
+			"preorder": "预购"
 		},
 		"share": {
 			"close": "关闭分享",
 			"copy_to_clipboard": "复制链接",
+			"copy_to_clipboard_success": "URL 已复制到剪贴板",
 			"share_url": "关联",
 			"success_message": "链接已复制到剪贴板",
 			"facebook": "分享",
@@ -161,6 +175,7 @@
 		"blog_title": "示例博客标题"
 	},
 	"products": {
+		"limited_deal_badge": "限时优惠",
 		"total_price": "总价：",
 		"select": "选择",
 		"selected": "已选",
@@ -188,6 +203,7 @@
 			"more_details": "更多产品详情",
 			"more_options": "更多的选择",
 			"show_options": "显示选项",
+			"view_options": "查看选项",
 			"express_show_options": "选项",
 			"review_count": {
 				"one": "审查",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "有库存并准备发货",
+				"in_stock_short_msg": "有存货",
+				"now_in_stock_msg": "{{ value }} 有现货，可随时发货",
+				"now_in_stock_short_msg": "{{ value }} 有货",
 				"out_of_stock_msg": "缺货",
-				"low_stock_msg": "库存仅剩 {{ value }}！"
+				"low_stock_msg": "库存仅剩 {{ value }}！",
+				"low_stock_short_msg": "仅剩 {{ value }}！",
+				"pre_order_msg": "可以预购"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "分享这个产品",
 			"sold_out": "卖光了",
+			"low_stock": "低库存",
 			"unavailable": "不可用",
 			"vendor": "小贩",
 			"video_exit_message": "{{ title }} 在同一窗口中打开全屏视频。",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "比较",
+			"products": "产品",
+			"remove": "消除",
+			"options": "选项",
+			"cancel": "取消",
 			"this_item": "此项",
 			"price": "价格",
 			"brand": "品牌",
 			"rating": "评分",
-			"availability": "可用性"
+			"availability": "可用性",
+			"weight": "重量",
+			"type": "产品类别",
+			"description": "描述",
+			"quantity_error_msg": "选择更多产品进行比较",
+			"quantity_error_title": "没什么可比较的"
 		},
 		"footer": {
 			"payment": "支付方式",
@@ -426,11 +458,13 @@
 			"shop_all": "选购全部"
 		},
 		"collection_template": {
+			"loading_products": "正在加载产品...",
 			"empty_collection_message": "该集合没有产品",
 			"empty": "没有找到产品",
 			"title": "收藏",
 			"use_fewer_filters_html": "使用更少的过滤器或<a class=\"{{ class }}\" href=\"{{ link }}\">全部清除</a>",
-			"use_fewer_filters": "使用更少的过滤器"
+			"use_fewer_filters": "使用更少的过滤器",
+			"view_switch_title": "查看方式："
 		},
 		"video": {
 			"load_video": "加载视频：{{ description }}"

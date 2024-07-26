@@ -5,7 +5,9 @@
 			"announcement": "Pengumuman",
 			"cart": "Keranjang",
 			"search": "Mencari",
-			"home": "Rumah"
+			"home": "Rumah",
+			"sidescroll_title": "Pengguliran horizontal",
+			"sidescroll_msg": "Tekan tombol Shift dan gulir roda mouse"
 		},
 		"date_types": {
 			"days": "Hari",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Catatan: Templat ini dirancang hanya untuk penyesuaian tampilan cepat. Jangan menggunakannya sebagai template produk yang berdiri sendiri.",
 			"empty_collection_message": "Catatan: Koleksi ini kosong.",
 			"empty_fallback_collection_message": "Catatan: Koleksi fallback \"{{ title }}\" tidak memiliki produk.",
-			"cart_drawer_no_blocks": "Catatan: Bagian laci keranjang belanja tidak ada bloknya."
+			"cart_drawer_no_blocks": "Catatan: Bagian laci keranjang belanja tidak ada bloknya.",
+			"compared_images_blocks_requirements": "Catatan: Diperlukan dua blok untuk bagian ini."
 		},
 		"browsing_history": {
 			"fallback": "Anda tidak memiliki item yang baru dilihat."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Bagikan di Facebook",
 				"share_on_twitter": "Posting di X",
 				"share_by_email": "Bagikan melalui email",
-				"share_on_pinterest": "Pin di Pinterest"
+				"share_on_pinterest": "Pin di Pinterest",
+				"copy_to_clipboard": "Menyalin ke clipboard"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Ikuti di X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Mencari",
 			"search_placeholder": "Ketik untuk mencari...",
+			"search_product_type_default_option": "Semua",
 			"info": "Gunakan bilah pencarian untuk menemukan produk",
 			"predictive_search": {
 				"suggestions": "Saran",
@@ -78,10 +83,17 @@
 				"products": "Produk",
 				"posts": "Postingan Blog",
 				"pages": "Halaman"
+			},
+			"voice_search": {
+				"default_message": "Mendengarkan...",
+				"repeat_message": "Tidak ada yang dikenali",
+				"repeat_link": "Coba lagi?"
 			}
 		},
 		"cart": {
+			"change_variant": "Ubah opsi",
 			"view": "Lihat keranjang saya ({{ count }})",
+			"only_available": "Hanya {{ count }} yang tersedia",
 			"open": "Buka gerobak",
 			"qty_max_note": "Semua item yang tersedia di keranjang",
 			"qty_max_note_short": "Semua item di keranjang",
@@ -93,11 +105,13 @@
 				"title": "Ditambahkan ke troli",
 				"go_to_cart": "Pergi ke Keranjang",
 				"error": "Ada yang salah. Silakan coba lagi nanti"
-			}
+			},
+			"preorder": "Pesan terlebih dahulu"
 		},
 		"share": {
 			"close": "Tutup berbagi",
 			"copy_to_clipboard": "Salin tautan",
+			"copy_to_clipboard_success": "URL disalin ke papan klip",
 			"share_url": "Tautan",
 			"success_message": "Tautan disalin ke papan klip",
 			"facebook": "Membagikan",
@@ -161,6 +175,7 @@
 		"blog_title": "Contoh judul blog"
 	},
 	"products": {
+		"limited_deal_badge": "Kesepakatan waktu terbatas",
 		"total_price": "Total harga:",
 		"select": "Pilih",
 		"selected": "Terpilih",
@@ -188,6 +203,7 @@
 			"more_details": "Detail produk lebih lanjut",
 			"more_options": "Lebih banyak pilihan",
 			"show_options": "Tampilkan opsi",
+			"view_options": "Lihat opsi",
 			"express_show_options": "Pilihan",
 			"review_count": {
 				"one": "tinjauan",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Stok tersedia dan siap dikirim",
+				"in_stock_short_msg": "Persediaan",
+				"now_in_stock_msg": "{{ value }} tersedia dan siap dikirim",
+				"now_in_stock_short_msg": "{{ value }} tersedia",
 				"out_of_stock_msg": "Kehabisan persediaan",
-				"low_stock_msg": "Hanya {{ value }} yang tersisa!"
+				"low_stock_msg": "Hanya {{ value }} yang tersisa!",
+				"low_stock_short_msg": "Hanya {{ value }} yang tersisa!",
+				"pre_order_msg": "Tersedia untuk praorder"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Bagikan produk ini",
 			"sold_out": "Habis terjual",
+			"low_stock": "Stok sedikit",
 			"unavailable": "Tidak tersedia",
 			"vendor": "Penjaja",
 			"video_exit_message": "{{ title }} membuka video layar penuh di jendela yang sama.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Membandingkan",
+			"products": "Produk",
+			"remove": "Menghapus",
+			"options": "Pilihan",
+			"cancel": "Membatalkan",
 			"this_item": "Barang ini",
 			"price": "Harga",
 			"brand": "Merek",
 			"rating": "Peringkat",
-			"availability": "Ketersediaan"
+			"availability": "Ketersediaan",
+			"weight": "Berat",
+			"type": "Tipe produk",
+			"description": "Keterangan",
+			"quantity_error_msg": "Pilih lebih banyak produk untuk dibandingkan",
+			"quantity_error_title": "Tidak ada yang bisa dibandingkan"
 		},
 		"footer": {
 			"payment": "Cara Pembayaran",
@@ -426,11 +458,13 @@
 			"shop_all": "Belanja semuanya"
 		},
 		"collection_template": {
+			"loading_products": "Memuat produk...",
 			"empty_collection_message": "Koleksi ini tidak memiliki produk",
 			"empty": "Tidak ada produk yang ditemukan",
 			"title": "Koleksi",
 			"use_fewer_filters_html": "Gunakan lebih sedikit filter atau <a class=\"{{ class }}\" href=\"{{ link }}\">hapus semua</a>",
-			"use_fewer_filters": "Gunakan lebih sedikit filter"
+			"use_fewer_filters": "Gunakan lebih sedikit filter",
+			"view_switch_title": "Menampilkan sebagai:"
 		},
 		"video": {
 			"load_video": "Muat video: {{ description }}"

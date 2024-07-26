@@ -5,7 +5,9 @@
 			"announcement": "Oznámenie",
 			"cart": "Košík",
 			"search": "Vyhľadávanie",
-			"home": "Domov"
+			"home": "Domov",
+			"sidescroll_title": "Horizontálne rolovanie",
+			"sidescroll_msg": "Stlačte kláves Shift a rolujte kolieskom myši"
 		},
 		"date_types": {
 			"days": "Dni",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Poznámka: Táto šablóna je určená len na prispôsobenie rýchleho zobrazenia. Nepoužívajte ho ako samostatnú šablónu produktu.",
 			"empty_collection_message": "Poznámka: Táto zbierka je prázdna.",
 			"empty_fallback_collection_message": "Poznámka: Záložná kolekcia \"{{ title }}\" neobsahuje žiadne produkty.",
-			"cart_drawer_no_blocks": "Poznámka: Zásuvková časť nákupného košíka neobsahuje žiadne bloky."
+			"cart_drawer_no_blocks": "Poznámka: Zásuvková časť nákupného košíka neobsahuje žiadne bloky.",
+			"compared_images_blocks_requirements": "Poznámka: Pre túto časť sú potrebné dva bloky."
 		},
 		"browsing_history": {
 			"fallback": "Nemáte žiadne nedávno zobrazené položky."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Zdieľať na Facebook",
 				"share_on_twitter": "Príspevok na X",
 				"share_by_email": "Zdieľať e-mailom",
-				"share_on_pinterest": "Pripnúť na Pinterest"
+				"share_on_pinterest": "Pripnúť na Pinterest",
+				"copy_to_clipboard": "Skopírovať do schránky"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Sledujte X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Vyhľadávanie",
 			"search_placeholder": "Ak chcete hľadať, zadajte...",
+			"search_product_type_default_option": "Všetky",
 			"info": "Na vyhľadanie produktov použite panel vyhľadávania",
 			"predictive_search": {
 				"suggestions": "Návrhy",
@@ -78,10 +83,17 @@
 				"products": "Produkty",
 				"posts": "Blogové príspevky",
 				"pages": "Stránky"
+			},
+			"voice_search": {
+				"default_message": "Počúvanie...",
+				"repeat_message": "Nič rozpoznané",
+				"repeat_link": "Skúsiť znova?"
 			}
 		},
 		"cart": {
+			"change_variant": "Zmeňte možnosti",
 			"view": "Zobraziť môj košík ({{ count }})",
+			"only_available": "K dispozícii je iba {{ count }}",
 			"open": "Otvorte košík",
 			"qty_max_note": "Všetky dostupné položky v košíku",
 			"qty_max_note_short": "Všetky položky v košíku",
@@ -93,11 +105,13 @@
 				"title": "Pridané do košíka",
 				"go_to_cart": "Prejdite do košíka",
 				"error": "Niečo sa pokazilo. Prosím, skús neskôr"
-			}
+			},
+			"preorder": "Predobjednať"
 		},
 		"share": {
 			"close": "Zavrieť zdieľanie",
 			"copy_to_clipboard": "Skopírovať odkaz",
+			"copy_to_clipboard_success": "Adresa URL bola skopírovaná do schránky",
 			"share_url": "Odkaz",
 			"success_message": "Odkaz bol skopírovaný do schránky",
 			"facebook": "zdieľam",
@@ -161,6 +175,7 @@
 		"blog_title": "Príklad názvu blogu"
 	},
 	"products": {
+		"limited_deal_badge": "Časovo obmedzená ponuka",
 		"total_price": "Celková cena:",
 		"select": "Vyberte",
 		"selected": "Vybraný",
@@ -188,6 +203,7 @@
 			"more_details": "Viac podrobností o produkte",
 			"more_options": "Viac možností",
 			"show_options": "Zobraziť možnosti",
+			"view_options": "Zobraziť možnosti",
 			"express_show_options": "možnosti",
 			"review_count": {
 				"one": "preskúmanie",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Skladom a pripravené na odoslanie",
+				"in_stock_short_msg": "Na sklade",
+				"now_in_stock_msg": "{{ value }} na sklade a pripravené na odoslanie",
+				"now_in_stock_short_msg": "{{ value }} na sklade",
 				"out_of_stock_msg": "Vypredané",
-				"low_stock_msg": "Na sklade už len {{ value }}!"
+				"low_stock_msg": "Na sklade už len {{ value }}!",
+				"low_stock_short_msg": "Zostáva iba {{ value }}!",
+				"pre_order_msg": "K dispozícii na predobjednávku"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Zdieľajte tento produkt",
 			"sold_out": "Vypredané",
+			"low_stock": "Nízke zásoby",
 			"unavailable": "nedostupné",
 			"vendor": "Predajca",
 			"video_exit_message": "{{ title }} otvorí video na celú obrazovku v rovnakom okne.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Porovnaj",
+			"products": "Produkty",
+			"remove": "Odstrániť",
+			"options": "možnosti",
+			"cancel": "Zrušiť",
 			"this_item": "Táto položka",
 			"price": "cena",
 			"brand": "Značka",
 			"rating": "Hodnotenie",
-			"availability": "Dostupnosť"
+			"availability": "Dostupnosť",
+			"weight": "Hmotnosť",
+			"type": "Typ produktu",
+			"description": "Popis",
+			"quantity_error_msg": "Vyberte viac produktov na porovnanie",
+			"quantity_error_title": "Niet s čím porovnávať"
 		},
 		"footer": {
 			"payment": "Spôsob platby",
@@ -426,11 +458,13 @@
 			"shop_all": "Nakupujte všetky"
 		},
 		"collection_template": {
+			"loading_products": "Načítavajú sa produkty...",
 			"empty_collection_message": "Táto kolekcia neobsahuje žiadne produkty",
 			"empty": "Nenašli sa žiadne produkty",
 			"title": "Zbierka",
 			"use_fewer_filters_html": "Použite menej filtrov alebo <a class=\"{{ class }}\" href=\"{{ link }}\">vymažte všetky</a>",
-			"use_fewer_filters": "Použite menej filtrov"
+			"use_fewer_filters": "Použite menej filtrov",
+			"view_switch_title": "Zobraziť ako:"
 		},
 		"video": {
 			"load_video": "Načítať video: {{ description }}"

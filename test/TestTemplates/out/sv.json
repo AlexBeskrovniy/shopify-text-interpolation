@@ -5,7 +5,9 @@
 			"announcement": "Meddelande",
 			"cart": "Vagn",
 			"search": "Sök",
-			"home": "Hem"
+			"home": "Hem",
+			"sidescroll_title": "Horisontell rullning",
+			"sidescroll_msg": "Tryck på Shift-tangenten och rulla mushjulet"
 		},
 		"date_types": {
 			"days": "dagar",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Obs: Den här mallen är endast utformad för snabbvyanpassningar. Använd den inte som fristående produktmall.",
 			"empty_collection_message": "Obs: Den här samlingen är tom.",
 			"empty_fallback_collection_message": "Obs: Reservsamlingen \"{{ title }}\" har inga produkter.",
-			"cart_drawer_no_blocks": "Obs: Varukorgslådsektionen har inga block."
+			"cart_drawer_no_blocks": "Obs: Varukorgslådsektionen har inga block.",
+			"compared_images_blocks_requirements": "Obs: Två block krävs för detta avsnitt."
 		},
 		"browsing_history": {
 			"fallback": "Du har inga nyligen visade objekt."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Dela på Facebook",
 				"share_on_twitter": "Inlägg på X",
 				"share_by_email": "Dela via e-post",
-				"share_on_pinterest": "Fäst på Pinterest"
+				"share_on_pinterest": "Fäst på Pinterest",
+				"copy_to_clipboard": "Kopiera till urklipp"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Följ på X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Sök",
 			"search_placeholder": "Skriv för att söka...",
+			"search_product_type_default_option": "Allt",
 			"info": "Använd sökfältet för att hitta produkter",
 			"predictive_search": {
 				"suggestions": "Förslag",
@@ -78,10 +83,17 @@
 				"products": "Produkter",
 				"posts": "Blogginlägg",
 				"pages": "Sidor"
+			},
+			"voice_search": {
+				"default_message": "Lyssnande...",
+				"repeat_message": "Inget känt igen",
+				"repeat_link": "Försök igen?"
 			}
 		},
 		"cart": {
+			"change_variant": "Ändra alternativ",
 			"view": "Visa min kundvagn ({{ count }})",
+			"only_available": "Endast {{ count }} är tillgängligt",
 			"open": "Öppen vagn",
 			"qty_max_note": "Alla tillgängliga varor i varukorgen",
 			"qty_max_note_short": "Alla varor i varukorgen",
@@ -93,11 +105,13 @@
 				"title": "Lägg till i kundvagnen",
 				"go_to_cart": "Gå till varukorgen",
 				"error": "Något gick fel. Försök senare"
-			}
+			},
+			"preorder": "Förboka"
 		},
 		"share": {
 			"close": "Stäng aktie",
 			"copy_to_clipboard": "Kopiera länk",
+			"copy_to_clipboard_success": "URL kopierad till urklipp",
 			"share_url": "Länk",
 			"success_message": "Länken har kopierats till urklipp",
 			"facebook": "Dela med sig",
@@ -161,6 +175,7 @@
 		"blog_title": "Exempel på bloggtitel"
 	},
 	"products": {
+		"limited_deal_badge": "Tidsbegränsat erbjudande",
 		"total_price": "Totalbelopp:",
 		"select": "Välj",
 		"selected": "Vald",
@@ -188,6 +203,7 @@
 			"more_details": "Mer produktdetaljer",
 			"more_options": "Fler alternativ",
 			"show_options": "Visa alternativ",
+			"view_options": "Visa alternativ",
 			"express_show_options": "alternativ",
 			"review_count": {
 				"one": "recension",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Finns i lager och redo för leverans",
+				"in_stock_short_msg": "I lager",
+				"now_in_stock_msg": "{{ value }} finns i lager och redo för leverans",
+				"now_in_stock_short_msg": "{{ value }} i lager",
 				"out_of_stock_msg": "Slut i lager",
-				"low_stock_msg": "Endast {{ value }} kvar i lager!"
+				"low_stock_msg": "Endast {{ value }} kvar i lager!",
+				"low_stock_short_msg": "Endast {{ value }} kvar!",
+				"pre_order_msg": "Finns för förbeställning"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Dela denna produkt",
 			"sold_out": "Utsåld",
+			"low_stock": "Lågt lager",
 			"unavailable": "Inte tillgänglig",
 			"vendor": "Säljare",
 			"video_exit_message": "{{ title }} öppnar helskärmsvideo i samma fönster.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Jämföra",
+			"products": "Produkter",
+			"remove": "Avlägsna",
+			"options": "alternativ",
+			"cancel": "Annullera",
 			"this_item": "Detta föremål",
 			"price": "Pris",
 			"brand": "varumärke",
 			"rating": "Betyg",
-			"availability": "Tillgänglighet"
+			"availability": "Tillgänglighet",
+			"weight": "Vikt",
+			"type": "Produkttyp",
+			"description": "Beskrivning",
+			"quantity_error_msg": "Välj fler produkter att jämföra",
+			"quantity_error_title": "Inget att jämföra med"
 		},
 		"footer": {
 			"payment": "Betalningsmetoder",
@@ -426,11 +458,13 @@
 			"shop_all": "Handla allt"
 		},
 		"collection_template": {
+			"loading_products": "Laddar produkter...",
 			"empty_collection_message": "Denna kollektion har inga produkter",
 			"empty": "Inga produkter hittades",
 			"title": "Samling",
 			"use_fewer_filters_html": "Använd färre filter eller <a class=\"{{ class }}\" href=\"{{ link }}\">rensa alla</a>",
-			"use_fewer_filters": "Använd färre filter"
+			"use_fewer_filters": "Använd färre filter",
+			"view_switch_title": "Visa som:"
 		},
 		"video": {
 			"load_video": "Ladda video: {{ description }}"

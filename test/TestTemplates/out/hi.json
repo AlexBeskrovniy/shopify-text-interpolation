@@ -5,7 +5,9 @@
 			"announcement": "घोषणा",
 			"cart": "कार्ट",
 			"search": "खोज",
-			"home": "घर"
+			"home": "घर",
+			"sidescroll_title": "क्षैतिज स्क्रॉलिंग",
+			"sidescroll_msg": "Shift कुंजी दबाएँ और माउस व्हील को स्क्रॉल करें"
 		},
 		"date_types": {
 			"days": "दिन",
@@ -20,7 +22,8 @@
 			"quick_view_message": "नोट: यह टेम्प्लेट केवल त्वरित दृश्य अनुकूलन के लिए डिज़ाइन किया गया है। इसे अकेले उत्पाद टेम्पलेट के रूप में उपयोग न करें।",
 			"empty_collection_message": "नोट: यह संग्रह खाली है।",
 			"empty_fallback_collection_message": "ध्यान दें: फ़ॉलबैक संग्रह \"{{ title }}\" में कोई उत्पाद नहीं है।",
-			"cart_drawer_no_blocks": "नोट: शॉपिंग कार्ट ड्रावर सेक्शन में कोई ब्लॉक नहीं है।"
+			"cart_drawer_no_blocks": "नोट: शॉपिंग कार्ट ड्रावर सेक्शन में कोई ब्लॉक नहीं है।",
+			"compared_images_blocks_requirements": "नोट: इस अनुभाग के लिए दो ब्लॉक आवश्यक हैं।"
 		},
 		"browsing_history": {
 			"fallback": "हाल में देखा गया कोई आइटम नहीं।"
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Facebook पर शेयर करें",
 				"share_on_twitter": "एक्स पर पोस्ट करें",
 				"share_by_email": "ईमेल द्वारा साझा करें",
-				"share_on_pinterest": "Pinterest पर पिन करें"
+				"share_on_pinterest": "Pinterest पर पिन करें",
+				"copy_to_clipboard": "क्लिपबोर्ड पर कॉपी करें"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "X पर फ़ॉलो करें",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "खोज",
 			"search_placeholder": "खोजने के लिए लिखें...",
+			"search_product_type_default_option": "सभी",
 			"info": "उत्पादों को खोजने के लिए खोज बार का उपयोग करें",
 			"predictive_search": {
 				"suggestions": "सुझाव",
@@ -78,10 +83,17 @@
 				"products": "उत्पादों",
 				"posts": "वेबदैनिकी डाक",
 				"pages": "पृष्ठों"
+			},
+			"voice_search": {
+				"default_message": "सुनना...",
+				"repeat_message": "कुछ भी पहचाना नहीं गया",
+				"repeat_link": "पुनः प्रयास करें?"
 			}
 		},
 		"cart": {
+			"change_variant": "विकल्प बदलें",
 			"view": "मेरा कार्ट देखें ({{ count }})",
+			"only_available": "केवल {{ count }} उपलब्ध है",
 			"open": "खुली गाड़ी",
 			"qty_max_note": "कार्ट में सभी उपलब्ध आइटम",
 			"qty_max_note_short": "कार्ट में सभी आइटम",
@@ -93,11 +105,13 @@
 				"title": "कार्ट में जोड़ा गया",
 				"go_to_cart": "गाड़ी पर जाना",
 				"error": "कुछ गलत हो गया। बाद में कोशिश करें"
-			}
+			},
+			"preorder": "पूर्व आदेश"
 		},
 		"share": {
 			"close": "शेयर बंद करें",
 			"copy_to_clipboard": "लिंक की प्रतिलिपि करें",
+			"copy_to_clipboard_success": "URL को क्लिपबोर्ड पर कॉपी किया गया",
 			"share_url": "संपर्क",
 			"success_message": "लिंक को क्लिपबोर्ड पर कॉपी किया गया",
 			"facebook": "साझा करना",
@@ -161,6 +175,7 @@
 		"blog_title": "उदाहरण ब्लॉग शीर्षक"
 	},
 	"products": {
+		"limited_deal_badge": "सीमित समय का सौदा",
 		"total_price": "कुल कीमत:",
 		"select": "चुनना",
 		"selected": "गिने चुने",
@@ -188,6 +203,7 @@
 			"more_details": "अधिक उत्पाद विवरण",
 			"more_options": "अधिक विकल्प",
 			"show_options": "विकल्प दिखाएं",
+			"view_options": "विकल्प देखें",
 			"express_show_options": "विकल्प",
 			"review_count": {
 				"one": "समीक्षा",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "स्टॉक में है और शिपिंग के लिए तैयार है",
+				"in_stock_short_msg": "स्टॉक में",
+				"now_in_stock_msg": "{{ value }} स्टॉक में है और शिपिंग के लिए तैयार है",
+				"now_in_stock_short_msg": "{{ value }} स्टॉक में",
 				"out_of_stock_msg": "स्टॉक ख़त्म",
-				"low_stock_msg": "स्टॉक में केवल {{ value }} बचा है!"
+				"low_stock_msg": "स्टॉक में केवल {{ value }} बचा है!",
+				"low_stock_short_msg": "केवल {{ value }} शेष!",
+				"pre_order_msg": "प्री - ऑर्डर के लिए उपलब्ध"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "इस उत्पाद को साझा करें",
 			"sold_out": "बिक गया",
+			"low_stock": "कम स्टॉक",
 			"unavailable": "अनुपलब्ध",
 			"vendor": "वेंडर",
 			"video_exit_message": "{{ title }} उसी विंडो में फ़ुल स्क्रीन वीडियो खोलता है।",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "तुलना करना",
+			"products": "उत्पादों",
+			"remove": "निकालना",
+			"options": "विकल्प",
+			"cancel": "रद्द करना",
 			"this_item": "यह आइटम",
 			"price": "कीमत",
 			"brand": "ब्रांड",
 			"rating": "रेटिंग",
-			"availability": "उपलब्धता"
+			"availability": "उपलब्धता",
+			"weight": "वज़न",
+			"type": "उत्पाद का प्रकार",
+			"description": "विवरण",
+			"quantity_error_msg": "तुलना करने के लिए अधिक उत्पाद चुनें",
+			"quantity_error_title": "तुलना करने लायक कुछ भी नहीं"
 		},
 		"footer": {
 			"payment": "भुगतान की विधि",
@@ -426,11 +458,13 @@
 			"shop_all": "सभी खरीदारी करें"
 		},
 		"collection_template": {
+			"loading_products": "उत्पाद लोड हो रहे हैं...",
 			"empty_collection_message": "इस संग्रह में कोई उत्पाद नहीं है",
 			"empty": "कोई उत्पाद नहीं मिला",
 			"title": "संग्रह",
 			"use_fewer_filters_html": "कम फ़िल्टर का उपयोग करें या <a class=\"{{ class }}\" href=\"{{ link }}\">सभी साफ़</a> करें",
-			"use_fewer_filters": "कम फिल्टर का प्रयोग करें"
+			"use_fewer_filters": "कम फिल्टर का प्रयोग करें",
+			"view_switch_title": "के रूप में देखें:"
 		},
 		"video": {
 			"load_video": "वीडियो लोड करें: {{ description }}"

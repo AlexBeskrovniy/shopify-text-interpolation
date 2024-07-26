@@ -5,7 +5,9 @@
 			"announcement": "Anuncio",
 			"cart": "Carro",
 			"search": "Buscar",
-			"home": "Hogar"
+			"home": "Hogar",
+			"sidescroll_title": "Desplazamiento horizontal",
+			"sidescroll_msg": "Presione la tecla Shift y desplace la rueda del mouse."
 		},
 		"date_types": {
 			"days": "Días",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Nota: esta plantilla está diseñada solo para personalizaciones de vista rápida. No lo utilice como plantilla de producto independiente.",
 			"empty_collection_message": "Nota: Esta colección está vacía.",
 			"empty_fallback_collection_message": "Nota: la colección alternativa \"{{ title }}\" no tiene productos.",
-			"cart_drawer_no_blocks": "Nota: La sección del cajón del carrito de compras no tiene bloques."
+			"cart_drawer_no_blocks": "Nota: La sección del cajón del carrito de compras no tiene bloques.",
+			"compared_images_blocks_requirements": "Nota: Se requieren dos bloques para esta sección."
 		},
 		"browsing_history": {
 			"fallback": "No tiene elementos vistos recientemente."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Compartir en Facebook",
 				"share_on_twitter": "Publicar en X",
 				"share_by_email": "Compartir por correo electrónico",
-				"share_on_pinterest": "Pin en Pinterest"
+				"share_on_pinterest": "Pin en Pinterest",
+				"copy_to_clipboard": "Copiar al portapapeles"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Sigue en X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -57,7 +61,7 @@
 		"continue_shopping": "Seguir comprando",
 		"pagination": {
 			"label": "Paginación",
-			"page": "Página {{ undefined }}",
+			"page": "Página {{ number }}",
 			"next": "Siguiente página",
 			"previous": "Pagina anterior",
 			"next_short": "Próximo",
@@ -71,6 +75,7 @@
 			},
 			"search": "Buscar",
 			"search_placeholder": "Escribe para buscar...",
+			"search_product_type_default_option": "Todo",
 			"info": "Utilice la barra de búsqueda para encontrar productos",
 			"predictive_search": {
 				"suggestions": "Sugerencias",
@@ -78,10 +83,17 @@
 				"products": "Productos",
 				"posts": "Publicaciones de blog",
 				"pages": "paginas"
+			},
+			"voice_search": {
+				"default_message": "Escuchando...",
+				"repeat_message": "Nada reconocido",
+				"repeat_link": "¿Intentar otra vez?"
 			}
 		},
 		"cart": {
+			"change_variant": "Cambiar opciones",
 			"view": "Ver mi carrito ({{ count }})",
+			"only_available": "Sólo {{ count }} está disponible",
 			"open": "carrito abierto",
 			"qty_max_note": "Todos los artículos disponibles en el carrito.",
 			"qty_max_note_short": "Todos los artículos en el carrito",
@@ -93,11 +105,13 @@
 				"title": "Añadido al carrito",
 				"go_to_cart": "Ir al carrito",
 				"error": "Algo salió mal. Por favor intente mas tarde"
-			}
+			},
+			"preorder": "Hacer un pedido"
 		},
 		"share": {
 			"close": "Cerrar compartir",
 			"copy_to_clipboard": "Copiar link",
+			"copy_to_clipboard_success": "URL copiada al portapapeles",
 			"share_url": "Enlace",
 			"success_message": "link copiado al portapapeles",
 			"facebook": "Cuota",
@@ -161,6 +175,7 @@
 		"blog_title": "Ejemplo de título de blog"
 	},
 	"products": {
+		"limited_deal_badge": "Oferta por tiempo limitado",
 		"total_price": "Precio total:",
 		"select": "Seleccionar",
 		"selected": "Seleccionado",
@@ -181,13 +196,14 @@
 			"description_read_more": "Leer más",
 			"description_read_less": "Leer menos",
 			"on_sale": "Venta",
-			"saved_amount": "{{ undefined }} desactivado",
+			"saved_amount": "{{ value }} desactivado",
 			"product_variants": "Variantes del producto",
 			"back_to_product": "volver al producto",
 			"quick_view": "Compra rápida",
 			"more_details": "Más detalles del producto",
 			"more_options": "Mas opciones",
 			"show_options": "Mostrar opciones",
+			"view_options": "Ver opciones",
 			"express_show_options": "Opciones",
 			"review_count": {
 				"one": "revisión",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "En stock y listo para enviar",
+				"in_stock_short_msg": "En stock",
+				"now_in_stock_msg": "{{ value }} en stock y listo para envío",
+				"now_in_stock_short_msg": "{{ value }} en stock",
 				"out_of_stock_msg": "Agotado",
-				"low_stock_msg": "¡Solo queda {{ value }} en stock!"
+				"low_stock_msg": "¡Solo queda {{ value }} en stock!",
+				"low_stock_short_msg": "¡Solo queda {{ value }}!",
+				"pre_order_msg": "Disponible para pre-orden"
 			},
 			"stock_notification": {
 				"form": {
@@ -249,7 +270,7 @@
 				"directions": "Obtener las direcciones"
 			},
 			"price": {
-				"from_price_html": "De {{ undefined }}",
+				"from_price_html": "De {{ price }}",
 				"regular_price": "Precio regular",
 				"sale_price": "Precio de venta",
 				"unit_price": "Precio unitario",
@@ -261,6 +282,7 @@
 			},
 			"share": "Comparte este producto",
 			"sold_out": "Agotado",
+			"low_stock": "Stock bajo",
 			"unavailable": "Indisponible",
 			"vendor": "Vendedor",
 			"video_exit_message": "{{ title }} abre el video a pantalla completa en la misma ventana.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Comparar",
+			"products": "Productos",
+			"remove": "Eliminar",
+			"options": "Opciones",
+			"cancel": "Cancelar",
 			"this_item": "Éste ítem",
 			"price": "Precio",
 			"brand": "Marca",
 			"rating": "Clasificación",
-			"availability": "Disponibilidad"
+			"availability": "Disponibilidad",
+			"weight": "Peso",
+			"type": "Tipo de producto",
+			"description": "Descripción",
+			"quantity_error_msg": "Seleccione más productos para comparar",
+			"quantity_error_title": "Nada con lo que comparar"
 		},
 		"footer": {
 			"payment": "Métodos de pago",
@@ -426,11 +458,13 @@
 			"shop_all": "Comprar todo"
 		},
 		"collection_template": {
+			"loading_products": "Cargando productos...",
 			"empty_collection_message": "Esta colección no tiene productos.",
 			"empty": "No se encontraron productos",
 			"title": "Recopilación",
 			"use_fewer_filters_html": "Use menos filtros o <a class=\"{{ class }}\" href=\"{{ link }}\">borre todos</a>",
-			"use_fewer_filters": "Usa menos filtros"
+			"use_fewer_filters": "Usa menos filtros",
+			"view_switch_title": "Visto como:"
 		},
 		"video": {
 			"load_video": "Cargar video: {{ description }}"
@@ -532,7 +566,7 @@
 		"orders": {
 			"title": "Historial de pedidos",
 			"order_number": "Ordenar",
-			"order_number_link": "Número de pedido {{ undefined }}",
+			"order_number_link": "Número de pedido {{ number }}",
 			"date": "Fecha",
 			"payment_status": "Estado de pago",
 			"fulfillment_status": "Estado de cumplimiento",

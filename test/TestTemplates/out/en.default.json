@@ -5,7 +5,9 @@
 			"announcement": "Announcement",
 			"cart": "Cart",
 			"search": "Search",
-			"home": "Home"
+			"home": "Home",
+			"sidescroll_title": "Horizontal scrolling",
+			"sidescroll_msg": "Press the Shift key and scroll the mouse wheel"
 		},
 		"date_types": {
 			"days": "Days",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Note: This template is designed only for quick view customizations. Do not use it as stand alone product template.",
 			"empty_collection_message": "Note: This collection is empty.",
 			"empty_fallback_collection_message": "Note: Fallback collection \"{{ title }}\" has no products.",
-			"cart_drawer_no_blocks": "Note: The shopping cart drawer section has no blocks."
+			"cart_drawer_no_blocks": "Note: The shopping cart drawer section has no blocks.",
+			"compared_images_blocks_requirements": "Note: Two blocks are required for this section."
 		},
 		"browsing_history": {
 			"fallback": "You have no recently viewed items."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Share on Facebook",
 				"share_on_twitter": "Post on X",
 				"share_by_email": "Share by e-mail",
-				"share_on_pinterest": "Pin on Pinterest"
+				"share_on_pinterest": "Pin on Pinterest",
+				"copy_to_clipboard": "Copy to clipboard"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Follow on X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Search",
 			"search_placeholder": "Type to search...",
+			"search_product_type_default_option": "All",
 			"info": "Use the search bar to find products",
 			"predictive_search": {
 				"suggestions": "Suggestions",
@@ -78,10 +83,17 @@
 				"products": "Products",
 				"posts": "Blog Posts",
 				"pages": "Pages"
+			},
+			"voice_search": {
+				"default_message": "Listening...",
+				"repeat_message": "Nothing recognized",
+				"repeat_link": "Try again?"
 			}
 		},
 		"cart": {
+			"change_variant": "Change options",
 			"view": "View my cart ({{ count }})",
+			"only_available": "Only {{ count }} is available",
 			"open": "Open cart",
 			"qty_max_note": "All available items in the cart",
 			"qty_max_note_short": "All items in the cart",
@@ -93,11 +105,13 @@
 				"title": "Added to cart",
 				"go_to_cart": "Go to Cart",
 				"error": "Something went wrong. Please, try later"
-			}
+			},
+			"preorder": "Pre-order"
 		},
 		"share": {
 			"close": "Close share",
 			"copy_to_clipboard": "Copy link",
+			"copy_to_clipboard_success": "URL copied to clipboard",
 			"share_url": "Link",
 			"success_message": "Link copied to clipboard",
 			"facebook": "Share",
@@ -161,6 +175,7 @@
 		"blog_title": "Example blog title"
 	},
 	"products": {
+		"limited_deal_badge": "Limited time deal",
 		"total_price": "Total price:",
 		"select": "Select",
 		"selected": "Selected",
@@ -188,6 +203,7 @@
 			"more_details": "More product details",
 			"more_options": "More options",
 			"show_options": "Show options",
+			"view_options": "View options",
 			"express_show_options": "Options",
 			"review_count": {
 				"one": "review",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "In stock and ready for shipping",
+				"in_stock_short_msg": "In stock",
+				"now_in_stock_msg": "{{ value }} in stock and ready for shipping",
+				"now_in_stock_short_msg": "{{ value }} in stock",
 				"out_of_stock_msg": "Out of stock",
-				"low_stock_msg": "Only {{ value }} left in stock!"
+				"low_stock_msg": "Only {{ value }} left in stock!",
+				"low_stock_short_msg": "Only {{ value }} left!",
+				"pre_order_msg": "Available for pre-order"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Share this product",
 			"sold_out": "Sold out",
+			"low_stock": "Low stock",
 			"unavailable": "Unavailable",
 			"vendor": "Vendor",
 			"video_exit_message": "{{ title }} opens full screen video in same window.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Compare",
+			"products": "Products",
+			"remove": "Remove",
+			"options": "Options",
+			"cancel": "Cancel",
 			"this_item": "This item",
 			"price": "Price",
 			"brand": "Brand",
 			"rating": "Rating",
-			"availability": "Availability"
+			"availability": "Availability",
+			"weight": "Weight",
+			"type": "Product type",
+			"description": "Description",
+			"quantity_error_msg": "Select more products to compare",
+			"quantity_error_title": "Nothing to compare with"
 		},
 		"footer": {
 			"payment": "Payment methods",
@@ -426,11 +458,13 @@
 			"shop_all": "Shop all"
 		},
 		"collection_template": {
+			"loading_products": "Loading products...",
 			"empty_collection_message": "This collection has no products",
 			"empty": "No products found",
 			"title": "Collection",
 			"use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>",
-			"use_fewer_filters": "Use fewer filters"
+			"use_fewer_filters": "Use fewer filters",
+			"view_switch_title": "View as:"
 		},
 		"video": {
 			"load_video": "Load video: {{ description }}"

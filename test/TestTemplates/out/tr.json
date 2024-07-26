@@ -5,7 +5,9 @@
 			"announcement": "Duyuru",
 			"cart": "Araba",
 			"search": "Aramak",
-			"home": "Ev"
+			"home": "Ev",
+			"sidescroll_title": "Yatay kaydırma",
+			"sidescroll_msg": "Shift tuşuna basın ve fare tekerleğini kaydırın"
 		},
 		"date_types": {
 			"days": "gün",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Not: Bu şablon yalnızca hızlı görünüm özelleştirmeleri için tasarlanmıştır. Tek başına ürün şablonu olarak kullanmayın.",
 			"empty_collection_message": "Not: Bu koleksiyon boştur.",
 			"empty_fallback_collection_message": "Not: \"{{ title }}\" yedek koleksiyonunda ürün yok.",
-			"cart_drawer_no_blocks": "Not: Alışveriş sepeti çekmecesinde blok yoktur."
+			"cart_drawer_no_blocks": "Not: Alışveriş sepeti çekmecesinde blok yoktur.",
+			"compared_images_blocks_requirements": "Not: Bu bölüm için iki blok gereklidir."
 		},
 		"browsing_history": {
 			"fallback": "Yakın zamanda görüntülenen öğeniz yok."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Facebook",
 				"share_on_twitter": "X'te yayınla",
 				"share_by_email": "E-posta ile paylaş",
-				"share_on_pinterest": "Pinterest Pin"
+				"share_on_pinterest": "Pinterest Pin",
+				"copy_to_clipboard": "Panoya kopyala"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "X'i takip edin",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Arama",
 			"search_placeholder": "Aramak için yazın...",
+			"search_product_type_default_option": "Tüm",
 			"info": "Ürünleri bulmak için arama çubuğunu kullanın",
 			"predictive_search": {
 				"suggestions": "Öneriler",
@@ -78,10 +83,17 @@
 				"products": "Ürünler",
 				"posts": "Blog Yazıları",
 				"pages": "Sayfalar"
+			},
+			"voice_search": {
+				"default_message": "Dinleme...",
+				"repeat_message": "Hiçbir şey tanınmadı",
+				"repeat_link": "Tekrar deneyin?"
 			}
 		},
 		"cart": {
+			"change_variant": "Değiştirme Se? enekleri",
 			"view": "Sepetimi görüntüle ({{ count }})",
+			"only_available": "Yalnızca {{ count }} kullanılabilir",
 			"open": "sepeti aç",
 			"qty_max_note": "Sepetteki mevcut tüm ürünler",
 			"qty_max_note_short": "Sepetteki tüm ürünler",
@@ -93,11 +105,13 @@
 				"title": "sepete eklendi",
 				"go_to_cart": "Sepete Git",
 				"error": "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin"
-			}
+			},
+			"preorder": "Ön sipariş"
 		},
 		"share": {
 			"close": "paylaşımı kapat",
 			"copy_to_clipboard": "Bağlantıyı kopyala",
+			"copy_to_clipboard_success": "URL panoya kopyalandı",
 			"share_url": "Bağlantı",
 			"success_message": "link kopyalandı",
 			"facebook": "Paylaş",
@@ -161,6 +175,7 @@
 		"blog_title": "Örnek blog başlığı"
 	},
 	"products": {
+		"limited_deal_badge": "Sınırlı süreli anlaşma",
 		"total_price": "Toplam fiyat:",
 		"select": "Seçme",
 		"selected": "Seçildi",
@@ -188,6 +203,7 @@
 			"more_details": "Daha fazla ürün detayı",
 			"more_options": "Daha fazla seçenek",
 			"show_options": "Seçenekleri göster",
+			"view_options": "Seçenekleri gör",
 			"express_show_options": "Seçenekler",
 			"review_count": {
 				"one": "gözden geçirmek",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Stokta ve sevkiyata hazır",
+				"in_stock_short_msg": "Stokta var",
+				"now_in_stock_msg": "{{ value }} stokta ve gönderime hazır",
+				"now_in_stock_short_msg": "{{ value }} stokta",
 				"out_of_stock_msg": "Stoklar tükendi",
-				"low_stock_msg": "Stokta yalnızca {{ value }} kaldı!"
+				"low_stock_msg": "Stokta yalnızca {{ value }} kaldı!",
+				"low_stock_short_msg": "Yalnızca {{ value }} kaldı!",
+				"pre_order_msg": "Ön sipariş için hazır"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Bu ürünü paylaş",
 			"sold_out": "Tükendi",
+			"low_stock": "Az stok",
 			"unavailable": "Kullanım dışı",
 			"vendor": "SATICI",
 			"video_exit_message": "{{ title }} tam ekran videoyu aynı pencerede açar.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Karşılaştırmak",
+			"products": "Ürünler",
+			"remove": "Kaldırmak",
+			"options": "Seçenekler",
+			"cancel": "İptal etmek",
 			"this_item": "Bu ürün",
 			"price": "Fiyat",
 			"brand": "Marka",
 			"rating": "Değerlendirme",
-			"availability": "Kullanılabilirlik"
+			"availability": "Kullanılabilirlik",
+			"weight": "Ağırlık",
+			"type": "Ürün tipi",
+			"description": "Tanım",
+			"quantity_error_msg": "Karşılaştırmak için daha fazla ürün seçin",
+			"quantity_error_title": "Karşılaştırılacak hiçbir şey yok"
 		},
 		"footer": {
 			"payment": "Ödeme metodları",
@@ -426,11 +458,13 @@
 			"shop_all": "Tümünü satın al"
 		},
 		"collection_template": {
+			"loading_products": "Ürünler yükleniyor...",
 			"empty_collection_message": "Bu koleksiyonda ürün yok",
 			"empty": "Ürün bulunamadı",
 			"title": "Toplamak",
 			"use_fewer_filters_html": "Daha az filtre kullanın veya <a class=\"{{ class }}\" href=\"{{ link }}\">tümünü temizleyin</a>",
-			"use_fewer_filters": "Daha az filtre kullan"
+			"use_fewer_filters": "Daha az filtre kullan",
+			"view_switch_title": "Olarak görüntüle:"
 		},
 		"video": {
 			"load_video": "Video yükle: {{ description }}"

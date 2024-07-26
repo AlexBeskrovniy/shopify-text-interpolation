@@ -5,7 +5,9 @@
 			"announcement": "Thông báo",
 			"cart": "Xe đẩy",
 			"search": "Tìm kiếm",
-			"home": "Trang chủ"
+			"home": "Trang chủ",
+			"sidescroll_title": "Cuộn ngang",
+			"sidescroll_msg": "Nhấn phím Shift và cuộn con lăn chuột"
 		},
 		"date_types": {
 			"days": "ngày",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Lưu ý: Mẫu này được thiết kế chỉ dành cho các tùy chỉnh xem nhanh. Không sử dụng nó làm mẫu sản phẩm độc lập.",
 			"empty_collection_message": "Lưu ý: Bộ sưu tập này trống.",
 			"empty_fallback_collection_message": "Lưu ý: Bộ sưu tập dự phòng \"{{ title }}\" không có sản phẩm.",
-			"cart_drawer_no_blocks": "Lưu ý: Phần ngăn kéo giỏ hàng không có khối."
+			"cart_drawer_no_blocks": "Lưu ý: Phần ngăn kéo giỏ hàng không có khối.",
+			"compared_images_blocks_requirements": "Lưu ý: Cần có hai khối cho phần này."
 		},
 		"browsing_history": {
 			"fallback": "Bạn không có mục nào được xem gần đây."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Chia sẻ trên Facebook",
 				"share_on_twitter": "Đăng trên X",
 				"share_by_email": "Chia sẻ qua email",
-				"share_on_pinterest": "Ghim trên Pinterest"
+				"share_on_pinterest": "Ghim trên Pinterest",
+				"copy_to_clipboard": "Sao chép vào clipboard"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Theo dõi X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Tìm kiếm",
 			"search_placeholder": "Nhập để tìm kiếm...",
+			"search_product_type_default_option": "Tất cả",
 			"info": "Sử dụng thanh tìm kiếm để tìm sản phẩm",
 			"predictive_search": {
 				"suggestions": "Đề xuất",
@@ -78,10 +83,17 @@
 				"products": "Các sản phẩm",
 				"posts": "Bài đăng trên blog",
 				"pages": "Trang"
+			},
+			"voice_search": {
+				"default_message": "Đang nghe...",
+				"repeat_message": "Không có gì được công nhận",
+				"repeat_link": "Thử lại?"
 			}
 		},
 		"cart": {
+			"change_variant": "Thay đổi tùy chọn",
 			"view": "Xem giỏ hàng của tôi ({{ count }})",
+			"only_available": "Chỉ có {{ count }}",
 			"open": "mở giỏ hàng",
 			"qty_max_note": "Tất cả các mặt hàng có sẵn trong giỏ hàng",
 			"qty_max_note_short": "Tất cả các mặt hàng trong giỏ hàng",
@@ -93,11 +105,13 @@
 				"title": "Đã thêm vào giỏ hàng",
 				"go_to_cart": "Đi tới xe đẩy hàng",
 				"error": "Đã xảy ra lỗi. Vui lòng thử lại sau"
-			}
+			},
+			"preorder": "Đặt hàng trước"
 		},
 		"share": {
 			"close": "Đóng chia sẻ",
 			"copy_to_clipboard": "Sao chép đường dẫn",
+			"copy_to_clipboard_success": "Đã sao chép URL vào bảng nhớ tạm",
 			"share_url": "liên kết",
 			"success_message": "Liên kết được sao chép vào khay nhớ tạm",
 			"facebook": "Chia sẻ",
@@ -161,6 +175,7 @@
 		"blog_title": "Tiêu đề blog ví dụ"
 	},
 	"products": {
+		"limited_deal_badge": "Thỏa thuận thời gian có hạn",
 		"total_price": "Tổng giá:",
 		"select": "Lựa chọn",
 		"selected": "Đã chọn",
@@ -188,6 +203,7 @@
 			"more_details": "Thêm chi tiết sản phẩm",
 			"more_options": "Lựa chọn khác",
 			"show_options": "Hiển thị tùy chọn",
+			"view_options": "Xem tùy chọn",
 			"express_show_options": "Tùy chọn",
 			"review_count": {
 				"one": "xem xét lại",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Trong kho và sẵn sàng để vận chuyển",
+				"in_stock_short_msg": "Trong kho",
+				"now_in_stock_msg": "{{ value }} còn hàng và sẵn sàng vận chuyển",
+				"now_in_stock_short_msg": "{{ value }} còn hàng",
 				"out_of_stock_msg": "Hết hàng",
-				"low_stock_msg": "Chỉ còn {{ value }} trong kho!"
+				"low_stock_msg": "Chỉ còn {{ value }} trong kho!",
+				"low_stock_short_msg": "Chỉ còn {{ value }}!",
+				"pre_order_msg": "Có sẵn để đặt hàng trước"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Chia sẻ sản phẩm này",
 			"sold_out": "Bán hết",
+			"low_stock": "Cổ phiếu thấp",
 			"unavailable": "Không có sẵn",
 			"vendor": "Người bán",
 			"video_exit_message": "{{ title }} mở video toàn màn hình trong cùng một cửa sổ.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "So sánh",
+			"products": "Các sản phẩm",
+			"remove": "Di dời",
+			"options": "Tùy chọn",
+			"cancel": "Hủy bỏ",
 			"this_item": "Vật phẩm này",
 			"price": "Giá",
 			"brand": "Thương hiệu",
 			"rating": "Xếp hạng",
-			"availability": "khả dụng"
+			"availability": "khả dụng",
+			"weight": "Cân nặng",
+			"type": "Loại sản phẩm",
+			"description": "Sự miêu tả",
+			"quantity_error_msg": "Chọn thêm sản phẩm để so sánh",
+			"quantity_error_title": "Không có gì có thể so sánh với"
 		},
 		"footer": {
 			"payment": "Phương thức thanh toán",
@@ -426,11 +458,13 @@
 			"shop_all": "Mua sắm tất cả"
 		},
 		"collection_template": {
+			"loading_products": "Đang tải sản phẩm...",
 			"empty_collection_message": "Bộ sưu tập này không có sản phẩm",
 			"empty": "Không tìm thấy sản phẩm",
 			"title": "Bộ sưu tập",
 			"use_fewer_filters_html": "Sử dụng ít bộ lọc hơn hoặc <a class=\"{{ class }}\" href=\"{{ link }}\">xóa tất cả</a>",
-			"use_fewer_filters": "Sử dụng ít bộ lọc hơn"
+			"use_fewer_filters": "Sử dụng ít bộ lọc hơn",
+			"view_switch_title": "Xem dưới dạng:"
 		},
 		"video": {
 			"load_video": "Tải video: {{ description }}"

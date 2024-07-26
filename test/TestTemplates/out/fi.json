@@ -5,7 +5,9 @@
 			"announcement": "Ilmoitus",
 			"cart": "Kärry",
 			"search": "Hae",
-			"home": "Koti"
+			"home": "Koti",
+			"sidescroll_title": "Vaakasuora vieritys",
+			"sidescroll_msg": "Paina Shift-näppäintä ja vieritä hiiren rullaa"
 		},
 		"date_types": {
 			"days": "päivää",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Huomautus: Tämä malli on suunniteltu vain pikanäkymän mukauttamiseen. Älä käytä sitä erillisenä tuotemallina.",
 			"empty_collection_message": "Huomautus: Tämä kokoelma on tyhjä.",
 			"empty_fallback_collection_message": "Huomautus: Varakokoelmassa \"{{ title }}\" ei ole tuotteita.",
-			"cart_drawer_no_blocks": "Huomautus: Ostoskorin vetolaatikossa ei ole lohkoja."
+			"cart_drawer_no_blocks": "Huomautus: Ostoskorin vetolaatikossa ei ole lohkoja.",
+			"compared_images_blocks_requirements": "Huomautus: Tähän osioon tarvitaan kaksi lohkoa."
 		},
 		"browsing_history": {
 			"fallback": "Sinulla ei ole äskettäin katsottuja kohteita."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Jaa Facebook",
 				"share_on_twitter": "Postaa X",
 				"share_by_email": "Jaa sähköpostilla",
-				"share_on_pinterest": "Pin Pinterest"
+				"share_on_pinterest": "Pin Pinterest",
+				"copy_to_clipboard": "Kopioi leikepöydälle"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Seuraa X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Hae",
 			"search_placeholder": "Hae kirjoittamalla...",
+			"search_product_type_default_option": "Kaikki",
 			"info": "Käytä hakupalkkia löytääksesi tuotteita",
 			"predictive_search": {
 				"suggestions": "Ehdotukset",
@@ -78,10 +83,17 @@
 				"products": "Tuotteet",
 				"posts": "Blogiviestit",
 				"pages": "Sivut"
+			},
+			"voice_search": {
+				"default_message": "Kuuntelee...",
+				"repeat_message": "Ei tunnistettu mitään",
+				"repeat_link": "Yritä uudelleen?"
 			}
 		},
 		"cart": {
+			"change_variant": "Muuta vaihtoehtoja",
 			"view": "Näytä ostoskorini ({{ count }})",
+			"only_available": "Vain {{ count }} on käytettävissä",
 			"open": "Avaa kori",
 			"qty_max_note": "Kaikki ostoskorissa saatavilla olevat tuotteet",
 			"qty_max_note_short": "Kaikki tuotteet ostoskorissa",
@@ -93,11 +105,13 @@
 				"title": "Lisätty ostoskoriin",
 				"go_to_cart": "Siirry ostoskoriin",
 				"error": "Jotain meni pieleen. Ole hyvä ja yritä myöhemmin"
-			}
+			},
+			"preorder": "Ennakkotilaus"
 		},
 		"share": {
 			"close": "Sulje jako",
 			"copy_to_clipboard": "Kopioi linkki",
+			"copy_to_clipboard_success": "URL-osoite kopioitu leikepöydälle",
 			"share_url": "Linkki",
 			"success_message": "Linkki kopioitu leikepöydälle",
 			"facebook": "Jaa",
@@ -161,6 +175,7 @@
 		"blog_title": "Esimerkki blogin otsikosta"
 	},
 	"products": {
+		"limited_deal_badge": "Rajoitetun ajan sopimus",
 		"total_price": "Kokonaishinta:",
 		"select": "Valitse",
 		"selected": "Valittu",
@@ -188,6 +203,7 @@
 			"more_details": "Lisää tuotetietoja",
 			"more_options": "Lisää vaihtoehtoja",
 			"show_options": "Näytä vaihtoehdot",
+			"view_options": "Näytä vaihtoehdot",
 			"express_show_options": "Vaihtoehdot",
 			"review_count": {
 				"one": "arvostelu",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Varastossa ja valmiina lähetettäväksi",
+				"in_stock_short_msg": "Varastossa",
+				"now_in_stock_msg": "{{ value }} varastossa ja valmiina lähetettäväksi",
+				"now_in_stock_short_msg": "{{ value }} varastossa",
 				"out_of_stock_msg": "Loppu varastosta",
-				"low_stock_msg": "Vain {{ value }} jäljellä varastossa!"
+				"low_stock_msg": "Vain {{ value }} jäljellä varastossa!",
+				"low_stock_short_msg": "Vain {{ value }} jäljellä!",
+				"pre_order_msg": "Ennakkotilattavissa"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Jaa tämä tuote",
 			"sold_out": "Loppuunmyyty",
+			"low_stock": "Alhainen varasto",
 			"unavailable": "Ei saatavilla",
 			"vendor": "Myyjä",
 			"video_exit_message": "{{ title }} avaa koko näytön videon samassa ikkunassa.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Vertailla",
+			"products": "Tuotteet",
+			"remove": "Poista",
+			"options": "Vaihtoehdot",
+			"cancel": "Peruuttaa",
 			"this_item": "Tämä esine",
 			"price": "Hinta",
 			"brand": "Brändi",
 			"rating": "Luokitus",
-			"availability": "Saatavuus"
+			"availability": "Saatavuus",
+			"weight": "Paino",
+			"type": "Tuotetyyppi",
+			"description": "Kuvaus",
+			"quantity_error_msg": "Valitse lisää vertailtavia tuotteita",
+			"quantity_error_title": "Ei mitään verrattavaa"
 		},
 		"footer": {
 			"payment": "Maksutavat",
@@ -426,11 +458,13 @@
 			"shop_all": "Osta kaikki"
 		},
 		"collection_template": {
+			"loading_products": "Ladataan tuotteita...",
 			"empty_collection_message": "Tässä kokoelmassa ei ole tuotteita",
 			"empty": "Tuotteita ei löytynyt",
 			"title": "Kokoelma",
 			"use_fewer_filters_html": "Käytä vähemmän suodattimia tai <a class=\"{{ class }}\" href=\"{{ link }}\">tyhjennä kaikki</a>",
-			"use_fewer_filters": "Käytä vähemmän suodattimia"
+			"use_fewer_filters": "Käytä vähemmän suodattimia",
+			"view_switch_title": "Näytä:"
 		},
 		"video": {
 			"load_video": "Lataa video: {{ description }}"

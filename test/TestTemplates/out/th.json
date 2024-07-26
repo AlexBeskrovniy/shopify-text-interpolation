@@ -5,7 +5,9 @@
 			"announcement": "ประกาศ",
 			"cart": "รถเข็น",
 			"search": "ค้นหา",
-			"home": "บ้าน"
+			"home": "บ้าน",
+			"sidescroll_title": "การเลื่อนแนวนอน",
+			"sidescroll_msg": "กดปุ่ม Shift และเลื่อนล้อเมาส์"
 		},
 		"date_types": {
 			"days": "วัน",
@@ -20,7 +22,8 @@
 			"quick_view_message": "หมายเหตุ: เทมเพลตนี้ออกแบบมาเพื่อการปรับแต่งมุมมองอย่างรวดเร็วเท่านั้น อย่าใช้เป็นเทมเพลตผลิตภัณฑ์แบบสแตนด์อโลน",
 			"empty_collection_message": "หมายเหตุ: คอลเลกชันนี้ว่างเปล่า",
 			"empty_fallback_collection_message": "หมายเหตุ: คอลเลกชันสำรอง \"{{ title }}\" ไม่มีผลิตภัณฑ์",
-			"cart_drawer_no_blocks": "หมายเหตุ: ส่วนลิ้นชักตะกร้าสินค้าไม่มีบล็อก"
+			"cart_drawer_no_blocks": "หมายเหตุ: ส่วนลิ้นชักตะกร้าสินค้าไม่มีบล็อก",
+			"compared_images_blocks_requirements": "หมายเหตุ: จำเป็นต้องมีสองช่วงตึกสำหรับส่วนนี้"
 		},
 		"browsing_history": {
 			"fallback": "คุณยังไม่มีรายการที่ดูล่าสุด."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "แบ่งปันบน Facebook",
 				"share_on_twitter": "โพสต์บน X",
 				"share_by_email": "แบ่งปันทางอีเมล",
-				"share_on_pinterest": "ปักหมุดบน Pinterest"
+				"share_on_pinterest": "ปักหมุดบน Pinterest",
+				"copy_to_clipboard": "คัดลอกไปยังคลิปบอร์ด"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "ติดตามได้ที่ X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "ค้นหา",
 			"search_placeholder": "พิมพ์เพื่อค้นหา...",
+			"search_product_type_default_option": "ทั้งหมด",
 			"info": "ใช้แถบค้นหาเพื่อค้นหาสินค้า",
 			"predictive_search": {
 				"suggestions": "ข้อเสนอแนะ",
@@ -78,10 +83,17 @@
 				"products": "สินค้า",
 				"posts": "โพสต์ในบล็อก",
 				"pages": "หน้า"
+			},
+			"voice_search": {
+				"default_message": "การฟัง...",
+				"repeat_message": "ไม่มีอะไรได้รับการยอมรับ",
+				"repeat_link": "ลองอีกครั้ง?"
 			}
 		},
 		"cart": {
+			"change_variant": "เปลี่ยนตัวเลือก",
 			"view": "ดูรถเข็นของฉัน ({{ count }})",
+			"only_available": "ใช้ได้เฉพาะ {{ count }} เท่านั้น",
 			"open": "เปิดรถเข็น",
 			"qty_max_note": "รายการที่มีอยู่ทั้งหมดในรถเข็น",
 			"qty_max_note_short": "รายการทั้งหมดในรถเข็น",
@@ -93,11 +105,13 @@
 				"title": "เพิ่มในรถเข็นแล้ว",
 				"go_to_cart": "ไปที่รถเข็น",
 				"error": "บางอย่างผิดพลาด. กรุณาลองในภายหลัง"
-			}
+			},
+			"preorder": "สั่งของล่วงหน้า"
 		},
 		"share": {
 			"close": "ปิดการแบ่งปัน",
 			"copy_to_clipboard": "คัดลอกลิงค์",
+			"copy_to_clipboard_success": "คัดลอก URL ไปยังคลิปบอร์ดแล้ว",
 			"share_url": "ลิงค์",
 			"success_message": "คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว",
 			"facebook": "แบ่งปัน",
@@ -161,6 +175,7 @@
 		"blog_title": "ตัวอย่างชื่อบล็อก"
 	},
 	"products": {
+		"limited_deal_badge": "ข้อตกลงเวลาจำกัด",
 		"total_price": "ราคารวม:",
 		"select": "เลือก",
 		"selected": "เลือกแล้ว",
@@ -188,6 +203,7 @@
 			"more_details": "รายละเอียดสินค้าเพิ่มเติม",
 			"more_options": "ตัวเลือกเพิ่มเติม",
 			"show_options": "แสดงตัวเลือก",
+			"view_options": "ดูตัวเลือก",
 			"express_show_options": "ตัวเลือก",
 			"review_count": {
 				"one": "ทบทวน",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "ในสต็อกและพร้อมสำหรับการจัดส่ง",
+				"in_stock_short_msg": "มีสินค้า",
+				"now_in_stock_msg": "{{ value }} มีในสต็อกและพร้อมส่ง",
+				"now_in_stock_short_msg": "{{ value }} มีในสต็อก",
 				"out_of_stock_msg": "สินค้าหมด",
-				"low_stock_msg": "เหลือเพียง {{ value }} ในสต็อก!"
+				"low_stock_msg": "เหลือเพียง {{ value }} ในสต็อก!",
+				"low_stock_short_msg": "เหลือเพียง {{ value }} เท่านั้น!",
+				"pre_order_msg": "สามารถสั่งซื้อล่วงหน้าได้"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "แบ่งปันผลิตภัณฑ์นี้",
 			"sold_out": "ขายหมดแล้ว",
+			"low_stock": "สต็อกต่ำ",
 			"unavailable": "ไม่พร้อมใช้งาน",
 			"vendor": "ผู้ขาย",
 			"video_exit_message": "{{ title }} เปิดวิดีโอแบบเต็มหน้าจอในหน้าต่างเดียวกัน",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "เปรียบเทียบ",
+			"products": "สินค้า",
+			"remove": "ลบ",
+			"options": "ตัวเลือก",
+			"cancel": "ยกเลิก",
 			"this_item": "รายการนี้",
 			"price": "ราคา",
 			"brand": "ยี่ห้อ",
 			"rating": "เรตติ้ง",
-			"availability": "ความพร้อมใช้งาน"
+			"availability": "ความพร้อมใช้งาน",
+			"weight": "น้ำหนัก",
+			"type": "ประเภทสินค้า",
+			"description": "คำอธิบาย",
+			"quantity_error_msg": "เลือกผลิตภัณฑ์เพิ่มเติมเพื่อเปรียบเทียบ",
+			"quantity_error_title": "ไม่มีอะไรที่จะเปรียบเทียบด้วย"
 		},
 		"footer": {
 			"payment": "วิธีการชำระเงิน",
@@ -426,11 +458,13 @@
 			"shop_all": "ช้อปครบ"
 		},
 		"collection_template": {
+			"loading_products": "กำลังโหลดผลิตภัณฑ์...",
 			"empty_collection_message": "คอลเลกชันนี้ไม่มีสินค้า",
 			"empty": "ไม่พบสินค้า",
 			"title": "ของสะสม",
 			"use_fewer_filters_html": "ใช้ตัวกรองน้อยลงหรือ <a class=\"{{ class }}\" href=\"{{ link }}\">ล้างทั้งหมด</a>",
-			"use_fewer_filters": "ใช้ตัวกรองน้อยลง"
+			"use_fewer_filters": "ใช้ตัวกรองน้อยลง",
+			"view_switch_title": "ดูเป็น:"
 		},
 		"video": {
 			"load_video": "โหลดวิดีโอ: {{ description }}"

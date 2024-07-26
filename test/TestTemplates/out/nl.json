@@ -5,7 +5,9 @@
 			"announcement": "Aankondiging",
 			"cart": "Winkelwagen",
 			"search": "Zoekopdracht",
-			"home": "Thuis"
+			"home": "Thuis",
+			"sidescroll_title": "Horizontaal scrollen",
+			"sidescroll_msg": "Druk op de Shift-toets en scroll met het muiswiel"
 		},
 		"date_types": {
 			"days": "Dagen",
@@ -20,7 +22,8 @@
 			"quick_view_message": "Opmerking: deze sjabloon is alleen ontworpen voor snelle weergaveaanpassingen. Gebruik het niet als een op zichzelf staand productsjabloon.",
 			"empty_collection_message": "Opmerking: deze verzameling is leeg.",
 			"empty_fallback_collection_message": "Opmerking: Terugvalcollectie \"{{ title }}\" heeft geen producten.",
-			"cart_drawer_no_blocks": "Let op: Het ladegedeelte van de winkelwagen heeft geen blokken."
+			"cart_drawer_no_blocks": "Let op: Het ladegedeelte van de winkelwagen heeft geen blokken.",
+			"compared_images_blocks_requirements": "Let op: Voor dit gedeelte zijn twee blokken nodig."
 		},
 		"browsing_history": {
 			"fallback": "U heeft geen recent bekeken artikelen."
@@ -40,10 +43,11 @@
 				"share_on_facebook": "Deel op Facebook",
 				"share_on_twitter": "Post op X",
 				"share_by_email": "Delen via email",
-				"share_on_pinterest": "Pin op Pinterest"
+				"share_on_pinterest": "Pin op Pinterest",
+				"copy_to_clipboard": "Kopieer naar klembord"
 			},
 			"links": {
-				"twitter": "Twitter",
+				"twitter": "Volg op X",
 				"facebook": "Facebook",
 				"pinterest": "Pinterest",
 				"instagram": "Instagram",
@@ -71,6 +75,7 @@
 			},
 			"search": "Zoeken",
 			"search_placeholder": "Type om te zoeken...",
+			"search_product_type_default_option": "Alle",
 			"info": "Gebruik de zoekbalk om producten te vinden",
 			"predictive_search": {
 				"suggestions": "Suggesties",
@@ -78,10 +83,17 @@
 				"products": "Producten",
 				"posts": "Blog berichten",
 				"pages": "Pagina's"
+			},
+			"voice_search": {
+				"default_message": "Luisteren...",
+				"repeat_message": "Niets herkend",
+				"repeat_link": "Probeer het nog eens?"
 			}
 		},
 		"cart": {
+			"change_variant": "Wijzig opties",
 			"view": "Mijn winkelwagen bekijken ({{ count }})",
+			"only_available": "Alleen {{ count }} is beschikbaar",
 			"open": "Winkelwagen openen",
 			"qty_max_note": "Alle beschikbare artikelen in de winkelwagen",
 			"qty_max_note_short": "Alle artikelen in de winkelwagen",
@@ -93,11 +105,13 @@
 				"title": "Toegevoegd aan winkelwagen",
 				"go_to_cart": "Ga naar winkelwagen",
 				"error": "Er is iets fout gegaan. Probeer het later alstublieft"
-			}
+			},
+			"preorder": "Voorafgaande bestelling"
 		},
 		"share": {
 			"close": "Delen sluiten",
 			"copy_to_clipboard": "Kopieer link",
+			"copy_to_clipboard_success": "URL gekopieerd naar klembord",
 			"share_url": "Koppeling",
 			"success_message": "Link gekopieerd naar klembord",
 			"facebook": "Deel",
@@ -161,6 +175,7 @@
 		"blog_title": "Voorbeeld blogtitel"
 	},
 	"products": {
+		"limited_deal_badge": "Tijdelijke aanbieding",
 		"total_price": "Totale prijs:",
 		"select": "Selecteer",
 		"selected": "Geselecteerd",
@@ -188,6 +203,7 @@
 			"more_details": "Meer productdetails",
 			"more_options": "Meer opties",
 			"show_options": "Toon opties",
+			"view_options": "Bekijk opties",
 			"express_show_options": "Opties",
 			"review_count": {
 				"one": "recensie",
@@ -195,8 +211,13 @@
 			},
 			"stock_alert": {
 				"in_stock_msg": "Op voorraad en klaar voor verzending",
+				"in_stock_short_msg": "Op voorraad",
+				"now_in_stock_msg": "{{ value }} op voorraad en klaar voor verzending",
+				"now_in_stock_short_msg": "{{ value }} op voorraad",
 				"out_of_stock_msg": "Geen voorraad meer",
-				"low_stock_msg": "Nog slechts {{ value }} op voorraad!"
+				"low_stock_msg": "Nog slechts {{ value }} op voorraad!",
+				"low_stock_short_msg": "Er is nog maar {{ value }} over!",
+				"pre_order_msg": "Beschikbaar voor pre-order"
 			},
 			"stock_notification": {
 				"form": {
@@ -261,6 +282,7 @@
 			},
 			"share": "Deel dit product",
 			"sold_out": "Uitverkocht",
+			"low_stock": "Lage voorraad",
 			"unavailable": "Niet beschikbaar",
 			"vendor": "Leverancier",
 			"video_exit_message": "{{ title }} opent video op volledig scherm in hetzelfde venster.",
@@ -399,11 +421,21 @@
 			}
 		},
 		"compare_products": {
+			"compare": "Vergelijken",
+			"products": "Producten",
+			"remove": "Verwijderen",
+			"options": "Opties",
+			"cancel": "Annuleren",
 			"this_item": "Dit item",
 			"price": "Prijs",
 			"brand": "Merk",
 			"rating": "Beoordeling",
-			"availability": "Beschikbaarheid"
+			"availability": "Beschikbaarheid",
+			"weight": "Gewicht",
+			"type": "Product type",
+			"description": "Beschrijving",
+			"quantity_error_msg": "Selecteer meer producten om te vergelijken",
+			"quantity_error_title": "Niets om mee te vergelijken"
 		},
 		"footer": {
 			"payment": "Betaalmethodes",
@@ -426,11 +458,13 @@
 			"shop_all": "Winkel alles"
 		},
 		"collection_template": {
+			"loading_products": "Producten laden...",
 			"empty_collection_message": "Deze collectie heeft geen producten",
 			"empty": "Geen producten gevonden",
 			"title": "Verzameling",
 			"use_fewer_filters_html": "Gebruik minder filters of <a class=\"{{ class }}\" href=\"{{ link }}\">wis alles</a>",
-			"use_fewer_filters": "Gebruik minder filters"
+			"use_fewer_filters": "Gebruik minder filters",
+			"view_switch_title": "Zien als:"
 		},
 		"video": {
 			"load_video": "Laad video: {{ description }}"
