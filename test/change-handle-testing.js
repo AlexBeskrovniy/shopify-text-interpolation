@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 const {
     readAndParseJSON,
     getValuesMap,
@@ -5,8 +8,7 @@ const {
     getChangedValuesByMap,
     getLocaleJSON,
     getLocaleFileNames,
-    getLocaleLang,
-    rewriteLocaleFiles
+    getLocaleLang
 } = require('../helpers.js')
 const { updateLocale } = require('../translationTools.js')
 
@@ -28,13 +30,23 @@ const getSourceState = () => {
     return { newSource, oldSourceMap, newSourceMap, diffsOnSources };
 }
 
+const rewriteTestLocaleFiles = (updatedLocales) => {
+    updatedLocales.map(({ fileName, updatedLocaleObject }) => {
+        const outFilePath = path.join(__dirname, `TestTemplates/locales/${fileName}`);
+        fs.existsSync(outFilePath) && fs.unlinkSync(outFilePath);
+        fs.writeFileSync(outFilePath, JSON.stringify(updatedLocaleObject, null, '\t'));
+    });
+}
+
 
 const translateLocalesFiles = async () => {
     const localeNames = getLocaleFileNames()
+    console.log(localeNames);
     const updatedLocales = await Promise.all(localeNames.map(async (name) => {
         return await updateLocale(name, getLocaleJSON(name), getLocaleLang(name), getSourceState())
     }))
-    rewriteLocaleFiles(updatedLocales);
+    console.log(updatedLocales);
+    rewriteTestLocaleFiles(updatedLocales);
 }
 
 translateLocalesFiles();

@@ -1,0 +1,25 @@
+{
+	"general": {
+		"date_types": {
+			"days": "Days",
+			"hours": "Hours",
+			"minutes": "Minutes",
+			"seconds": "Seconds",
+			"facebook": "Open my Facebook"
+		},
+		"editor": {
+			"default_heading": "No hay ningún contenido en esta sección ahora.",
+			"default_text": "Este mensaje solo se mostrará en el editor de temas.",
+			"browsing_history_message": "Nota: Esta sección",
+			"quick_view_message": "Nota: No lo utilice como plantilla de producto independiente.",
+			"quick_view_message_2": "Note: product template.",
+			"empty_fallback_collection_message": "Nota: La colección alternativa \"{{ title }}\" no tiene productos."
+		},
+		"browsing_history": {
+			"fallback": "No has visto artículos recientemente."
+		}
+	},
+	"pagination": {
+		"page": "Web Page {{ number }}"
+	}
+}

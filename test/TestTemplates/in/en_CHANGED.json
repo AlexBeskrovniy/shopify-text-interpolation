@@ -18,5 +18,8 @@
       "browsing_history": {
         "fallback": "You have no recently viewed items." 
       }
+    },
+    "pagination": {
+      "page": "Web Page {{ number }}"
     }
 }

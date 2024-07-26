@@ -13,11 +13,11 @@ const INTRPLStrings = [
 ]
 
 const translatedINTRPLStrings = [
-    "Примечание. В резервной коллекции \"{{ title }}\" нет продуктов.",   
-    "Этот магазин будет работать на основе {{ shopify }}",
+    "Примечание. В резервной коллекции \"{{ title }}\" нет товаров.",   
+    "Этот магазин будет работать на платформе {{ shopify }}",
     "{{ rating_value }} из {{ rating_max }} звезд",   
-    "Самовывоз доступен в <span class=\"color-foreground\">{{ location_name }}</span>",
-    "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">удалите все</a>",
+    "Самовывоз доступен по адресу <span class=\"color-foreground\">{{ location_name }}</span>",
+    "Используйте меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">очистите все</a>",
     "<a href=\"{{ link }}\" class=\"link underlined-link\">Войдите</a> , чтобы оформить заказ быстрее.",
     "{{ number }}",   
     "Самовывоз в настоящее время недоступен в <span class=\"color-foreground\">{{ location_name }}</span>"
