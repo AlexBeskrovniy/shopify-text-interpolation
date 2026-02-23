@@ -7,7 +7,9 @@ const exeptionsArr = [
     "Snapchat",
     "YouTube",
     "Vimeo",
-    "TikTok"
+    "TikTok",
+    "LinkedIn",
+    "Discord"
 ];
 
 module.exports = { exeptionsArr };
